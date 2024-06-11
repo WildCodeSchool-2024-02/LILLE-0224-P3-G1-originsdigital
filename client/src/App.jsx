@@ -1,14 +1,8 @@
 import "./App.css";
+import Videoplayer from "./components/Videoplayer/Videoplayer";
 
 function App() {
-  return (
-    <>
-      <p className="un">hello</p>
-      <p className="deux">hello</p>
-      <p className="trois">hello</p>
-      <p className="quatre">hello</p>
-    </>
-  );
+  return <Videoplayer />;
 }
 
 export default App;
