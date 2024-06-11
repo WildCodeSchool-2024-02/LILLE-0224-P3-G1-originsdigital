@@ -2,7 +2,11 @@ import "./App.css";
 import Videoplayer from "./components/Videoplayer/Videoplayer";
 
 function App() {
-  return <Videoplayer />;
+  return (
+    <div>
+      <Videoplayer />
+    </div>
+  );
 }
 
 export default App;
