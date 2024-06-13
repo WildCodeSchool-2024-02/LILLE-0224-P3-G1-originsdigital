@@ -10,6 +10,7 @@
   list-style: none;
   color: var(--color-four);
   font-size: 0.55em;
+  line-height: initial;
 }
 .vignette_description {
   font-size: small;
