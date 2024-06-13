@@ -6,6 +6,7 @@
 }
 body {
   font-family: "Darker Grotesque", sans-serif;
+  margin: 0;
 }
 h3 {
   color: var(--color-four);
@@ -19,13 +20,13 @@ ul {
   padding-right: 1rem;
 }
 @media (max-width: 480px) {
-  .ContainerApropos {
+  .ContainerAbout {
     display: flex;
     justify-content: center;
     background-color: var(--color-four);
     width: 100%;
   }
-  .SectionApropos {
+  .SectionAbout {
     background-color: var(--color-two);
     width: 90%;
     display: flex;
@@ -52,7 +53,7 @@ ul {
     border-radius: 10%;
   }
   .Description2 {
-    background-image: url(../assets//images//apropos-opacity.jpg);
+    background-image: url(../assets//images//About-opacity.jpg);
     background-position: top;
     color: var(--color-one);
     width: 80%;
@@ -66,7 +67,7 @@ ul {
     border-radius: 100% 0% 100% 0% / 7% 91% 9% 93%;
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
   }
-  .ImgApropos {
+  .ImgAbout {
     width: 80%;
     height: 20rem;
     object-fit: cover;
@@ -75,7 +76,7 @@ ul {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
   }
-  .ImgApropos1 {
+  .ImgAbout1 {
     width: 80%;
     height: 20rem;
     object-fit: cover;
@@ -86,20 +87,24 @@ ul {
   }
 }
 
-.ContainerApropos {
+.ContainerAbout {
   display: flex;
   margin: 0;
   justify-content: center;
   background-color: var(--color-four);
+
   /*width: 100%;*/
 }
-.SectionApropos {
+.SectionAbout {
   background-color: var(--color-two);
-  width: 90%;
+  margin: 1rem;
+  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  border-radius: 25px;
+  box-shadow: 0px 0px 44px 0px rgba(2, 223, 147, 1);
 }
 .Description {
   background-color: white;
@@ -126,15 +131,17 @@ ul {
   padding-bottom: 1rem;
   border-radius: 10%;
   transition: transform 0.5s ease;
+  margin: 1rem;
 }
 .Description1:hover {
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
   transform: scale(1.05);
 }
 .Description2 {
-  background-image: url(../assets//images//apropos-opacity.jpg);
+  background-image: url(../assets/images/apropos-opacity.jpg);
   background-position: top;
   color: var(--color-one);
+  overflow: hidden;
   width: 50%;
   font-weight: bold;
   padding: 10rem;
@@ -146,13 +153,15 @@ ul {
   border-radius: 100% 0% 100% 0% / 7% 91% 9% 93%;
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
   transition: transform 0.5s ease;
+  margin: 1rem;
 }
 .Description2:hover {
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
   transform: scale(1.05);
+  overflow: hidden;
 }
 
-.ImgApropos {
+.ImgAbout {
   width: 80%;
   height: 20rem;
   object-fit: cover;
@@ -162,12 +171,12 @@ ul {
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
   transition: transform 0.5s ease;
 }
-.ImgApropos:hover {
+.ImgAbout:hover {
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
   transform: scale(1.05);
 }
 
-.ImgApropos1 {
+.ImgAbout1 {
   width: 80%;
   height: 20rem;
   object-fit: cover;
@@ -177,7 +186,7 @@ ul {
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
   transition: transform 0.5s ease;
 }
-.ImgApropos1:hover {
+.ImgAbout1:hover {
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
   transform: scale(1.05);
 }

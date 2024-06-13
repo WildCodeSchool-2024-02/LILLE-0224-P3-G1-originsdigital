@@ -1,9 +1,9 @@
-import "./Apropos.css";
+import "./About.css";
 
-export default function Apropos() {
+export default function About() {
   return (
-    <div className="ContainerApropos">
-      <div className="SectionApropos">
+    <div className="ContainerAbout">
+      <div className="SectionAbout">
         <article className="Description">
           <h3>À propos de nous</h3>
           <p>
@@ -16,8 +16,8 @@ export default function Apropos() {
           </p>
         </article>
         <img
-          className="ImgApropos"
-          src="src/assets/images/apropos.jpg"
+          className="ImgAbout"
+          src="src/assets/images/Apropos.jpg"
           alt="groupe de développeurs"
         />
         <article className="Description">
@@ -31,8 +31,8 @@ export default function Apropos() {
           </p>
         </article>
         <img
-          className="ImgApropos1"
-          src="src/assets/images/apropos1.jpg"
+          className="ImgAbout1"
+          src="src/assets/images/Apropos1.jpg"
           alt="groupe de développeurs"
         />
         <article className="Description1">

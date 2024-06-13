@@ -1,10 +1,8 @@
 import "./App.css";
-import Apropos from "./components/Apropos";
+import About from "./components/About";
 
 function App() {
-  return (
-    <Apropos/>
-  );
+  return <About />;
 }
 
 export default App;
