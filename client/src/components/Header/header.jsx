@@ -5,9 +5,6 @@ import "./Header.css";
 import { Form, Link } from "react-router-dom";
 
 function Header() {
-  // tout ces states sont a mette dans le context et a importer ici de cette manière
-  // const {style, setStyle,defile, setDefile,searchbar, setSearchBar,onBlur, setOnBlur} = moncontext();
-
   const [style, setStyle] = useState(false);
   const [searchbar, setSearchBar] = useState(false);
   const [onBlur, setOnBlur] = useState(false);
