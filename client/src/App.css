@@ -109,6 +109,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 article,
 aside,
 details,
@@ -126,6 +127,7 @@ body {
   line-height: 1;
 }
 ol,
+
 ul {
   list-style: none;
 }
