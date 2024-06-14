@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.h1-mon-compte {
+  color: var(--color-three);
+  font-family: "Darker Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.form-mon-compte {
+  width: 80%;
+  border: 1px solid red;
+  position: relative;
+  left: 10%;
+  top: 2em;
+}
