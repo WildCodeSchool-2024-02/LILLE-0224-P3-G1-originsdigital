@@ -7,19 +7,14 @@ import { Form, Link } from "react-router-dom";
 function Header() {
   // tout ces states sont a mette dans le context et a importer ici de cette manière
   // const {style, setStyle,defile, setDefile,searchbar, setSearchBar,onBlur, setOnBlur} = moncontext();
-  // et il faut créer un nouveau state pour le texte du défilement
+
   const [style, setStyle] = useState(false);
-  // const [defile, setDefile] = useState(false);
   const [searchbar, setSearchBar] = useState(false);
   const [onBlur, setOnBlur] = useState(false);
   const [textDefile, setTexDefile] = useState("");
 
-  // const audio = new Audio("src/assets/images/son_magnetoscope.mp3");
-  // const currentUrl = window.location.href; // donne l'url complète
-
   const fctStyle = () => {
     setStyle(!style);
-    // setDefile(!defile);
     setTexDefile("terminator");
   };
   if (style) {
@@ -29,9 +24,7 @@ function Header() {
   }
 
   if (style) {
-    setTimeout(() => {
-      // audio.play();
-    }, 800);
+    setTimeout(() => {}, 800);
   }
 
   const searchBar = () => {
