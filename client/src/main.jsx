@@ -14,9 +14,8 @@ const router = createBrowserRouter([
   {
     path: "/compte",
     element: <Compte />,
-    // action: (req,_,_)=>{
-    //   console.info(req.body)
-    // }
+   
+        
   },
 ]);
 
