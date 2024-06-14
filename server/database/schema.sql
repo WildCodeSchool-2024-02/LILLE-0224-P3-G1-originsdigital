@@ -79,3 +79,7 @@ CREATE TABLE operation_video (
     FOREIGN KEY (videoID) REFERENCES video(id)
 );
 
+INSERT INTO admin (username, password) VALUES ('admin1', 'password1'), ('admin2', 'password2');
+
+INSERT INTO moderator (username, password) VALUES ('moderator1', 'password1'), ('moderator2', 'password2');
+
