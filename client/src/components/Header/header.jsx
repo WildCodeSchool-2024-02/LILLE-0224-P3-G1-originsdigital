@@ -9,16 +9,18 @@ function Header() {
   // const {style, setStyle,defile, setDefile,searchbar, setSearchBar,onBlur, setOnBlur} = moncontext();
   // et il faut créer un nouveau state pour le texte du défilement
   const [style, setStyle] = useState(false);
-  const [defile, setDefile] = useState(false);
+  // const [defile, setDefile] = useState(false);
   const [searchbar, setSearchBar] = useState(false);
   const [onBlur, setOnBlur] = useState(false);
+  const [textDefile, setTexDefile] = useState("");
 
-  const audio = new Audio("src/assets/images/son_magnetoscope.mp3");
+  // const audio = new Audio("src/assets/images/son_magnetoscope.mp3");
   // const currentUrl = window.location.href; // donne l'url complète
 
   const fctStyle = () => {
     setStyle(!style);
-    setDefile(!defile);
+    // setDefile(!defile);
+    setTexDefile("terminator");
   };
   if (style) {
     setTimeout(() => {
@@ -28,7 +30,7 @@ function Header() {
 
   if (style) {
     setTimeout(() => {
-      audio.play();
+      // audio.play();
     }, 800);
   }
 
@@ -56,13 +58,13 @@ function Header() {
       />
 
       <img
-        src="src/assets/images/k7.png"
+        src="src/assets/images/magn2.png"
         alt="ceci est une iage de cassete video"
         className={style ? "img_k7" : "img_k7_none"}
       />
 
-      <div className="marquee-rtl">
-        <div>{defile && "Terminator 1 duree 1h30 ..."}</div>
+      <div className={textDefile.length > 0 && "marquee-rtl"}>
+        <div>{textDefile}</div>
       </div>
 
       <Form>
@@ -99,7 +101,7 @@ function Header() {
         b
       </button>
 
-      <Link to="/teste">
+      <Link to="/play">
         <button type="button" onClick={() => fctStyle()}>
           click
         </button>
