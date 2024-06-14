@@ -5,7 +5,10 @@
   --color-four: #111111;
   --color-five: #fdfdfd;
 }
-
+@font-face {
+  font-family: "Glitch";
+  src: url("./fonts/DoctorGlitch.otf") format("opentype");
+}
 .un {
   color: var(--color-one);
 }

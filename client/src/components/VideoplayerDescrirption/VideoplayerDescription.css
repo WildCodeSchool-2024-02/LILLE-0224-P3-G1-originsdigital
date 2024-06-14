@@ -1,11 +1,3 @@
-@font-face {
-  font-family: "GlitchingDemoRegular";
-  src:
-    local("GlitchingDemoRegular"),
-    url("C:\Users\Karra\AppData\Local\Microsoft\Windows\Fonts\GlitchingDemoRegular.ttf")
-      format("TTF");
-}
-
 .videoplayer_list {
   list-style: none;
   color: var(--color-four);
@@ -73,10 +65,10 @@
   }
   .title_categories {
     font-size: xx-large;
-    font-family: "GlitchingDemoRegular";
+    font-family: "Glitch";
   }
   .title_genre {
     font-size: xx-large;
-    font-family: "GlitchingDemoRegular";
+    font-family: "Glitch";
   }
 }
