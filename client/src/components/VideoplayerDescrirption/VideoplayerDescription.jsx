@@ -12,7 +12,7 @@ function VideoplayerDescription() {
           </ul>
           <div className="categories">
             <ul className="videoplayer_genre">
-              <h2 className="title_genre">FILM PAR GENRES</h2>
+              <h2 className="title_genre">FILMS PAR GENRE</h2>
               <li className="genre">ACTION</li>
               <li className="genre">AVENTURE</li>
               <li className="genre">ANIMATION</li>
@@ -30,7 +30,6 @@ function VideoplayerDescription() {
             </ul>
           </div>
         </div>
-        {/* <div className="videoplayer_description_vignette"> */}
         <div className="videoplayer_image">
           <img
             className="vignette_image"
