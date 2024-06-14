@@ -71,6 +71,31 @@ export default function InfoContact() {
           </article>
         </section>
       </div>
+      <div className="supportSection">
+        <div className="supportInfo">
+          <h2>Besoin d'aide?</h2>
+          <p>
+            Nous sommes disponibles pour une assistance en direct 24 heures sur
+            24, 7 jours sur 7.
+          </p>
+          <h3>
+            <Link className="h3Fair" to="/foire-aux-questions">
+              Foire aux questions
+            </Link>
+          </h3>
+        </div>
+        <div className="callSupport">
+          <h2>Contactez-nous</h2>
+          <p>
+            Nous serons heureux de vous aider chaque fois que vous en aurez
+            besoin. Connectez-vous pour visiter notre page Contact pour obtenir
+            de l’aide supplémentaire &nbsp; &nbsp; &nbsp;
+            <a className="phoneText" href="tel:0320202020">
+              03 20 20 20 20{" "}
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

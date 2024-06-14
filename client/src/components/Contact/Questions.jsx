@@ -5,7 +5,7 @@ export default function Questions() {
   return (
     <div className="container-body">
       <div className="ContainerQuestions">
-        <section className="SectionReponse">
+        <section className="SectionAnswer">
           <h1>Avec qui puis-je partager mon abonnement VHS ?</h1>
           <p>
             Vous ne pouvez pas partager votre abonnement en dehors de votre

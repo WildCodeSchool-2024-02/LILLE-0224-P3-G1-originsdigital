@@ -28,12 +28,12 @@ export default function ContactPage()  {
         <h1>Contact</h1>
 
         <form ref={form} onSubmit={sendEmail}>
-          <label className="champs" htmlFor="name">Name</label>
-          <input className="champs" type="text" name="from_name" />
-          <label className="champs"htmlFor="email">Email</label>
-          <input className="champs" type="email" name="from_email" />
-          <label className="champs" htmlFor="message">Message</label>
-          <textarea className="champs" name="message" />
+          <label className="fields" htmlFor="name">Name</label>
+          <input className="fields" type="text" name="from_name" />
+          <label className="fields"htmlFor="email">Email</label>
+          <input className="fields" type="email" name="from_email" />
+          <label className="fields" htmlFor="message">Message</label>
+          <textarea className="fields" name="message" />
           <input className="btnSend" type="submit" value="Send" />
         </form>
       </div>
