@@ -105,3 +105,15 @@ INSERT INTO video (titre, release_date, post_date, typeID, director, duration, s
 ('Les Affranchis', '1990-09-19', '2024-06-15', 'Film', 'Martin Scorsese', '2h26', 'L\'histoire d\'Henry Hill et de sa vie dans la mafia, couvrant sa relation avec sa femme Karen et ses partenaires du crime Jimmy Conway et Tommy DeVito.', 'https://images.allocine.fr/medias/nmedia/18/36/00/95/19884323.jpg', 'https://www.youtube.com/watch?v=qo5jJpHtI1Y', 4.8, 'free'),
 ('Le Silence des Agneaux', '1991-02-14', '2024-06-15', 'Film', 'Jonathan Demme', '1h58', 'Une jeune recrue du FBI doit demander l\'aide d\'un détenu psychiatre cannibale pour attraper un autre tueur en série.', 'https://images.allocine.fr/medias/nmedia/18/36/12/34/19872254.jpg', 'https://www.youtube.com/watch?v=W6Mm8Sbe__o', 4.8, 'free'),
 ('Le Seigneur des Anneaux : La Communauté de l\'Anneau', '2001-12-19', '2024-06-15', 'Film', 'Peter Jackson', '2h58', 'Un jeune hobbit nommé Frodon doit détruire un anneau maléfique dans les feux de la Montagne du Destin, accompagné d\'une communauté de héros.', 'https://images.allocine.fr/medias/nmedia/00/02/52/70/affiche2.jpg', 'https://www.youtube.com/watch?v=V75dMMIW2B4', 4.9, 'free');
+
+INSERT INTO users (lastname, firstname, email, username, password, status) VALUES
+('Dupont', 'Jean', 'jean.dupont@example.com', 'jdupont', 'password123', 1),
+('Martin', 'Marie', 'marie.martin@example.com', 'mmartin', 'password123', 1),
+('Leroy', 'Julien', 'julien.leroy@example.com', 'jleroy', 'password123', 1),
+('Moreau', 'Sophie', 'sophie.moreau@example.com', 'smoreau', 'password123', 1),
+('Fournier', 'Lucas', 'lucas.fournier@example.com', 'lfournier', 'password123', 1),
+('Dubois', 'Claire', 'claire.dubois@example.com', 'cdubois', 'password123', 1),
+('Lambert', 'Antoine', 'antoine.lambert@example.com', 'alambert', 'password123', 1),
+('Rousseau', 'Emma', 'emma.rousseau@example.com', 'erousseau', 'password123', 1),
+('Lefevre', 'David', 'david.lefevre@example.com', 'dlefevre', 'password123', 1),
+('Perrin', 'Julie', 'julie.perrin@example.com', 'jperrin', 'password123', 1);
