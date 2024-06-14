@@ -6,7 +6,8 @@ import ConditionsDutilisation from "./components/Contact/ConditionsDutilisation"
 import Contact from "./components/Contact/Contact";
 import Questions from "./components/Contact/Questions";
 import  ContactPage from "./components/Contact/ContactPage";
-import QuestionsTest from "./components/Contact/QuestionsTeste";
+import Faq from "./components/Contact/Faq";
+
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/foire-aux-questions",
-        element: <QuestionsTest/>,
+        element: <Faq/>,
       },
     ],
   },

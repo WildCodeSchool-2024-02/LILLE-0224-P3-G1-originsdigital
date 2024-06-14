@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./QuestionsTest.css";
+import "./Faq.css";
 
-function QuestionsTest() {
+function Faq() {
   const [showAnswers, setshowAnswers] = useState(Array(9).fill(false));
 
   const toggleAnswer = (questAns) => {
@@ -37,7 +37,7 @@ function QuestionsTest() {
   return (
     <div className="fair-Container">
       {questions.map((question, index) => (
-        <div key={`question_${question.answers}`} className="fair-item">
+        <div key={`question_${question}`} className="fair-item">
           <button type='button' className="question" onClick={() => toggleAnswer(index)}>
             {question}
           </button>
@@ -50,4 +50,4 @@ function QuestionsTest() {
   );
 }
 
-export default QuestionsTest;
+export default Faq;
