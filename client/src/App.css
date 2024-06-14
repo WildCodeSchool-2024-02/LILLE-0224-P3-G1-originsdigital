@@ -21,7 +21,6 @@
   color: var(--color-four);
 }
 
-/*reset CSS*/
 html,
 body,
 div,
@@ -110,7 +109,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -128,7 +127,7 @@ body {
   line-height: 1;
 }
 ol,
-li,
+
 ul {
   list-style: none;
 }
