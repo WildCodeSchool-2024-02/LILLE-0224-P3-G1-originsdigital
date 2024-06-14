@@ -1,13 +1,5 @@
-@font-face {
-  font-family: "Doctor Glitch";
-  src:
-    local("Doctor Glitch"),
-    url("C:\Users\mathi\AppData\Local\Microsoft\Windows\Fonts\Doctor Glitch.otf")
-      format("OTF");
-}
-
 footer {
-  font-family: "Doctor Glitch";
+  font-family: "Glitch";
   font-weight: 600;
   background-color: var(--color-one);
   color: var(--color-four);
