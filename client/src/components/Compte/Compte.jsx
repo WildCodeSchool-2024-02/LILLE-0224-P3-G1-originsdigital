@@ -3,7 +3,6 @@ import "./Compte.css";
 
 function Compte() {
   
-  
   return (
     <Form className="form-mon-compte" method="post">
       <h1 className="h1-mon-compte">Modifier mon profil</h1>
