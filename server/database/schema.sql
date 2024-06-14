@@ -117,3 +117,9 @@ INSERT INTO users (lastname, firstname, email, username, password, status) VALUE
 ('Rousseau', 'Emma', 'emma.rousseau@example.com', 'erousseau', 'password123', 1),
 ('Lefevre', 'David', 'david.lefevre@example.com', 'dlefevre', 'password123', 1),
 ('Perrin', 'Julie', 'julie.perrin@example.com', 'jperrin', 'password123', 1);
+
+INSERT INTO genre (name) VALUES
+('Action'),
+('Aventure'),
+('Guerre'),
+('Sci-Fi');
