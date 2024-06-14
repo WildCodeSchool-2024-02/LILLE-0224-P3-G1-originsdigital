@@ -1,11 +1,12 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import Videoplayer from "./components/Videoplayer/Videoplayer";
+import Header from "./components/Header/header";
 
 function App() {
   return (
-    <div>
-      <Videoplayer />
-    </div>
+    <>
+      <Header /> <Outlet />
+    </>
   );
 }
 

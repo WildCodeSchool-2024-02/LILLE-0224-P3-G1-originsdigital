@@ -1,5 +1,5 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
+import React from "react";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -9,6 +9,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/play",
+        element: <>coucou</>,
+      },
+    ],
   },
 ]);
 
