@@ -9,7 +9,7 @@ body {
   background-color: black;
 }
 
-.h1-mon-compte {
+.h1-my-account {
   color: var(--color-three);
   font-family: "Darker Grotesque", sans-serif;
   font-optical-sizing: auto;
@@ -58,7 +58,7 @@ body {
   font-family: "Darker Grotesque", sans-serif;
 }
 
-.enregistrer-annuler {
+.rec-cancel {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -83,13 +83,13 @@ body {
   z-index: 0;
 }
 
-#enregistrer {
+#save {
   color: white;
   background-color: var(--color-three);
   border: 3px double white;
 }
 
-#annuler {
+#cancel {
   color: var(--color-three);
   background-color: white;
   border: 3px double var(--color-three);

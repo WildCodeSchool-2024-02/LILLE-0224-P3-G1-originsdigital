@@ -1,10 +1,10 @@
-// import React from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
-import Compte from "./components/Compte/Compte";
+import Count from "./components/Compte/Compte";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/compte",
-    element: <Compte />,
+    element: <Count />,
     action: async ({ request }) => {
       const form = await request.formData();
       const username = form.get("username");
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  // <React.StrictMode>
-  <RouterProvider router={router} />
-  // </React.StrictMode>
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );

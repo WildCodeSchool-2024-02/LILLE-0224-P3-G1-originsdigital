@@ -2,14 +2,14 @@ import { Form, useActionData } from "react-router-dom";
 import "./Compte.css";
 import { useState } from "react";
 
-function Compte() {
-  const [valeurPseudo, setValeurPseudo] = useState("alexandre");
+function Count() {
+  const [valueUserName, setValueUserName] = useState("alexandre");
   const [valeurMail, setValeurMail] = useState("alex@gmail.com");
   const [valeurPass, setValeurPass] = useState("Abcd1234!");
   const [initError, setInitError] = useState(false);
 
   const onchangePseudo = (e) => {
-    setValeurPseudo(e.target.value);
+    setValueUserName(e.target.value);
   };
   const onchangeMail = (e) => {
     setValeurMail(e.target.value);
@@ -19,7 +19,7 @@ function Compte() {
   };
 
   const init = () => {
-    setValeurPseudo("alexandre");
+    setValueUserName("alexandre");
     setValeurMail("alex@gmail.com");
     setValeurPass("Abcd1234!");
     setInitError(!initError);
@@ -37,14 +37,17 @@ function Compte() {
         setInitError(false);
       }}
     >
-      <h1 className="h1-mon-compte">Modifier mon profil</h1> <hr />
+      <h1 className="h1-my-account">Modifier mon profil</h1> <hr />
       <div className="div-form">
         <ul className="ul-form">
           <li className="info">
             <label htmlFor="username" className="label">
               Pseudo:{" "}
               {data && data.user.length < 3 && !initError ? (
-                <span className="error">3 caractère minimum, <br />100 maximum</span>
+                <span className="error">
+                  3 caractère minimum, <br />
+                  100 maximum
+                </span>
               ) : (
                 ""
               )}
@@ -55,7 +58,7 @@ function Compte() {
               className="input"
               id="username"
               onChange={onchangePseudo}
-              value={valeurPseudo}
+              value={valueUserName}
             />
           </li>
           <li className="info">
@@ -103,15 +106,10 @@ function Compte() {
         </ul>
       </div>
       <hr className="hr" />
-      <div className="enregistrer-annuler">
-        <input
-          type="submit"
-          value="ENREGISTRER"
-          className="input"
-          id="enregistrer"
-        />
+      <div className="rec-cancel">
+        <input type="submit" value="ENREGISTRER" className="input" id="save" />
 
-        <button type="button" className="input" id="annuler" onClick={init}>
+        <button type="button" className="input" id="cancel" onClick={init}>
           ANNULER
         </button>
       </div>
@@ -124,4 +122,4 @@ function Compte() {
   );
 }
 
-export default Compte;
+export default Count;
