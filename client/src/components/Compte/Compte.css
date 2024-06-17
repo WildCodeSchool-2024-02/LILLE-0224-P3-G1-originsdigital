@@ -16,7 +16,6 @@ body {
 .h1-my-account {
   color: var(--color-three);
   font-family: "Glitch";
-  /* font-family: "Darker Grotesque", sans-serif; */
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;

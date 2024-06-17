@@ -4,24 +4,24 @@ import { useState } from "react";
 
 function Count() {
   const [valueUserName, setValueUserName] = useState("alexandre");
-  const [valeurMail, setValeurMail] = useState("alex@gmail.com");
-  const [valeurPass, setValeurPass] = useState("Abcd1234!");
+  const [valueMail, setValueMail] = useState("alex@gmail.com");
+  const [valuePass, setValuePass] = useState("Abcd1234!");
   const [initError, setInitError] = useState(false);
 
   const onchangePseudo = (e) => {
     setValueUserName(e.target.value);
   };
   const onchangeMail = (e) => {
-    setValeurMail(e.target.value);
+    setValueMail(e.target.value);
   };
   const onchangePass = (e) => {
-    setValeurPass(e.target.value);
+    setValuePass(e.target.value);
   };
 
   const init = () => {
     setValueUserName("alexandre");
-    setValeurMail("alex@gmail.com");
-    setValeurPass("Abcd1234!");
+    setValueMail("alex@gmail.com");
+    setValuePass("Abcd1234!");
     setInitError(!initError);
   };
 
@@ -76,7 +76,7 @@ function Count() {
               className="input"
               id="email"
               onChange={onchangeMail}
-              value={valeurMail}
+              value={valueMail}
             />
           </li>
           <li className="info">
@@ -100,7 +100,7 @@ function Count() {
               className="input"
               id="passwd"
               onChange={onchangePass}
-              value={valeurPass}
+              value={valuePass}
             />
           </li>
         </ul>
