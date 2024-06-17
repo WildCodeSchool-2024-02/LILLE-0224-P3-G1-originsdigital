@@ -145,10 +145,10 @@ const config = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // container-bodynvironment: "jest-environment-node",
+  // testEnvironment: "jest-environment-node",
 
-  // Options that will be passed to the container-bodynvironment
-  // container-bodynvironmentOptions: {},
+  // Options that will be passed to the testEnvironment
+  // testEnvironmentOptions: {},
 
   // Adds a location field to test results
   // testLocationInResults: false,
