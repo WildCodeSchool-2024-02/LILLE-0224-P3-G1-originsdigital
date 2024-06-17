@@ -29,9 +29,6 @@ form {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
-  /*background-image: url(../../assets/images/contactez-nous.jpg);
-    background-position: center;*/
   background-color: var(--color-four);
 }
 .fields {

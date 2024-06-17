@@ -45,7 +45,6 @@ span {
 .SectionInfoContactSuggestion {
   display: flex;
   background-color: var(--color-two);
-  /*width: 10%;*/
   padding: 1rem;
   margin: 1rem;
   border-radius: 25px;

@@ -1,7 +1,7 @@
-import "./ConditionsDutilisation.css";
+import "./TermsOfUse.css";
 import { Link } from "react-router-dom";
 
-export default function ConditionsDutilisation() {
+export default function TermsOfUse() {
   return (
     <div className="ContainerConditions">
       <section className="SectionConditions">

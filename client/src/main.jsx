@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
-import ConditionsDutilisation from "./components/Contact/ConditionsDutilisation";
+import TermsOfUse from "./components/Contact/TermsOfUse";
 import Contact from "./components/Contact/Contact";
 import Questions from "./components/Contact/Questions";
 import  ContactPage from "./components/Contact/ContactPage";
@@ -15,8 +15,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/conditions",
-        element: <ConditionsDutilisation />,
+        path: "/Terms-Of-Use",
+        element: <TermsOfUse/>,
       },
       {
         path: "/informations",
