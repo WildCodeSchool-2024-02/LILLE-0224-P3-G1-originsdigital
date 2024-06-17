@@ -16,6 +16,7 @@
   },
   "plugins": ["react-refresh"],
   "rules": {
+    "jsx-a11y/no-autofocus":0,
     "no-console": ["error", { "allow": ["error", "info", "warn"] }],
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",
