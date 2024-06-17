@@ -44,7 +44,7 @@ function Compte() {
             <label htmlFor="username" className="label">
               Pseudo:{" "}
               {data && data.user.length < 3 && !initError ? (
-                <span className="error">3 caractère minimum</span>
+                <span className="error">3 caractère minimum, <br />100 maximum</span>
               ) : (
                 ""
               )}
