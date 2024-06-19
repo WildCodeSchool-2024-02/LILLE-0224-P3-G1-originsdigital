@@ -1,10 +1,12 @@
 import ReactDOM from "react-dom/client";
+import axios from "axios";
 import React from "react";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import Count from "./components/Compte/Compte";
+import CreationAccount from "./components/creationAccount/CreationAccount";
 
 const router = createBrowserRouter([
   {
@@ -13,12 +15,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/play",
-        element: <>coucou</>,
       },
     ],
   },
   {
-    path: "/compte",
+    path: "/compte/:id",
     element: <Count />,
     action: async ({ request }) => {
       const form = await request.formData();
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
         user: username,
         mail: email,
         pass: password,
+        id: window.location.href.split("/")[4],
       };
 
       if (
@@ -38,10 +40,30 @@ const router = createBrowserRouter([
         regex.test(email) &&
         regexPass.test(password)
       ) {
-        alert("modification enregistré !");
+        axios.put("http://localhost:3310/api/compte", formulaire);
       }
 
       return formulaire;
+    },
+  },
+  {
+    path: "/inscription",
+    element: <CreationAccount />,
+    action: async ({ request }) => {
+      const data = await request.formData();
+      const last = data.get("last");
+      const first = data.get("first");
+      const mail = data.get("mail");
+      const user = data.get("user");
+      const pass = data.get("pass");
+      const result = {
+        lastname: last,
+        firstname: first,
+        email: mail,
+        username: user,
+        password: pass,
+      };
+      return result;
     },
   },
 ]);
