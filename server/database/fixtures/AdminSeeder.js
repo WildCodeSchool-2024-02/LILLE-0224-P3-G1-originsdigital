@@ -16,13 +16,16 @@ class AdminSeeder extends AbstractSeeder {
                 password: 'password123'
             },
         ];
-        
+
         admins.forEach((admin) => {
-            this.insert(admin);
-        });
+            const adminWithRefName = {
+              ...admin,
+              refName: `admin_${admin.username}`,
+            };
+      
+            this.insert(adminWithRefName);
+          });
     }
 }
-
-
 
 module.exports = AdminSeeder;
