@@ -12,7 +12,7 @@ CREATE TABLE moderator (
 );
 
 
-CREATE TABLE users (
+CREATE TABLE user_data (
 id INT AUTO_INCREMENT PRIMARY KEY,
 lastname VARCHAR(255) NOT NULL,
 firstname VARCHAR(255) NOT NULL,
@@ -53,10 +53,10 @@ CREATE TABLE compte (
 id INT AUTO_INCREMENT PRIMARY KEY,
 role VARCHAR(255) NOT NULL,
 adminID INT,
-usersID INT,
+user_dataID INT,
 moderatorID INT,
 FOREIGN KEY (adminID) REFERENCES admin(id),
-FOREIGN KEY (usersID) REFERENCES users(id),
+FOREIGN KEY (user_dataID) REFERENCES user_data(id),
 FOREIGN KEY (moderatorID) REFERENCES moderator(id)
 );
 
@@ -78,30 +78,3 @@ CREATE TABLE operation_video (
     FOREIGN KEY (compteID) REFERENCES compte(id), 
     FOREIGN KEY (videoID) REFERENCES video(id)
 );
-
-
-
-
-INSERT INTO admin (username, password) VALUES ('admin1', 'password1'), ('admin2', 'password2');
-
-INSERT INTO moderator (username, password) VALUES ('moderator1', 'password1'), ('moderator2', 'password2');
-
-
-
-INSERT INTO users (lastname, firstname, email, username, password, status) VALUES
-('Dupont', 'Jean', 'jean.dupont@example.com', 'jdupont', 'password123', 1),
-('Martin', 'Marie', 'marie.martin@example.com', 'mmartin', 'password123', 1),
-('Leroy', 'Julien', 'julien.leroy@example.com', 'jleroy', 'password123', 1),
-('Moreau', 'Sophie', 'sophie.moreau@example.com', 'smoreau', 'password123', 1),
-('Fournier', 'Lucas', 'lucas.fournier@example.com', 'lfournier', 'password123', 1),
-('Dubois', 'Claire', 'claire.dubois@example.com', 'cdubois', 'password123', 1),
-('Lambert', 'Antoine', 'antoine.lambert@example.com', 'alambert', 'password123', 1),
-('Rousseau', 'Emma', 'emma.rousseau@example.com', 'erousseau', 'password123', 1),
-('Lefevre', 'David', 'david.lefevre@example.com', 'dlefevre', 'password123', 1),
-('Perrin', 'Julie', 'julie.perrin@example.com', 'jperrin', 'password123', 1);
-
-INSERT INTO genre (name) VALUES
-('Action'),
-('Aventure'),
-('Guerre'),
-('Sci-Fi');
