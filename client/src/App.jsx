@@ -1,14 +1,8 @@
-import { Outlet } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header/header";
+import Home from "./pages/Home";
 
 function App() {
-  return ( 
-    <>
-    <Header /> 
-    <Outlet />
-    </>
-  );
+  return <Home />;
 }
 
 export default App;

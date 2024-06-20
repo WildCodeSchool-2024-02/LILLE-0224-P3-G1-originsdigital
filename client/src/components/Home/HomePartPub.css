@@ -1,0 +1,86 @@
+.container-Home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.imgPubDay {
+  display: flex;
+}
+.TextChoose {
+  color: white;
+  font-size: 36px;
+}
+.choosePlan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 50%;
+}
+.btn-Choose {
+  color: var(--color-one);
+  font-weight: bolder;
+  font-size: large;
+  background-color: var(--color-three);
+  display: flex;
+  padding: 1rem;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease 0.2s;
+}
+.btn-Choose:hover {
+  transform: scale(1.1);
+}
+.artcileP {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 50%;
+}
+.textP {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: large;
+}
+.titleP {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+@media (max-width: 480px) {
+  .artcileP {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    width: 80%;
+  }
+  .TextChoose {
+    color: white;
+    font-size: 36px;
+    width: 100%;
+    text-align: center;
+  }
+  .choosePlan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+    text-align: center;
+  }
+}

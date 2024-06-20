@@ -1,0 +1,40 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.container-cardPub {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.cardPubSec {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.card-content {
+  font-size: 1.2em;
+  color: #555;
+}
+@media (max-width: 480px) {
+  .cardPubSec {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

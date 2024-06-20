@@ -5,41 +5,35 @@ import App from "./App";
 import TermsOfUse from "./components/Contact/TermsOfUse";
 import Contact from "./components/Contact/Contact";
 import Questions from "./components/Contact/Questions";
-import  ContactPage from "./components/Contact/ContactPage";
+import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
 import Count from "./components/Compte/Compte";
-
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-      {
-        path: "/Terms-Of-Use",
-        element: <TermsOfUse/>,
-      },
-      {
-        path: "/informations",
-        element: <Contact />,
-      },
-      {
-        path: "/article",
-        element: <Questions />,
-      },
-      {
-        path: "/contactPage",
-        element: <ContactPage />,
-      },
-      {
-        path: "/foire-aux-questions",
-        element: <Faq/>,
-      },
-    ],
-        path: "/play",
-        element: <>coucou</>,
-      },
-    ],
+    children: [],
+  },
+  {
+    path: "/Terms-Of-Use",
+    element: <TermsOfUse />,
+  },
+  {
+    path: "/informations",
+    element: <Contact />,
+  },
+  {
+    path: "/article",
+    element: <Questions />,
+  },
+  {
+    path: "/contactPage",
+    element: <ContactPage />,
+  },
+  {
+    path: "/foire-aux-questions",
+    element: <Faq />,
   },
   {
     path: "/compte",
@@ -62,7 +56,7 @@ const router = createBrowserRouter([
         regex.test(email) &&
         regexPass.test(password)
       ) {
-        alert("modification enregistré !");
+        return formulaire;
       }
       return formulaire;
     },
