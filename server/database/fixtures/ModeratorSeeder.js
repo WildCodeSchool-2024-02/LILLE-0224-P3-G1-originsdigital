@@ -17,9 +17,14 @@ class ModeratorSeeder extends AbstractSedder{
             },
         ];
 
-            moderators.forEach((moderator)=>{
-                this.insert(moderator);
-            });
+            moderators.forEach((moderator) => {
+                const moderatorWithRefName = {
+                  ...moderator,
+                  refName: `moderator_${moderator.username}`,
+                };
+          
+                this.insert(moderatorWithRefName);
+              });
     }
 }
 
