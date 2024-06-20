@@ -3,26 +3,12 @@
   --color-two: #02df93;
   --color-three: #8421ce;
   --color-four: #111111;
-  --color-five: #fdfdfd;
+  --color-five: white;
+  --color-six: #0000ff;
 }
 @font-face {
   font-family: "Glitch";
   src: url("./fonts/DoctorGlitch.otf") format("opentype");
-}
-.un {
-  color: var(--color-one);
-}
-
-.deux {
-  color: var(--color-two);
-}
-
-.trois {
-  color: var(--color-three);
-}
-
-.quatre {
-  color: var(--color-four);
 }
 
 .cinq {
@@ -117,6 +103,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 article,
 aside,
 details,
@@ -132,8 +119,10 @@ section {
 }
 body {
   line-height: 1;
+  background-color: black;
 }
 ol,
+
 ul {
   list-style: none;
 }
@@ -152,4 +141,6 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+
 }
+
