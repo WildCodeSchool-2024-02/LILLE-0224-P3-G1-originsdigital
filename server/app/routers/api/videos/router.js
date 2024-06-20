@@ -3,16 +3,17 @@ const express = require("express");
 const router = express.Router();
 
 /* ************************************************************************* */
-// Import And Use Routers Here
+// Define Your API Routes Here
 /* ************************************************************************* */
 
-const itemsRouter = require("./items/router");
+// Import item-related actions
+const { browse} = require("../../../controllers/videoActions");
 
-router.use("/items", itemsRouter);
+// Route to get a list of videos
 
-const videosRouter = require("./videos/router");
+router.get("/", browse);
 
-router.use("/videos", videosRouter);
+
 
 /* ************************************************************************* */
 
