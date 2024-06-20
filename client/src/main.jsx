@@ -1,19 +1,44 @@
 import ReactDOM from "react-dom/client";
 import axios from "axios";
 import React from "react";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import App from "./App";
-
 import CreationAccount from "./components/creationAccount/CreationAccount";
 import UpdateUserInfo from "./components/Compte/UpdateUserInfo";
+import TermsOfUse from "./components/Contact/TermsOfUse";
+import Contact from "./components/Contact/Contact";
+import Questions from "./components/Contact/Questions";
+import  ContactPage from "./components/Contact/ContactPage";
+import Faq from "./components/Contact/Faq";
+import Count from "./components/Compte/Compte";
+
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      {
+        path: "/Terms-Of-Use",
+        element: <TermsOfUse/>,
+      },
+      {
+        path: "/informations",
+        element: <Contact />,
+      },
+      {
+        path: "/article",
+        element: <Questions />,
+      },
+      {
+        path: "/contactPage",
+        element: <ContactPage />,
+      },
+      {
+        path: "/foire-aux-questions",
+        element: <Faq/>,
+      },
       {
         path: "/play",
       },
@@ -43,7 +68,6 @@ const router = createBrowserRouter([
       ) {
         axios.put("http://localhost:3310/api/users", formulaire);
       }
-
       return formulaire;
     },
   },
