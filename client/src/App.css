@@ -6,10 +6,13 @@
   --color-five: white;
   --color-six: #0000ff;
 }
-
 @font-face {
   font-family: "Glitch";
   src: url("./fonts/DoctorGlitch.otf") format("opentype");
+}
+
+.cinq {
+  color: var(--color-five);
 }
 
 html,
@@ -123,6 +126,7 @@ ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
