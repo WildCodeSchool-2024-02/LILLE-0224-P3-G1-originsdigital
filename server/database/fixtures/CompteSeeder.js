@@ -31,7 +31,12 @@ class CompteSeeder extends AbstractSeeder {
         ];
         
         comptes.forEach((compte) => {
-            this.insert(compte);
+            const compteWithRefName = {
+                ...compte,
+                refName: `compte_${compte.role}`,
+              };
+
+            this.insert(compteWithRefName);
         });
     }
 }
