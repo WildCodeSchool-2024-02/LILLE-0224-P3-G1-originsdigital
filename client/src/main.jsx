@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [],
   },
   {
-    path: "/Terms-Of-Use",
+    path: "/terms-of-use",
     element: <TermsOfUse />,
   },
   {
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     element: <Questions />,
   },
   {
-    path: "/contactPage",
+    path: "/contact",
     element: <ContactPage />,
   },
   {
