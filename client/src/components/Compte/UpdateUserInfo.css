@@ -111,7 +111,6 @@ body {
 }
 
 .validate {
-  /* position: relative; */
   top: 1em;
   text-align: center;
   color: green;
