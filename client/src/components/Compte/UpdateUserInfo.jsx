@@ -1,12 +1,24 @@
-import { Form, useActionData } from "react-router-dom";
-import "./Compte.css";
-import { useState } from "react";
+import { Form, useActionData, useParams } from "react-router-dom";
+import "./UpdateUserInfo.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-function Count() {
-  const [valueUserName, setValueUserName] = useState("alexandre");
-  const [valueMail, setValueMail] = useState("alex@gmail.com");
-  const [valuePass, setValuePass] = useState("Abcd1234!");
+function UpdateUserInfo() {
+  const [valueUserName, setValueUserName] = useState();
+  const [valueMail, setValueMail] = useState();
+  const [valuePass, setValuePass] = useState();
   const [initError, setInitError] = useState(false);
+  const [user, setUser] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    axios.get(`http://localhost:3310/api/users/${id}`).then((response) => {
+      setValueUserName(response.data[0].username);
+      setValueMail(response.data[0].email);
+      setValuePass(response.data[0].password);
+      setUser(response.data);
+    });
+  }, []);
 
   const onchangePseudo = (e) => {
     setValueUserName(e.target.value);
@@ -19,10 +31,11 @@ function Count() {
   };
 
   const init = () => {
-    setValueUserName("alexandre");
-    setValueMail("alex@gmail.com");
-    setValuePass("Abcd1234!");
+    setValueUserName(user[0].username);
+    setValueMail(user[0].email);
+    setValuePass(user[0].password);
     setInitError(!initError);
+    window.location.reload();
   };
 
   const data = useActionData();
@@ -37,7 +50,7 @@ function Count() {
         setInitError(false);
       }}
     >
-      <h1 className="h1-my-account">Modifier mon profil</h1> <hr />
+      <h1 className="h1-my-account">Modifier mon profil </h1> <hr />
       <div className="div-form">
         <ul className="ul-form">
           <li className="info">
@@ -65,7 +78,7 @@ function Count() {
             <label htmlFor="email" className="label">
               Email:{" "}
               {data && !regex.test(data.mail) && !initError ? (
-                <span className="error">adresse mail invalide</span>
+                <span className="error">Adresse mail invalide</span>
               ) : (
                 ""
               )}
@@ -85,8 +98,8 @@ function Count() {
               {data && !regexPass.test(data.pass) && !initError ? (
                 <span className="error">
                   <br />
-                  le mot de passe doit <br />
-                  contenir au moin <br />8 caractères, une <br />
+                  Le mot de passe doit <br />
+                  contenir au moins <br />8 caractères, une <br />
                   majuscule, un chiffre et
                   <br /> un caractère spécial
                 </span>
@@ -102,19 +115,25 @@ function Count() {
               onChange={onchangePass}
               value={valuePass}
             />
+            <h3 className="validate">
+              {data &&
+                data.user.length > 3 &&
+                regex.test(data.mail) &&
+                regexPass.test(data.pass) &&
+                "ENREGISTRER !"}{" "}
+            </h3>
           </li>
         </ul>
       </div>
       <hr className="hr" />
       <div className="rec-cancel">
         <input type="submit" value="ENREGISTRER" className="input" id="save" />
-
         <button type="button" className="input" id="cancel" onClick={init}>
           ANNULER
         </button>
       </div>
       <img
-        src="src/assets/images/th.jpg"
+        src="../src/assets/images/th.jpg"
         alt="cassettes disposé en diagonale"
         className="background"
       />
@@ -122,4 +141,4 @@ function Count() {
   );
 }
 
-export default Count;
+export default UpdateUserInfo;
