@@ -5,8 +5,9 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
-import Count from "./components/Compte/Compte";
+
 import CreationAccount from "./components/creationAccount/CreationAccount";
+import UpdateUserInfo from "./components/Compte/UpdateUserInfo";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +20,8 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/compte/:id",
-    element: <Count />,
+    path: "/users/:id",
+    element: <UpdateUserInfo />,
     action: async ({ request }) => {
       const form = await request.formData();
       const username = form.get("username");
@@ -40,14 +41,14 @@ const router = createBrowserRouter([
         regex.test(email) &&
         regexPass.test(password)
       ) {
-        axios.put("http://localhost:3310/api/compte", formulaire);
+        axios.put("http://localhost:3310/api/users", formulaire);
       }
 
       return formulaire;
     },
   },
   {
-    path: "/inscription",
+    path: "/subscribe",
     element: <CreationAccount />,
     action: async ({ request }) => {
       const data = await request.formData();

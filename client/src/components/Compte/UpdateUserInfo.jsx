@@ -1,9 +1,9 @@
 import { Form, useActionData, useParams } from "react-router-dom";
-import "./Compte.css";
+import "./UpdateUserInfo.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-function Count() {
+function UpdateUserInfo() {
   const [valueUserName, setValueUserName] = useState();
   const [valueMail, setValueMail] = useState();
   const [valuePass, setValuePass] = useState();
@@ -12,7 +12,7 @@ function Count() {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:3310/api/compte/${id}`).then((response) => {
+    axios.get(`http://localhost:3310/api/users/${id}`).then((response) => {
       setValueUserName(response.data[0].username);
       setValueMail(response.data[0].email);
       setValuePass(response.data[0].password);
@@ -99,7 +99,7 @@ function Count() {
                 <span className="error">
                   <br />
                   Le mot de passe doit <br />
-                  contenir au moin <br />8 caractères, une <br />
+                  contenir au moins <br />8 caractères, une <br />
                   majuscule, un chiffre et
                   <br /> un caractère spécial
                 </span>
@@ -128,7 +128,6 @@ function Count() {
       <hr className="hr" />
       <div className="rec-cancel">
         <input type="submit" value="ENREGISTRER" className="input" id="save" />
-
         <button type="button" className="input" id="cancel" onClick={init}>
           ANNULER
         </button>
@@ -142,4 +141,4 @@ function Count() {
   );
 }
 
-export default Count;
+export default UpdateUserInfo;

@@ -22,15 +22,16 @@ function CreationAccount() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-
+    // prevState est un mot clef qui créé une copie de l'état précédent de l'objet et ensuite
+    // modifie la valeur dans la propriété [name] : si je change le firstname, ça va changer la valeur de [firsname] en lui
+    // donnant la nouvelle valeur de l'input.
     setUser((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   };
 
-  const send = () => {
-    // event.preventDefault();
+  const handleSubmit = () => {
     if (
       user.last.length > 3 &&
       user.first.length > 3 &&
@@ -39,7 +40,7 @@ function CreationAccount() {
       regexPass.test(user.pass)
     ) {
       axios
-        .post("http://localhost:3310/api/insertUser", user)
+        .post("http://localhost:3310/api/users/create", user)
         .then((response) => {
           setResponseServer(response.data.message);
           setTimeout(() => {
@@ -72,13 +73,16 @@ function CreationAccount() {
       />
       <section className="form-creation-account">
         <h1 className="h1-creation-account">Inscription</h1>
-        <Form className="form-creation-account" method="post" onSubmit={send}>
+        <Form
+          className="form-creation-account"
+          method="post"
+          onSubmit={handleSubmit}
+        >
           {dataForm && dataForm.lastname.length < 3 && (
             <h3 className="errors">
               Le nom doit contenir au moins 3 caractère et maximum 100
             </h3>
           )}
-
           <input
             type="text"
             name="last"
@@ -92,7 +96,6 @@ function CreationAccount() {
               Le prénom doit contenir au moins 3 caractère et maximum 100
             </h3>
           )}
-
           <input
             type="text"
             name="first"
@@ -104,7 +107,6 @@ function CreationAccount() {
           {dataForm && !regexMail.test(dataForm.email) && (
             <h3 className="errors">Adresse mail invalide</h3>
           )}
-
           <input
             type="text"
             name="mail"
@@ -118,7 +120,6 @@ function CreationAccount() {
               Le pseudo doit contenir au moins 3 caractère et maximum 100
             </h3>
           )}
-
           <input
             type="text"
             name="user"
@@ -135,7 +136,6 @@ function CreationAccount() {
               <br /> un caractère spécial
             </h3>
           )}
-
           <input
             type="password"
             name="pass"
@@ -144,9 +144,7 @@ function CreationAccount() {
             value={user.pass}
             onChange={handleChange}
           />
-
           <h3 className="errors-ok">{responseServer}</h3>
-
           <input
             type="submit"
             className="input-creation-account"

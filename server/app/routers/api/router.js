@@ -6,13 +6,8 @@ const itemsRouter = require("./items/router");
 
 router.use("/items", itemsRouter);
 
-const MAJ = require("./updateUser/router");
+const userRouter = require("./users/router");
 
-router.use("/compte", MAJ)
-
-const usertUser = require("../insertUser/router");
-
-router.use("/insertUser", usertUser);
-
+router.use("/users", userRouter);
 
 module.exports = router;
