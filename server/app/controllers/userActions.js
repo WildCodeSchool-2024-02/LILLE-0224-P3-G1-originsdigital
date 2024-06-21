@@ -30,8 +30,28 @@ const read = async (req, res, next) => {
   }
 };
 
+const verify = async (req, res, next) => {
+  try {
+    const verif = await tables.maj.verify(req.params.name);
+    res.json(verif);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const verifyEmail = async (req, res, next) => {
+  try {
+    const verif = await tables.maj.verifyEmail(req.params.email);
+    res.json(verif);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   edit,
   read,
   add,
+  verify,
+  verifyEmail,
 };

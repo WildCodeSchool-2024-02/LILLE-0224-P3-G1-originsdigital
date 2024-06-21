@@ -14,7 +14,4 @@ const videosRouter = require("./videos/router");
 
 router.use("/videos", videosRouter);
 
-/* ************************************************************************* */
-
-
 module.exports = router;
