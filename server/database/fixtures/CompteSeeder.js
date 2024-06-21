@@ -9,7 +9,7 @@ class CompteSeeder extends AbstractSeeder {
     }
     
     run() {
-        const comptes = [
+        const accounts = [
             {
                 role: "admin",
                 adminID: this.getRef("admin_admin1").insertId,
@@ -30,13 +30,13 @@ class CompteSeeder extends AbstractSeeder {
             },
         ];
         
-        comptes.forEach((compte) => {
-            const compteWithRefName = {
-                ...compte,
-                refName: `compte_${compte.role}`,
+        accounts.forEach((account) => {
+            const accountWithRefName = {
+                ...account,
+                refName: `compte_${account.role}`,
               };
 
-            this.insert(compteWithRefName);
+            this.insert(accountWithRefName);
         });
     }
 }
