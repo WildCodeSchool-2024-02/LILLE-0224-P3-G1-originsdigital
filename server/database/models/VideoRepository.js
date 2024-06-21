@@ -8,10 +8,14 @@ class VideoRepository extends AbstractRepository {
   }
 
   async readAll() {
-    // Execute the SQL SELECT query to retrieve all items from the "video" table
-    const [rows] = await this.database.query(`select * from ${this.table}`);
+    // Execute the SQL SELECT query to retrieve all items with joins
+    const [rows] = await this.database.query(`
+      SELECT * FROM video_genre AS vg
+      RIGHT JOIN video AS v ON v.id = vg.videoID
+      LEFT JOIN genre AS g ON g.id = vg.genreID
+    `);
 
-    // Return the array of videos
+    // Return the array of results
     return rows;
   }
 }

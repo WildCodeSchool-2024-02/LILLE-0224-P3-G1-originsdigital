@@ -8,11 +8,8 @@ import UpdateUserInfo from "./components/Compte/UpdateUserInfo";
 import TermsOfUse from "./components/Contact/TermsOfUse";
 import Contact from "./components/Contact/Contact";
 import Questions from "./components/Contact/Questions";
-import  ContactPage from "./components/Contact/ContactPage";
+import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
-import Count from "./components/Compte/Compte";
-
-
 
 const router = createBrowserRouter([
   {
@@ -21,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/Terms-Of-Use",
-        element: <TermsOfUse/>,
+        element: <TermsOfUse />,
       },
       {
         path: "/informations",
@@ -37,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/foire-aux-questions",
-        element: <Faq/>,
+        element: <Faq />,
       },
       {
         path: "/play",
