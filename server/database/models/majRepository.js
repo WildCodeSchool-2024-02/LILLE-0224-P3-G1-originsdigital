@@ -2,19 +2,19 @@ const AbstractRepository = require("./AbstractRepository");
 
 class MajRepository extends AbstractRepository {
   constructor() {
-    super({ table: "users" });
+    super({ table: "user_data" });
   }
 
   async update(data) {
     await this.database.query(
-      `update users set lastname = 'Dupont',firstname = 'Jean',email = ?,username = ?,password = ? where id = ?`,
+      `update user_data set lastname = 'Dupont',firstname = 'Jean',email = ?,username = ?,password = ? where id = ?`,
       [data.mail, data.user, data.pass, data.id]
     );
   }
 
   async read(id) {
     const [info] = await this.database.query(
-      `select * from users where id = ?`,
+      `select * from user_data where id = ?`,
       [id]
     );
     return info;

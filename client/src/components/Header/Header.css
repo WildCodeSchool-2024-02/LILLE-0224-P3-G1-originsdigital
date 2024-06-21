@@ -12,6 +12,7 @@ header {
   height: 5em;
   background-color: black;
   position: fixed;
+  z-index: 1;
 }
 
 .img_background_header {
