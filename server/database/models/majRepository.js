@@ -19,6 +19,22 @@ class MajRepository extends AbstractRepository {
     );
     return info;
   }
+
+  async verify(name) {
+    const [info] = await this.database.query(
+      `select * from user_data where username like ?`,
+      [name]
+    );
+    return info;
+  }
+
+  async verifyEmail(email) {
+    const [info] = await this.database.query(
+      `select * from user_data where email like ?`,
+      [email]
+    );
+    return info;
+  }
 }
 
 module.exports = MajRepository;

@@ -9,10 +9,12 @@ function CreationAccount() {
   const regexPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/;
 
   const dataForm = useActionData();
-  if (dataForm) console.info(dataForm);
 
   const [responseServer, setResponseServer] = useState("");
   const [animation, setAnimation] = useState(null);
+  const [eyes, seteyes] = useState(true);
+  const [verify, setVerify] = useState("");
+  const [verifyEmail, setVerifyEmail] = useState("");
 
   const [user, setUser] = useState({
     last: "",
@@ -34,6 +36,12 @@ function CreationAccount() {
   };
 
   const handleSubmit = () => {
+    axios
+      .get(`http://localhost:3310/api/users/verify/${user.user}`)
+      .then((response) => setVerify(response.data[0].username));
+    axios
+      .get(`http://localhost:3310/api/users/verify-email/${user.mail}`)
+      .then((response) => setVerifyEmail(response.data[0].email));
     if (
       user.last.length > 3 &&
       user.first.length > 3 &&
@@ -65,7 +73,7 @@ function CreationAccount() {
   return (
     <>
       <img
-        src="src/assets/images/th.jpg"
+        src="src/assets/images/th3.jpg"
         alt="this is a fond screen"
         className="backgroud-creation-accound"
       />
@@ -110,6 +118,11 @@ function CreationAccount() {
           {dataForm && !regexMail.test(dataForm.email) && (
             <h3 className="errors">Adresse mail invalide</h3>
           )}
+          {dataForm &&
+            regexMail.test(dataForm.email) &&
+            dataForm.email === verifyEmail && (
+              <h3 className="errors">Cette adresse email exite déja</h3>
+            )}
           <input
             type="text"
             name="mail"
@@ -123,6 +136,11 @@ function CreationAccount() {
               Le pseudo doit contenir au moins <br />3 caractère et maximum 100
             </h3>
           )}
+          {dataForm &&
+            dataForm.username === verify &&
+            dataForm.username.length > 3 && (
+              <h3 className="errors">Ce pseudo existe déja</h3>
+            )}
           <input
             type="text"
             name="user"
@@ -140,13 +158,22 @@ function CreationAccount() {
             </h3>
           )}
           <input
-            type="password"
+            type={eyes ? "password" : "text"}
             name="pass"
             className="input-creation-account"
             placeholder=" Mot de passe"
             value={user.pass}
             onChange={handleChange}
           />
+          <button
+            type="button"
+            className="eyes"
+            onClick={() => {
+              seteyes(!eyes);
+            }}
+          >
+            &#128065;{eyes && <hr className="hr-eyes" />}{" "}
+          </button>
           <div id={animation !== null && "connect"}>
             <h3 className="errors-ok">{responseServer}</h3>
             {responseServer.length > 0 && animation !== null ? (
@@ -167,7 +194,7 @@ function CreationAccount() {
               id="submit-creation-account"
               value="Suivant"
             />
-            <hr style={{ marginTop: "2em" }} className="hr-submit" />
+            <hr style={{ marginTop: "1em" }} className="hr-submit" />
           </div>
         </Form>
       </section>

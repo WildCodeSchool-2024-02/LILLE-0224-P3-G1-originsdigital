@@ -8,7 +8,7 @@
   width: 4.5em;
   position: absolute;
   padding: 0.4em;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .backgroud-creation-accound {
@@ -17,7 +17,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 0.15;
+  opacity: 0.3;
 }
 
 .h1-creation-account {
@@ -90,7 +90,7 @@
 .h2-submit {
   color: white;
   font-size: 1em;
-  padding-top: 1em;
+  padding-top: 0em;
   text-align: center;
 }
 
@@ -110,6 +110,44 @@
   text-align: center;
 }
 
+.eyes {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  width: 2em;
+  position: relative;
+  top: -1.3em;
+  left: 37%;
+  cursor: pointer;
+}
+
+.hr-eyes {
+  margin-top: -35%;
+  width: 50%;
+  margin-left: 25%;
+  transform: rotate(-45deg);
+}
+
+#connect {
+  position: relative;
+  top: 0em;
+  animation-name: connexion;
+  animation-duration: 1.5s;
+  cursor: pointer;
+}
+
+@keyframes connexion {
+  from {
+    top: 4em;
+    opacity: 0;
+  }
+  to {
+    top: 0em;
+    opacity: 1;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .input-creation-account {
     width: 40%;
@@ -117,7 +155,11 @@
   .logo-creation-account {
     width: 7em;
     padding: 1em;
-    opacity: 0.6;
+    opacity: 0.8;
+  }
+
+  .eyes {
+    left: 25%;
   }
 }
 
@@ -138,7 +180,7 @@
   }
 
   .backgroud-creation-accound {
-    opacity: 0.05;
+    opacity: 0.3;
   }
 
   #submit-creation-account {
@@ -151,7 +193,7 @@
   .logo-creation-account {
     width: 8em;
     padding: 2em;
-    opacity: 0.6;
+    opacity: 1;
   }
 
   .h1-creation-account {
@@ -213,6 +255,20 @@
     color: var(--color-one);
     text-align: center;
     margin-top: 0.5em;
+    font-size: 2em;
+  }
+
+  .eyes {
+    top: -1.5em;
+    left: 40%;
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .eyes {
+    top: -1.5em;
+    left: 37%;
     font-size: 2em;
   }
 }
