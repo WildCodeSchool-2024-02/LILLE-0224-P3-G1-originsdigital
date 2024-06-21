@@ -7,7 +7,7 @@ const add = async (req, res, next) => {
   } catch (err) {
     next(err);
   }
-  return res.status(200).json({ message: "ENREGISTRÉ" });
+  return res.status(200).json({ message: "ENREGISTRÉ !" });
 };
 
 const edit = async (req, res, next) => {

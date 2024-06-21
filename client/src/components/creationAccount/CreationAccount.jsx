@@ -2,6 +2,7 @@ import { Form, useActionData } from "react-router-dom";
 import "./CreationAccount.css";
 import { useState } from "react";
 import axios from "axios";
+import Footer from "../Footer";
 
 function CreationAccount() {
   const regexMail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
@@ -11,6 +12,7 @@ function CreationAccount() {
   if (dataForm) console.info(dataForm);
 
   const [responseServer, setResponseServer] = useState("");
+  const [animation, setAnimation] = useState(null);
 
   const [user, setUser] = useState({
     last: "",
@@ -43,6 +45,7 @@ function CreationAccount() {
         .post("http://localhost:3310/api/users/create", user)
         .then((response) => {
           setResponseServer(response.data.message);
+          setAnimation(true);
           setTimeout(() => {
             setUser({
               last: "",
@@ -80,7 +83,7 @@ function CreationAccount() {
         >
           {dataForm && dataForm.lastname.length < 3 && (
             <h3 className="errors">
-              Le nom doit contenir au moins 3 caractère et maximum 100
+              Le nom doit contenir au moins <br />3 caractère et maximum 100
             </h3>
           )}
           <input
@@ -88,12 +91,12 @@ function CreationAccount() {
             name="last"
             value={user.last}
             className="input-creation-account"
-            placeholder="Nom"
+            placeholder=" Nom"
             onChange={handleChange}
           />
           {dataForm && dataForm.firstname.length < 3 && (
             <h3 className="errors">
-              Le prénom doit contenir au moins 3 caractère et maximum 100
+              Le prénom doit contenir au moins <br />3 caractère et maximum 100
             </h3>
           )}
           <input
@@ -101,7 +104,7 @@ function CreationAccount() {
             name="first"
             value={user.first}
             className="input-creation-account"
-            placeholder="Prénom"
+            placeholder=" Prénom"
             onChange={handleChange}
           />
           {dataForm && !regexMail.test(dataForm.email) && (
@@ -111,20 +114,20 @@ function CreationAccount() {
             type="text"
             name="mail"
             className="input-creation-account"
-            placeholder="Email"
+            placeholder=" Email"
             value={user.mail}
             onChange={handleChange}
           />
           {dataForm && dataForm.username.length < 3 && (
             <h3 className="errors">
-              Le pseudo doit contenir au moins 3 caractère et maximum 100
+              Le pseudo doit contenir au moins <br />3 caractère et maximum 100
             </h3>
           )}
           <input
             type="text"
             name="user"
             className="input-creation-account"
-            placeholder="Pseudo"
+            placeholder=" Pseudo"
             value={user.user}
             onChange={handleChange}
           />
@@ -140,19 +143,35 @@ function CreationAccount() {
             type="password"
             name="pass"
             className="input-creation-account"
-            placeholder="Mot de passe"
+            placeholder=" Mot de passe"
             value={user.pass}
             onChange={handleChange}
           />
-          <h3 className="errors-ok">{responseServer}</h3>
-          <input
-            type="submit"
-            className="input-creation-account"
-            id="submit-creation-account"
-            value="Suivant"
-          />
+          <div id={animation !== null && "connect"}>
+            <h3 className="errors-ok">{responseServer}</h3>
+            {responseServer.length > 0 && animation !== null ? (
+              <h2 className="connexion">se connecter</h2>
+            ) : (
+              ""
+            )}
+          </div>
+          <div className="next">
+            <hr className="hr-submit" />
+            <h2 className="h2-submit">
+              Inscrivez vous gratuitement pour regarder des films et des séries
+              des années 80 à 2000.
+            </h2>
+            <input
+              type="submit"
+              className="input-creation-account"
+              id="submit-creation-account"
+              value="Suivant"
+            />
+            <hr style={{ marginTop: "2em" }} className="hr-submit" />
+          </div>
         </Form>
       </section>
+      <Footer />
     </>
   );
 }

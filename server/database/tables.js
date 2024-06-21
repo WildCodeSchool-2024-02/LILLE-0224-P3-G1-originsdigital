@@ -1,10 +1,8 @@
 const InsertUserRepository = require("./models/InsertUserRepository");
-const ItemRepository = require("./models/ItemRepository");
 const MajRepository = require("./models/majRepository");
 const VideoRepository = require("./models/VideoRepository");
 
 const tables = {};
-tables.item = new ItemRepository();
 tables.maj = new MajRepository();
 tables.insert = new InsertUserRepository();
 tables.video = new VideoRepository();

@@ -2,7 +2,7 @@
   --color-one: #fafd36;
   --color-two: #02df93;
   --color-three: #8421ce;
-  --color-four: #111111;
+  --color-four: black;
   --color-five: white;
   --color-six: #0000ff;
 }
@@ -122,7 +122,6 @@ body {
   background-color: black;
 }
 ol,
-
 ul {
   list-style: none;
 }
@@ -141,6 +140,4 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-
 }
-

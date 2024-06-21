@@ -3,8 +3,8 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer>
-      <div class="footer-container">
-        <div class="footer-column">
+      <div className="footer-container">
+        <div className="footer-column">
           <h3>CATEGORIES</h3>
           <ul>
             <li>FILMS</li>
@@ -12,7 +12,7 @@ function Footer() {
             <li>POPULAIRE</li>
           </ul>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
           <h3>SUIVEZ NOUS</h3>
           <ul>
             <a href="www.facebook.com">
@@ -25,7 +25,7 @@ function Footer() {
             <li>CONTACTEZ NOUS</li>
           </ul>
         </div>
-        <div class="footer-column">
+        <div className="footer-column">
           <h3>COMPTE</h3>
           <ul>
             <li>FAVORIS</li>
