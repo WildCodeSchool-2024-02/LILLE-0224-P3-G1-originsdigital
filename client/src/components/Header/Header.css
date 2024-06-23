@@ -38,14 +38,15 @@ header {
 }
 
 .marquee-rtl {
-  width: 25%;
+  width: 26%;
   background-color: #666867;
   color: #3bad49;
   overflow: hidden;
   position: absolute;
   left: 37.5%;
-  top: 3em;
-  padding: 0.3em;
+  top: 6.2em;
+  padding: 0.5em;
+  border: 1px solid black;
   font-family: "DS-Digital", sans-serif;
   font-weight: 900;
 }
@@ -74,7 +75,7 @@ header {
     left: 100%;
     top: 10em;
     opacity: 1;
-    height: 100%;
+    height: 7em;
   }
   25% {
     width: 40%;
@@ -82,31 +83,31 @@ header {
     left: 30%;
     top: 10em;
     opacity: 1;
-    height: 100%;
+    height: 7em;
   }
   50% {
     width: 40%;
     position: absolute;
     left: 30%;
-    top: 1.5em;
+    top: 3em;
     opacity: 0.5;
-    height: 1.5em;
+    height: 3em;
   }
   75% {
     width: 40%;
     position: absolute;
     left: 30%;
-    top: 1.5em;
+    top: 3em;
     opacity: 0;
-    height: 1.5em;
+    height: 3em;
   }
   100% {
     width: 40%;
     position: absolute;
     left: 30%;
-    top: 1.5em;
+    top: 3em;
     opacity: 0;
-    height: 1.5em;
+    height: 3em;
   }
 }
 
@@ -156,7 +157,7 @@ header {
 
 @media screen and (min-width: 768px) {
   header {
-    height: 10em;
+    height: 15em;
   }
 
   .img_k7 {
@@ -190,43 +191,42 @@ header {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 4em;
       opacity: 0.5;
-      height: 3em;
+      height: 5em;
     }
     75% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 4em;
       opacity: 0;
-      height: 3em;
+      height: 5em;
     }
     100% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 4em;
       opacity: 0;
-      height: 3em;
+      height: 5em;
     }
   }
   .marquee-rtl {
-    width: 25%;
+    width: 27%;
     background-color: #666867;
     overflow: hidden;
     position: absolute;
-    left: 37.5%;
-    top: 5.5em;
-    font-size: 1.1em;
-    padding-top: 0.5em;
-    padding-bottom: 1.3em;
+    left: 37%;
+    top: 5em;
+    font-size: 1.8em;
     font-weight: 900;
   }
 
   .searchBar {
     position: absolute;
-    left: 30%;
+    top: 1.2em;
+    left: 30.5%;
     width: 39%;
     background-color: #666867;
     border: 1px solid #3bad49;
@@ -249,7 +249,7 @@ header {
 @media screen and (min-width: 1024px) {
   header {
     width: 90%;
-    height: 11em;
+    height: 15em;
     background-color: black;
     position: fixed;
     left: 5%;
@@ -286,39 +286,39 @@ header {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 4em;
       opacity: 0.5;
-      height: 3.5em;
+      height: 5em;
     }
     75% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 4em;
       opacity: 0;
-      height: 3.5em;
+      height: 5em;
     }
     100% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 4em;
       opacity: 0;
-      height: 3.5em;
+      height: 5em;
     }
   }
 
   .marquee-rtl {
-    width: 25%;
+    width: 26%;
     background-color: #666867;
     overflow: hidden;
     position: absolute;
     left: 37.5%;
-    top: 6em;
+    top: 4.5em;
     padding: 0.1em;
-    font-size: 1.1em;
-    padding-top: 0.8em;
-    padding-bottom: 1.3em;
+    font-size: 2em;
+    padding-top: 0.2em;
+    padding-bottom: 0.3em;
     padding-right: 0.3em;
     font-weight: 900;
   }
@@ -326,7 +326,7 @@ header {
   .searchBar {
     position: absolute;
     font-weight: bold;
-    left: 30%;
+    left: 30.5%;
     width: 39%;
     background-color: #666867;
     border: 1px solid #3bad49;
