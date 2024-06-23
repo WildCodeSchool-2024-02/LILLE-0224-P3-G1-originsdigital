@@ -9,10 +9,11 @@
 
 header {
   width: 100%;
-  height: 5em;
+  height: 10em;
   background-color: black;
   position: fixed;
   z-index: 1;
+  top: 0;
 }
 
 .img_background_header {

@@ -16,16 +16,11 @@ import Home from "./pages/Home";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <App />
-        <Header />
-      </>
-    ),
+    element: <App />,
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "/Terms-Of-Use",

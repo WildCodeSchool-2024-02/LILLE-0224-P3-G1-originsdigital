@@ -4,7 +4,7 @@ function HomePartPub() {
   return (
     <div className="container-Home">
       <section className="imgPubDay">
-        <img
+        <img className="imgHomePartPub"
           src="src/assets/images/420098-le-seigneur-des-anneaux-que-sont-1200x630-1.jpg"
           alt="pochette de jour "
         />
