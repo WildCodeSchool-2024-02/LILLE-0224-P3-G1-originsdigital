@@ -10,6 +10,7 @@ import Contact from "./components/Contact/Contact";
 import Questions from "./components/Contact/Questions";
 import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
+import Count from "./components/Compte/Compte";
 import Header from "./components/Header/header";
 
 const router = createBrowserRouter([
