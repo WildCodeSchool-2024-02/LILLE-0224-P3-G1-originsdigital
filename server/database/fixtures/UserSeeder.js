@@ -2,27 +2,102 @@ const AbstractSeeder = require("./AbstractSeeder");
 
 class UserSeeder extends AbstractSeeder {
   constructor() {
-    // Call the constructor of the parent class (AbstractSeeder) with appropriate options
-    super({ table: "user", truncate: true });
+    super({ table: "user_data", truncate: true });
   }
 
-  // The run method - Populate the 'user' table with fake data
-
   run() {
-    // Generate and insert fake data into the 'user' table
-    for (let i = 0; i < 10; i += 1) {
-      // Generate fake user data
-      const fakeUser = {
-        email: this.faker.internet.email(), // Generate a fake email using faker library
-        password: this.faker.internet.password(), // Generate a fake password using faker library
-        refName: `user_${i}`, // Create a reference name for the user
+    const users = [
+      {
+        lastname: "Dupont",
+        firstname: "Jean",
+        email: "jean.dupont@example.com",
+        username: "jdupont",
+        password: "password123",
+        status: 1,
+      },
+      {
+        lastname: "Martin",
+        firstname: "Marie",
+        email: "marie.martin@example.com",
+        username: "mmartin",
+        password: "password123",
+        status: 1,
+      },
+      {
+        lastname: "Leroy",
+        firstname: "Julien",
+        email: "julien.leroy@example.com",
+        username: "jleroy",
+        password: "password123",
+        status: 1,
+      },
+      {
+        lastname: "Moreau",
+        firstname: "Sophie",
+        email: "sophie.moreau@example.com",
+        username: "smoreau",
+        password: "password123",
+        status: 1,
+      },
+      {
+        lastname: "Fournier",
+        firstname: "Lucas",
+        email: "lucas.fournier@example.com",
+        username: "lfournier",
+        password: "password123",
+        status: 1,
+      },
+      {
+        lastname: "Dubois",
+        firstname: "Claire",
+        email: "claire.dubois@example.com",
+        username: "cdubois",
+        password: "password123",
+        status: 1,
+      },
+      {
+        lastname: "Lambert",
+        firstname: "Antoine",
+        email: "antoine.lambert@example.com",
+        username: "alambert",
+        password: "password123",
+        status: 1,
+      },
+      {
+        lastname: "Rousseau",
+        firstname: "Emma",
+        email: "emma.rousseau@example.com",
+        username: "erousseau",
+        password: "password123",
+        status: 1,
+      },
+      {
+        lastname: "Lefevre",
+        firstname: "David",
+        email: "david.lefevre@example.com",
+        username: "dlefevre",
+        password: "password123",
+        status: 1,
+      },
+      {
+        lastname: "Perrin",
+        firstname: "Julie",
+        email: "julie.perrin@example.com",
+        username: "jperrin",
+        password: "password123",
+        status: 1,
+      },
+    ];
+
+    users.forEach((user) => {
+      const userWithRefName = {
+        ...user,
+        refName: `user_data_${user.username}`,
       };
 
-      // Insert the fakeUser data into the 'user' table
-      this.insert(fakeUser); // insert into user(email, password) values (?, ?)
-    }
+      this.insert(userWithRefName);
+    });
   }
 }
 
-// Export the UserSeeder class
 module.exports = UserSeeder;

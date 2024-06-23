@@ -1,0 +1,192 @@
+.darker-grotesque {
+  font-family: "Darker Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body {
+  font-family: "Darker Grotesque", sans-serif;
+  margin: 0;
+}
+h3 {
+  color: var(--color-four);
+  padding-left: 1rem;
+}
+p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+ul {
+  padding-right: 1rem;
+}
+@media (max-width: 480px) {
+  .ContainerAbout {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-four);
+    width: 100%;
+  }
+  .SectionAbout {
+    background-color: var(--color-two);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .Description {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 20%;
+  }
+  .Description1 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-bottom: 1rem;
+    border-radius: 10%;
+  }
+  .Description2 {
+    background-image: url(../assets//images//About-opacity.jpg);
+    background-position: top;
+    color: var(--color-one);
+    width: 80%;
+    font-weight: bold;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 100% 0% 100% 0% / 7% 91% 9% 93%;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  }
+  .ImgAbout {
+    width: 80%;
+    height: 20rem;
+    object-fit: cover;
+    display: flex;
+    margin: 1rem;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  }
+  .ImgAbout1 {
+    width: 80%;
+    height: 20rem;
+    object-fit: cover;
+    display: flex;
+    margin: 1rem;
+    border-radius: 92% 8% 90% 10% / 28% 100% 0% 72%;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.ContainerAbout {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  background-color: var(--color-four);
+
+  /*width: 100%;*/
+}
+.SectionAbout {
+  background-color: var(--color-two);
+  margin: 1rem;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 0px 0px 44px 0px rgba(2, 223, 147, 1);
+}
+.Description {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 20%;
+  transition: transform 0.5s ease;
+}
+.Description:hover {
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  transform: scale(1.05);
+}
+.Description1 {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 10%;
+  transition: transform 0.5s ease;
+  margin: 1rem;
+}
+.Description1:hover {
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  transform: scale(1.05);
+}
+.Description2 {
+  background-image: url(../assets/images/apropos-opacity.jpg);
+  background-position: top;
+  color: var(--color-one);
+  overflow: hidden;
+  width: 50%;
+  font-weight: bold;
+  padding: 10rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 100% 0% 100% 0% / 7% 91% 9% 93%;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  transition: transform 0.5s ease;
+  margin: 1rem;
+}
+.Description2:hover {
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  transform: scale(1.05);
+  overflow: hidden;
+}
+
+.ImgAbout {
+  width: 80%;
+  height: 20rem;
+  object-fit: cover;
+  display: flex;
+  margin: 1rem;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  transition: transform 0.5s ease;
+}
+.ImgAbout:hover {
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  transform: scale(1.05);
+}
+
+.ImgAbout1 {
+  width: 80%;
+  height: 20rem;
+  object-fit: cover;
+  display: flex;
+  margin: 1rem;
+  border-radius: 92% 8% 90% 10% / 28% 100% 0% 72%;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  transition: transform 0.5s ease;
+}
+.ImgAbout1:hover {
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+  transform: scale(1.05);
+}

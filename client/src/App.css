@@ -2,14 +2,17 @@
   --color-one: #fafd36;
   --color-two: #02df93;
   --color-three: #8421ce;
-  --color-four: #111111;
+  --color-four: black;
   --color-five: white;
   --color-six: #0000ff;
 }
-
 @font-face {
   font-family: "Glitch";
   src: url("./fonts/DoctorGlitch.otf") format("opentype");
+}
+
+.cinq {
+  color: var(--color-five);
 }
 
 html,
@@ -119,10 +122,10 @@ body {
   background-color: black;
 }
 ol,
-
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
@@ -137,6 +140,4 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-
 }
-
