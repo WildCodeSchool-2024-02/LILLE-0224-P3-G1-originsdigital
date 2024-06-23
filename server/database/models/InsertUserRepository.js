@@ -2,7 +2,7 @@ const AbstractRepository = require("./AbstractRepository");
 
 class InsertUserRepository extends AbstractRepository {
   constructor() {
-    super({ table: "users" });
+    super({ table: "user_data" });
   }
 
   async add(data) {

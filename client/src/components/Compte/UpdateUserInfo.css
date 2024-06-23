@@ -47,6 +47,19 @@ body {
   color: white;
   border: 1px solid white;
   border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.input:focus {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border: 3px solid var(--color-one);
+}
+
+.input:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border: 3px solid var(--color-one);
 }
 
 .ul-form {
@@ -86,7 +99,7 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  opacity: 0.25;
+  opacity: 0.3;
   z-index: 0;
 }
 
@@ -130,7 +143,7 @@ body {
   }
 
   .h1-my-account {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .input {
@@ -140,14 +153,21 @@ body {
   .ul-form {
     list-style-type: none;
     z-index: 1;
+    margin-left: 15em;
   }
 
   .rec-cancel {
     position: absolute;
-    top: 7em;
-    left: 70%;
+    top: 8.5em;
+    left: 55%;
     width: 15em;
     flex-direction: column;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .ul-form {
+      margin-left: 10em;
+    }
   }
 
   #save {
@@ -163,6 +183,6 @@ body {
   }
 
   .background {
-    opacity: 0.15;
+    opacity: 0.3;
   }
 }

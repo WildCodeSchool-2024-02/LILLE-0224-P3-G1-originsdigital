@@ -2,15 +2,19 @@ import { Form, useActionData } from "react-router-dom";
 import "./CreationAccount.css";
 import { useState } from "react";
 import axios from "axios";
+import Footer from "../Footer";
 
 function CreationAccount() {
   const regexMail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
   const regexPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/;
 
   const dataForm = useActionData();
-  if (dataForm) console.info(dataForm);
 
   const [responseServer, setResponseServer] = useState("");
+  const [animation, setAnimation] = useState(null);
+  const [eyes, seteyes] = useState(true);
+  const [verify, setVerify] = useState("");
+  const [verifyEmail, setVerifyEmail] = useState("");
 
   const [user, setUser] = useState({
     last: "",
@@ -32,6 +36,12 @@ function CreationAccount() {
   };
 
   const handleSubmit = () => {
+    axios
+      .get(`http://localhost:3310/api/users/verify/${user.user}`)
+      .then((response) => setVerify(response.data[0].username));
+    axios
+      .get(`http://localhost:3310/api/users/verify-email/${user.mail}`)
+      .then((response) => setVerifyEmail(response.data[0].email));
     if (
       user.last.length > 3 &&
       user.first.length > 3 &&
@@ -43,6 +53,7 @@ function CreationAccount() {
         .post("http://localhost:3310/api/users/create", user)
         .then((response) => {
           setResponseServer(response.data.message);
+          setAnimation(true);
           setTimeout(() => {
             setUser({
               last: "",
@@ -62,7 +73,7 @@ function CreationAccount() {
   return (
     <>
       <img
-        src="src/assets/images/th.jpg"
+        src="src/assets/images/th3.jpg"
         alt="this is a fond screen"
         className="backgroud-creation-accound"
       />
@@ -80,7 +91,7 @@ function CreationAccount() {
         >
           {dataForm && dataForm.lastname.length < 3 && (
             <h3 className="errors">
-              Le nom doit contenir au moins 3 caractère et maximum 100
+              Le nom doit contenir au moins <br />3 caractère et maximum 100
             </h3>
           )}
           <input
@@ -88,12 +99,12 @@ function CreationAccount() {
             name="last"
             value={user.last}
             className="input-creation-account"
-            placeholder="Nom"
+            placeholder=" Nom"
             onChange={handleChange}
           />
           {dataForm && dataForm.firstname.length < 3 && (
             <h3 className="errors">
-              Le prénom doit contenir au moins 3 caractère et maximum 100
+              Le prénom doit contenir au moins <br />3 caractère et maximum 100
             </h3>
           )}
           <input
@@ -101,30 +112,40 @@ function CreationAccount() {
             name="first"
             value={user.first}
             className="input-creation-account"
-            placeholder="Prénom"
+            placeholder=" Prénom"
             onChange={handleChange}
           />
           {dataForm && !regexMail.test(dataForm.email) && (
             <h3 className="errors">Adresse mail invalide</h3>
           )}
+          {dataForm &&
+            regexMail.test(dataForm.email) &&
+            dataForm.email === verifyEmail && (
+              <h3 className="errors">Cette adresse email exite déja</h3>
+            )}
           <input
             type="text"
             name="mail"
             className="input-creation-account"
-            placeholder="Email"
+            placeholder=" Email"
             value={user.mail}
             onChange={handleChange}
           />
           {dataForm && dataForm.username.length < 3 && (
             <h3 className="errors">
-              Le pseudo doit contenir au moins 3 caractère et maximum 100
+              Le pseudo doit contenir au moins <br />3 caractère et maximum 100
             </h3>
           )}
+          {dataForm &&
+            dataForm.username === verify &&
+            dataForm.username.length > 3 && (
+              <h3 className="errors">Ce pseudo existe déja</h3>
+            )}
           <input
             type="text"
             name="user"
             className="input-creation-account"
-            placeholder="Pseudo"
+            placeholder=" Pseudo"
             value={user.user}
             onChange={handleChange}
           />
@@ -137,22 +158,47 @@ function CreationAccount() {
             </h3>
           )}
           <input
-            type="password"
+            type={eyes ? "password" : "text"}
             name="pass"
             className="input-creation-account"
-            placeholder="Mot de passe"
+            placeholder=" Mot de passe"
             value={user.pass}
             onChange={handleChange}
           />
-          <h3 className="errors-ok">{responseServer}</h3>
-          <input
-            type="submit"
-            className="input-creation-account"
-            id="submit-creation-account"
-            value="Suivant"
-          />
+          <button
+            type="button"
+            className="eyes"
+            onClick={() => {
+              seteyes(!eyes);
+            }}
+          >
+            &#128065;{eyes && <hr className="hr-eyes" />}{" "}
+          </button>
+          <div id={animation !== null && "connect"}>
+            <h3 className="errors-ok">{responseServer}</h3>
+            {responseServer.length > 0 && animation !== null ? (
+              <h2 className="connexion">se connecter</h2>
+            ) : (
+              ""
+            )}
+          </div>
+          <div className="next">
+            <hr className="hr-submit" />
+            <h2 className="h2-submit">
+              Inscrivez vous gratuitement pour regarder des films et des séries
+              des années 80 à 2000.
+            </h2>
+            <input
+              type="submit"
+              className="input-creation-account"
+              id="submit-creation-account"
+              value="Suivant"
+            />
+            <hr style={{ marginTop: "1em" }} className="hr-submit" />
+          </div>
         </Form>
       </section>
+      <Footer />
     </>
   );
 }

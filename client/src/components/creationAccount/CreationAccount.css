@@ -5,8 +5,10 @@
 }
 
 .logo-creation-account {
-  width: 6em;
+  width: 4.5em;
   position: absolute;
+  padding: 0.4em;
+  opacity: 0.8;
 }
 
 .backgroud-creation-accound {
@@ -15,7 +17,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  opacity: 0.15;
+  opacity: 0.3;
 }
 
 .h1-creation-account {
@@ -29,7 +31,7 @@
 
 .form-creation-account {
   position: absolute;
-  top: 3.5em;
+  top: 2.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,45 +39,236 @@
 }
 
 .input-creation-account {
-  width: 80%;
-  height: 2.5em;
+  width: 60%;
+  height: 2em;
   margin-top: 0.5em;
   font-size: 1em;
   background-color: #333333;
   border: 1px solid white;
   color: white;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.input-creation-account:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border: 1px solid var(--color-one);
+}
+
+.input-creation-account:focus {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border: 3px solid var(--color-one);
 }
 
 #submit-creation-account {
+  width: 40%;
+  margin-left: 30%;
   font-size: 1em;
   height: 2.5em;
-  margin-top: 2em;
-  background-color: var(--color-one);
-  color: var(--color-three);
+  margin-top: 1em;
+  background-color: var(--color-three);
+  color: var(--color-one);
+  font-weight: bold;
 }
 
 .errors {
   color: red;
-  text-align: center;
+  text-align: start;
+  font-size: 1em;
+  margin-left: 0em;
 }
 
 .errors-ok {
-  color: green;
+  color: var(--color-one);
   text-align: center;
   margin-top: 0.5em;
   font-size: 1.5em;
 }
 
-@media screen and (min-width: 992px) {
+.h2-submit {
+  color: white;
+  font-size: 1em;
+  padding-top: 0em;
+  text-align: center;
+}
+
+.hr-submit {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.connexion {
+  background-color: var(--color-one);
+  color: black;
+  padding: 0.5em;
+  border: 3px double black;
+  font-weight: bold;
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.eyes {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  width: 2em;
+  position: relative;
+  top: -1.3em;
+  left: 37%;
+  cursor: pointer;
+}
+
+.hr-eyes {
+  margin-top: -35%;
+  width: 50%;
+  margin-left: 25%;
+  transform: rotate(-45deg);
+}
+
+#connect {
+  position: relative;
+  top: 0em;
+  animation-name: connexion;
+  animation-duration: 1.5s;
+  cursor: pointer;
+}
+
+@keyframes connexion {
+  from {
+    top: 4em;
+    opacity: 0;
+  }
+  to {
+    top: 0em;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .input-creation-account {
     width: 40%;
+  }
+  .logo-creation-account {
+    width: 7em;
+    padding: 1em;
+    opacity: 0.8;
+  }
+
+  .eyes {
+    left: 25%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .input-creation-account {
+    width: 30%;
+    margin-left: 4em;
+    font-size: 1.5em;
+    height: 2em;
   }
 
   .form-creation-account {
     position: absolute;
-    top: 3.5em;
+    top: 4.5em;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
+  }
+
+  .backgroud-creation-accound {
+    opacity: 0.3;
+  }
+
+  #submit-creation-account {
+    width: 25%;
+    border-radius: 1em;
+    font-size: 1.2em;
+    margin-left: 37.5%;
+  }
+
+  .logo-creation-account {
+    width: 8em;
+    padding: 2em;
+    opacity: 1;
+  }
+
+  .h1-creation-account {
+    font-size: 2.5em;
+  }
+
+  .next {
+    position: absolute;
+    left: 45%;
+    top: 2.5em;
+    width: 50%;
+    text-align: justify;
+  }
+
+  .h2-submit {
+    color: white;
+    font-size: 2em;
+    padding-top: 1em;
+  }
+
+  .errors {
+    font-size: 1.3em;
+    margin-left: 4em;
+  }
+  .connexion {
+    background-color: var(--color-one);
+    color: black;
+    padding: 0.5em;
+    border: 3px double black;
+    font-weight: bold;
+    border-radius: 0.7em;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    position: relative;
+  }
+
+  #connect {
+    position: absolute;
+    left: 80%;
+    z-index: 1;
+    top: -10em;
+    animation-name: connexion;
+    animation-duration: 1.5s;
+    cursor: pointer;
+  }
+
+  @keyframes connexion {
+    from {
+      top: 0;
+      opacity: 0;
+    }
+    to {
+      top: -10em;
+      opacity: 1;
+    }
+  }
+
+  .errors-ok {
+    color: var(--color-one);
+    text-align: center;
+    margin-top: 0.5em;
+    font-size: 2em;
+  }
+
+  .eyes {
+    top: -1.5em;
+    left: 40%;
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .eyes {
+    top: -1.5em;
+    left: 37%;
+    font-size: 2em;
   }
 }
