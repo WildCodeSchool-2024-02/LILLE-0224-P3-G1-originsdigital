@@ -12,16 +12,10 @@ import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
 import Header from "./components/Header/header";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <App />
-        <Header />
-      </>
-    ),
+    element: <App />,
     children: [
       {
         path: "/Terms-Of-Use",
