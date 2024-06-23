@@ -1,47 +1,64 @@
 import { Form, useActionData, useParams } from "react-router-dom";
-import "./UpdateUserInfo.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
+import "./UpdateUserInfo.css";
 import Footer from "../Footer";
 
 function UpdateUserInfo() {
-  const [valueUserName, setValueUserName] = useState();
-  const [valueMail, setValueMail] = useState();
-  const [valuePass, setValuePass] = useState();
-  const [initError, setInitError] = useState(false);
-  const [user, setUser] = useState([]);
-  const { id } = useParams();
-
-  useEffect(() => {
-    axios.get(`http://localhost:3310/api/users/${id}`).then((response) => {
-      setValueUserName(response.data[0].username);
-      setValueMail(response.data[0].email);
-      setValuePass(response.data[0].password);
-      setUser(response.data);
-    });
-  }, []);
-
-  const onchangePseudo = (e) => {
-    setValueUserName(e.target.value);
-  };
-  const onchangeMail = (e) => {
-    setValueMail(e.target.value);
-  };
-  const onchangePass = (e) => {
-    setValuePass(e.target.value);
-  };
-
-  const init = () => {
-    setValueUserName(user[0].username);
-    setValueMail(user[0].email);
-    setValuePass(user[0].password);
-    setInitError(!initError);
-    window.location.reload();
-  };
-
-  const data = useActionData();
+  useActionData();
   const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
   const regexPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/;
+  const [responseServUserName, setResponseServUserName] = useState("");
+  const [responseServEmail, setResponseServEmail] = useState("");
+  const { id } = useParams();
+
+  const [submit, setSubmit] = useState(false);
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  const handleFormData = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+    setSubmit(false);
+    axios
+      .get(`http://localhost:3310/api/users/verify/${formData.username}`)
+      .then((response) => {
+        setResponseServUserName(response.data[0].username);
+      });
+    axios
+      .get(`http://localhost:3310/api/users/verifyEmail/${formData.email}`)
+      .then((response) => {
+        setResponseServEmail(response.data[0].email);
+      });
+  };
+// push 
+  const handleSubmit = () => {
+    setSubmit(false);
+
+    setFormData({
+      username: formData.username,
+      email: formData.email,
+      password: formData.password,
+    });
+
+    if (
+      formData.username.length > 3 &&
+      formData.username !== responseServUserName &&
+      regex.test(formData.email) &&
+      formData.email !== responseServEmail &&
+      regexPass.test(formData.password)
+    ) {
+      setSubmit(true);
+
+      axios.put(`http://localhost:3310/api/users/${id}`, formData);
+    }
+  };
 
   return (
     <>
@@ -50,85 +67,91 @@ function UpdateUserInfo() {
         alt="this is a logo"
         className="logo-creation-account"
       />
-      <Form
-        className="form-mon-compte"
-        method="post"
-        onSubmit={() => {
-          setInitError(false);
-        }}
-      >
+      <Form className="form-mon-compte" method="put" onSubmit={handleSubmit}>
         <h1 className="h1-my-account">Modifier mon profil </h1> <hr />
         <div className="div-form">
           <ul className="ul-form">
             <li className="info">
               <label htmlFor="username" className="label">
-                Pseudo:{" "}
-                {data && data.user.length < 3 && !initError ? (
-                  <span className="error">
-                    3 caractère minimum, <br />
-                    100 maximum
-                  </span>
-                ) : (
-                  ""
-                )}
+                Pseudo:
+                {formData.username.length < 3 &&
+                  formData.username.length > 0 && (
+                    <span className="error">
+                      <br />
+                      minimum 3 caratères
+                    </span>
+                  )}
+                {formData.username === responseServUserName &&
+                  responseServUserName.length > 0 && (
+                    <span className="error">
+                      <br />
+                      ce pseudo existe déja
+                    </span>
+                  )}
               </label>
               <input
                 type="text"
                 name="username"
                 className="input"
                 id="username"
-                onChange={onchangePseudo}
-                value={valueUserName}
+                onChange={handleFormData}
+                value={formData.username}
               />
             </li>
             <li className="info">
               <label htmlFor="email" className="label">
-                Email:{" "}
-                {data && !regex.test(data.mail) && !initError ? (
-                  <span className="error">Adresse mail invalide</span>
-                ) : (
-                  ""
+                Email:
+                {!regex.test(formData.email) && formData.email.length > 0 && (
+                  <span className="error">
+                    <br />
+                    adresse mail invalide
+                  </span>
                 )}
+                {regex.test(formData.email) &&
+                  formData.email === responseServEmail && (
+                    <span className="error">
+                      <br />
+                      ce mail existe déja
+                    </span>
+                  )}
               </label>
               <input
                 type="text"
                 name="email"
                 className="input"
                 id="email"
-                onChange={onchangeMail}
-                value={valueMail}
+                onChange={handleFormData}
+                value={formData.email}
               />
             </li>
             <li className="info">
               <label htmlFor="password" className="label">
-                Mot de passe:{" "}
-                {data && !regexPass.test(data.pass) && !initError ? (
-                  <span className="error">
-                    <br />
-                    Le mot de passe doit <br />
-                    contenir au moins <br />8 caractères, une <br />
-                    majuscule, un chiffre et
-                    <br /> un caractère spécial
-                  </span>
-                ) : (
-                  ""
-                )}
+                Mot de passe:
+                {!regexPass.test(formData.password) &&
+                  formData.password.length > 0 && (
+                    <span className="error">
+                      <br />
+                      Le mot de passe doit <br />
+                      contenir au moins <br />8 caractères, une <br />
+                      majuscule, un chiffre et
+                      <br /> un caractère spécial
+                    </span>
+                  )}
               </label>
               <input
                 type="password"
                 name="password"
                 className="input"
                 id="passwd"
-                onChange={onchangePass}
-                value={valuePass}
+                onChange={handleFormData}
+                value={formData.password}
               />
-              <h3 className="validate">
-                {data &&
-                  data.user.length > 3 &&
-                  regex.test(data.mail) &&
-                  regexPass.test(data.pass) &&
-                  "ENREGISTRER !"}{" "}
-              </h3>
+              {formData.username.length > 3 &&
+                formData.username !== responseServUserName &&
+                regex.test(formData.email) &&
+                formData.email !== responseServEmail &&
+                regexPass.test(formData.password) &&
+                submit && <h3 className="validate">ENREGISTRER !</h3>}
             </li>
           </ul>
         </div>
@@ -140,7 +163,7 @@ function UpdateUserInfo() {
             className="input"
             id="save"
           />
-          <button type="button" className="input" id="cancel" onClick={init}>
+          <button type="button" className="input" id="cancel">
             ANNULER
           </button>
         </div>
