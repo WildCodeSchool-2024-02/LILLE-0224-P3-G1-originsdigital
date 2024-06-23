@@ -12,7 +12,6 @@ header {
   height: 10em;
   background-color: black;
   position: fixed;
-  z-index: 1;
   top: 0;
 }
 
@@ -113,10 +112,10 @@ header {
 
 .searchBar {
   position: absolute;
-  top: 1.7em;
-  left: 30%;
+  top: 2.3em;
+  left: 30.5%;
   width: 39%;
-  padding: 0.4em;
+  padding: 0.5em;
   background-color: #666867;
   border: 1px solid #3bad49;
   font-family: DS-Digital;
@@ -138,7 +137,7 @@ header {
   }
   to {
     width: 39%;
-    left: 30%;
+    left: 30.5%;
   }
 }
 
