@@ -46,7 +46,7 @@ function UpdateUserInfo() {
   return (
     <>
       <img
-        src="../src/assets/images/logo.png"
+        src="../src/assets/images/Logo1.png"
         alt="this is a logo"
         className="logo-creation-account"
       />

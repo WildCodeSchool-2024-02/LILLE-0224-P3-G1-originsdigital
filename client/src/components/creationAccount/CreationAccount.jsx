@@ -2,7 +2,6 @@ import { Form, useActionData } from "react-router-dom";
 import "./CreationAccount.css";
 import { useState } from "react";
 import axios from "axios";
-import Footer from "../Footer";
 
 function CreationAccount() {
   const regexMail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
@@ -85,13 +84,14 @@ function CreationAccount() {
         alt="this is a logo"
         className="logo-creation-account"
       />
-      <section className="form-creation-account">
-        <h1 className="h1-creation-account">Inscription</h1>
+      <section>
+       
         <Form
           className="form-creation-account"
           method="post"
           onSubmit={handleSubmit}
         >
+ <h1 className="h1-creation-account">Inscription</h1>
           {dataForm && dataForm.lastname.length < 3 && (
             <h3 className="errors">
               Le nom doit contenir au moins <br />3 caractère et maximum 100
@@ -203,7 +203,6 @@ function CreationAccount() {
           </div>
         </Form>
       </section>
-      <Footer />
     </>
   );
 }
