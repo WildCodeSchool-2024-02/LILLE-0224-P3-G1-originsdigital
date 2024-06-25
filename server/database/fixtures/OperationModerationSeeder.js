@@ -1,10 +1,10 @@
 const AbstractSeeder = require("./AbstractSeeder");
 const ModeratorSeeder = require("./ModeratorSeeder");
-const CompteSeeder = require("./CompteSeeder");
+const AccountSeeder = require("./AccountSeeder");
 
 class OperationModerationSeeder extends AbstractSeeder {
     constructor(){
-        super({ table: "operation_moderation", truncate: true, dependencies: [CompteSeeder, ModeratorSeeder] });
+        super({ table: "operation_moderation", truncate: true, dependencies: [AccountSeeder, ModeratorSeeder] });
     }
     
     run() {
