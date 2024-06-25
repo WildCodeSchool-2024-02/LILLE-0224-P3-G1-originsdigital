@@ -11,17 +11,12 @@ import Questions from "./components/Contact/Questions";
 import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
 import Header from "./components/Header/header";
-
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <App />
-        <Header />
-      </>
-    ),
+    element: <App />,
     children: [
       {
         path: "/Terms-Of-Use",
@@ -48,6 +43,10 @@ const router = createBrowserRouter([
         element: <Header />,
       },
     ],
+  },
+  {
+    path: "/home",
+    element: <Home />,
   },
   {
     path: "/users/:id",
