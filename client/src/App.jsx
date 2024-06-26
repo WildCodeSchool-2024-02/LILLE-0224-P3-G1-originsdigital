@@ -1,12 +1,14 @@
 import "./App.css";
-import Footer from "./components/Footer";
+import Questions from "./components/Contact/Questions";
+
+
+
 
 function App() {
   return (
-    <>
-      <Outlet />
-      <Footer />
-    </>
+    
+      <Questions/>
+    
   )
 }
 
