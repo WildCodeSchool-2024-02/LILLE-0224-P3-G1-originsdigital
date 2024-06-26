@@ -12,6 +12,7 @@ import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
 import Header from "./components/Header/header";
 import VideoCard from "./components/VideoCard/VideoCard";
+import PageBrowse from "./pages/PageBrowse";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: "/videocard",
     element: <VideoCard />,
+  },
+  {
+    path: "/browsepage",
+    element: <PageBrowse />,
   },
   {
     path: "/users/:id",

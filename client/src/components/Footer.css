@@ -4,7 +4,6 @@ footer {
   background-color: var(--color-one);
   color: var(--color-four);
   padding: 15px 0;
-  position: absolute;
   width: 100%;
   top: 100%;
   opacity: 0.6;
