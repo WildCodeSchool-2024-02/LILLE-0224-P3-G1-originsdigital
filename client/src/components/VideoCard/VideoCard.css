@@ -24,7 +24,7 @@
 }
 
 .card {
-  width: calc(50% - 16px); /* Two cards side by side for mobile */
+  width: calc(50% - 16px); 
   height: 300px;
   perspective: 1000px;
   cursor: pointer;
