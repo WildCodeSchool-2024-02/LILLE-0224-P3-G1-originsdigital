@@ -54,6 +54,10 @@ const router = createBrowserRouter([
     element: <VideoCard />,
   },
   {
+    path: "/browsepage",
+    element: <PageBrowse />,
+  },
+  {
     path: "/users/:id",
     element: <UpdateUserInfo />,
     action: async ({ request }) => {
