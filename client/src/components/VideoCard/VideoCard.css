@@ -8,10 +8,11 @@
 }
 
 .video-card-title {
-  top: 10px;
-  left: 20px;
   font-size: 2em;
   color: var(--color-one);
+  margin-left: 2em;
+  font-family: "Glitch";
+  font-size: x-large;
 }
 
 .video-card-container {
@@ -107,9 +108,6 @@
     width: 20%;
     display: flex;
     justify-content: center;
-  }
-  .video-card-title {
-    position: absolute;
   }
 
   .card-side {

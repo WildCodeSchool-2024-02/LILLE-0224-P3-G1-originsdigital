@@ -44,47 +44,49 @@ function VideoCard() {
   };
 
   return (
-    <div className="video-card-container">
+    <div>
       <h1 className="video-card-title">TOUS NOS FILMS</h1>
-      {videos.map((video, index) => (
-        <div
-          key={video.videoID}
-          id="test"
-          className={`card ${flippedIndex === index ? "flipped" : ""}`}
-          onMouseEnter={() => handleMouseEnter(index)}
-          onMouseLeave={handleMouseLeave}
-          onFocus={() => handleMouseEnter(index)}
-          onBlur={handleMouseLeave}
-        >
-          <div className="card-side card-side-front">
-            <img src={video.image} alt={video.titre} className="card-image" />
-            <div className="card-details-mobile">
-              <ul>
-                <li>{new Date(video.release_date).toLocaleDateString()}</li>
-                <li>
-                  {video.duration} - {video.rating}
-                </li>
-                <li>{video.director}</li>
-              </ul>
-            </div>
-          </div>
-          <div className="card-side card-side-back">
-            <div className="card-back-content">
-              <div className="card-details">
-                <h2 className="card-title">{video.titre}</h2>
+      <div className="video-card-container">
+        {videos.map((video, index) => (
+          <div
+            key={video.videoID}
+            id="test"
+            className={`card ${flippedIndex === index ? "flipped" : ""}`}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+            onFocus={() => handleMouseEnter(index)}
+            onBlur={handleMouseLeave}
+          >
+            <div className="card-side card-side-front">
+              <img src={video.image} alt={video.titre} className="card-image" />
+              <div className="card-details-mobile">
                 <ul>
                   <li>{new Date(video.release_date).toLocaleDateString()}</li>
                   <li>
                     {video.duration} - {video.rating}
                   </li>
                   <li>{video.director}</li>
-                  <li>{video.synopsis}</li>
                 </ul>
               </div>
             </div>
+            <div className="card-side card-side-back">
+              <div className="card-back-content">
+                <div className="card-details">
+                  <h2 className="card-title">{video.titre}</h2>
+                  <ul>
+                    <li>{new Date(video.release_date).toLocaleDateString()}</li>
+                    <li>
+                      {video.duration} - {video.rating}
+                    </li>
+                    <li>{video.director}</li>
+                    <li>{video.synopsis}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
