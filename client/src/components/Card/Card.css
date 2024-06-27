@@ -1,5 +1,4 @@
-/* Global Styles */
-body {
+Global Styles body {
   margin-top: 5em;
   font-family: "Darker Grotesque", sans-serif;
   font-weight: 400;
@@ -24,7 +23,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Card Styles */
 .card {
   perspective: 150rem;
   position: relative;
@@ -68,7 +66,6 @@ body {
   object-fit: cover;
 }
 
-/* Mobile Specific Styles */
 @media screen and (max-width: 992px) {
   .card_mobile {
     display: none;
@@ -91,7 +88,6 @@ body {
   }
 }
 
-/* Desktop Specific Styles */
 @media screen and (min-width: 993px) {
   .card_title {
     text-align: center;

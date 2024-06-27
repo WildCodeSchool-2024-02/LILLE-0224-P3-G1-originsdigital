@@ -45,21 +45,25 @@ function VideoCard() {
 
   return (
     <div>
-      <h1 className="video-card-title">TOUS NOS FILMS</h1>
+      <h1 className="video-card-title-main">TOUS NOS FILMS</h1>
       <div className="video-card-container">
         {videos.map((video, index) => (
           <div
             key={video.videoID}
             id="test"
-            className={`card ${flippedIndex === index ? "flipped" : ""}`}
+            className={`video-card ${flippedIndex === index ? "flipped" : ""}`}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
             onFocus={() => handleMouseEnter(index)}
             onBlur={handleMouseLeave}
           >
-            <div className="card-side card-side-front">
-              <img src={video.image} alt={video.titre} className="card-image" />
-              <div className="card-details-mobile">
+            <div className="video-card-side video-card-side-front">
+              <img
+                src={video.image}
+                alt={video.titre}
+                className="video-card-image"
+              />
+              <div className="video-card-details-mobile">
                 <ul>
                   <li>{new Date(video.release_date).toLocaleDateString()}</li>
                   <li>
@@ -69,10 +73,10 @@ function VideoCard() {
                 </ul>
               </div>
             </div>
-            <div className="card-side card-side-back">
-              <div className="card-back-content">
-                <div className="card-details">
-                  <h2 className="card-title">{video.titre}</h2>
+            <div className="video-card-side video-card-side-back">
+              <div className="video-card-back-content">
+                <div className="video-card-details">
+                  <h2 className="video-card-title">{video.titre}</h2>
                   <ul>
                     <li>{new Date(video.release_date).toLocaleDateString()}</li>
                     <li>
