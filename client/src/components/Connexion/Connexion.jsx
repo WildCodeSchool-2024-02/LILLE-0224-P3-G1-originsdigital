@@ -51,7 +51,7 @@ function Connexion() {
           setAnimateFadeOut("fade-out");
 
           setTimeout(() => {
-            window.location.href = "http://localhost:3000/play";
+            window.location.href = "http://localhost:3000/browsepage";
           }, 1000);
         }
       });

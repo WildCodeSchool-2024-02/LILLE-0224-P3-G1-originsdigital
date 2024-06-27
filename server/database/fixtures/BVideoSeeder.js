@@ -320,7 +320,7 @@ class VideoSeeder extends AbstractSeeder {
         synopsis:
           "Les détectives du 15e arrondissement de la NYPD enquêtent sur des homicides dans leur district.",
         image:
-          "https://images.allocine.fr/medias/nmedia/18/35/75/40/19559964.jpg",
+          "https://fr.web.img5.acsta.net/c_310_420/pictures/22/01/03/16/19/2443988.jpg",
         link: "https://www.youtube.com/watch?v=3aHL5ZP5qsw&ab_channel=WhatIFindOnVHS",
         rating: 3.7,
         status: "free",
