@@ -55,6 +55,10 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
+    path: "/browsepage",
+    element: <PageBrowse />,
+  },
+  {
     path: "/users/:id",
     element: <UpdateUserInfo />,
     action: async ({ request }) => request.formData(),
