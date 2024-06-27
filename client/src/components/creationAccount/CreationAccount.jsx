@@ -38,7 +38,7 @@ function CreationAccount() {
     .get(`http://localhost:3310/api/users/verify/${user.user}`)
     .then((response) => setVerify(response.data[0].username));
   axios
-    .get(`http://localhost:3310/api/users/verifyEmail/${user.mail}`)
+    .get(`http://localhost:3310/api/users/verify-email/${user.mail}`)
     .then((response) => setVerifyEmail(response.data[0].email));
 
   const handleSubmit = () => {

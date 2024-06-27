@@ -20,7 +20,7 @@ router.get("/:id", read);
 
 router.get("/verify/:name", verify);
 
-router.get("/verifyEmail/:email", verifyEmail);
+router.get("/verify-email/:email", verifyEmail);
 
 router.post("/verifyPseudoOrEmail", verifyPseudoOrEmail);
 
