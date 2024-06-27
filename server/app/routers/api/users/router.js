@@ -22,6 +22,6 @@ router.get("/verify/:name", verify);
 
 router.get("/verify-email/:email", verifyEmail);
 
-router.post("/verifyPseudoOrEmail", verifyPseudoOrEmail);
+router.post("/verify-pseudo-or-email", verifyPseudoOrEmail);
 
 module.exports = router;

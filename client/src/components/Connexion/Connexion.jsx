@@ -31,7 +31,7 @@ function Connexion() {
 
   const submitForm = async () => {
     axios
-      .post(`http://localhost:3310/api/users/verifyPseudoOrEmail`, form)
+      .post(`http://localhost:3310/api/users/verify-pseudo-or-email`, form)
       .then((response) => {
         if (response.data.username === "no username") {
           setErrorInvalidPseudoOrEmail(true);
