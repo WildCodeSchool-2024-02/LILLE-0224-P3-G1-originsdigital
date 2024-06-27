@@ -5,10 +5,10 @@ class MajRepository extends AbstractRepository {
     super({ table: "user_data" });
   }
 
-  async update(data) {
+  async update(data, id) {
     await this.database.query(
-      `update user_data set lastname = 'Dupont',firstname = 'Jean',email = ?,username = ?,password = ? where id = ?`,
-      [data.mail, data.user, data.pass, data.id]
+      `update user_data set username = ?,email = ?,password = ? where id = ?`,
+      [data.username, data.email, data.password, id]
     );
   }
 
@@ -21,16 +21,16 @@ class MajRepository extends AbstractRepository {
   }
 
   async verify(name) {
-    const [info] = await this.database.query(
-      `select * from user_data where username like ?`,
+    const info = await this.database.query(
+      `select username from user_data where username = ?`,
       [name]
     );
     return info;
   }
 
   async verifyEmail(email) {
-    const [info] = await this.database.query(
-      `select * from user_data where email like ?`,
+    const info = await this.database.query(
+      `select email from user_data where email = ?`,
       [email]
     );
     return info;

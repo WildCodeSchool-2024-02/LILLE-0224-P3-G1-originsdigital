@@ -12,9 +12,9 @@ const add = async (req, res, next) => {
 
 const edit = async (req, res, next) => {
   const data = req.body;
-
+  const { id } = req.params;
   try {
-    await tables.maj.update(data);
+    await tables.maj.update(data, id);
     res.status(201);
   } catch (err) {
     next(err);
@@ -32,7 +32,7 @@ const read = async (req, res, next) => {
 
 const verify = async (req, res, next) => {
   try {
-    const verif = await tables.maj.verify(req.params.name);
+    const [verif] = await tables.maj.verify(req.params.name);
     res.json(verif);
   } catch (err) {
     next(err);
@@ -41,7 +41,7 @@ const verify = async (req, res, next) => {
 
 const verifyEmail = async (req, res, next) => {
   try {
-    const verif = await tables.maj.verifyEmail(req.params.email);
+    const [verif] = await tables.maj.verifyEmail(req.params.email);
     res.json(verif);
   } catch (err) {
     next(err);

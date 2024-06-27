@@ -35,19 +35,22 @@ function CreationAccount() {
     }));
   };
 
+  axios
+    .get(`http://localhost:3310/api/users/verify/${user.user}`)
+    .then((response) => setVerify(response.data[0].username));
+  axios
+    .get(`http://localhost:3310/api/users/verify-email/${user.mail}`)
+    .then((response) => setVerifyEmail(response.data[0].email));
+
   const handleSubmit = () => {
-    axios
-      .get(`http://localhost:3310/api/users/verify/${user.user}`)
-      .then((response) => setVerify(response.data[0].username));
-    axios
-      .get(`http://localhost:3310/api/users/verify-email/${user.mail}`)
-      .then((response) => setVerifyEmail(response.data[0].email));
     if (
       user.last.length > 3 &&
       user.first.length > 3 &&
       regexMail.test(user.mail) &&
       user.user.length > 3 &&
-      regexPass.test(user.pass)
+      regexPass.test(user.pass) &&
+      user.user !== verify &&
+      user.mail !== verifyEmail
     ) {
       axios
         .post("http://localhost:3310/api/users/create", user)
@@ -62,7 +65,7 @@ function CreationAccount() {
               user: "",
               pass: "",
             });
-          }, 500);
+          }, 10);
         })
         .catch((err) => {
           console.error(err);
@@ -120,11 +123,12 @@ function CreationAccount() {
           )}
           {dataForm &&
             regexMail.test(dataForm.email) &&
-            dataForm.email === verifyEmail && (
-              <h3 className="errors">Cette adresse email exite déja</h3>
+            dataForm.email === verifyEmail &&
+            user.mail !== "" && (
+              <h3 className="errors">Cette adresse email existe déja</h3>
             )}
           <input
-            type="text"
+            type="mail"
             name="mail"
             className="input-creation-account"
             placeholder=" Email"
@@ -138,7 +142,8 @@ function CreationAccount() {
           )}
           {dataForm &&
             dataForm.username === verify &&
-            dataForm.username.length > 3 && (
+            dataForm.username.length > 3 &&
+            user.user !== "" && (
               <h3 className="errors">Ce pseudo existe déja</h3>
             )}
           <input
