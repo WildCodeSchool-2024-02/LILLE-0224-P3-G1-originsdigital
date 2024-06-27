@@ -1,3 +1,5 @@
+const argon2 = require("argon2");
+
 const tables = require("../../database/tables");
 
 const add = async (req, res, next) => {
@@ -48,10 +50,32 @@ const verifyEmail = async (req, res, next) => {
   }
 };
 
+const verifyPseudoOrEmail = async (req, res, next) => {
+  try {
+    const [verif] = await tables.maj.verifyPseudoOrEmail(
+      req.body.pseudoOrEmail
+    );
+    if (verif) {
+      const verified = await argon2.verify(verif.password, req.body.password);
+
+      if (verified) {
+        res.json({ password: true, results: verif });
+      } else {
+        res.json({ password: false });
+      }
+    } else {
+      res.json({ username: "no username" });
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   edit,
   read,
   add,
   verify,
   verifyEmail,
+  verifyPseudoOrEmail,
 };

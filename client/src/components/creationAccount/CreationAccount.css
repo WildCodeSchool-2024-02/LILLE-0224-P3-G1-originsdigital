@@ -5,10 +5,11 @@
 }
 
 .logo-creation-account {
-  width: 4.5em;
+  width: 10em;
   position: absolute;
   padding: 0.4em;
-  opacity: 0.8;
+  opacity: 1;
+  top: 0;
 }
 
 .backgroud-creation-accound {
@@ -154,9 +155,9 @@
     width: 40%;
   }
   .logo-creation-account {
-    width: 7em;
+    width: 15em;
     padding: 1em;
-    opacity: 0.8;
+    opacity: 1;
   }
 
   .eyes {
@@ -192,9 +193,10 @@
   }
 
   .logo-creation-account {
-    width: 8em;
+    width: 30em;
     padding: 2em;
     opacity: 1;
+    top: -5em;
   }
 
   .h1-creation-account {
@@ -204,7 +206,7 @@
   .next {
     position: absolute;
     left: 45%;
-    top: 2.5em;
+    top: 5em;
     width: 50%;
     text-align: justify;
   }
@@ -235,7 +237,7 @@
     position: absolute;
     left: 80%;
     z-index: 1;
-    top: -10em;
+    top: -5em;
     animation-name: connexion;
     animation-duration: 1.5s;
     cursor: pointer;
@@ -247,7 +249,7 @@
       opacity: 0;
     }
     to {
-      top: -10em;
+      top: -5em;
       opacity: 1;
     }
   }
@@ -256,12 +258,12 @@
     color: var(--color-one);
     text-align: center;
     margin-top: 0.5em;
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .eyes {
     top: -1.5em;
-    left: 40%;
+    left: 42%;
     font-size: 2em;
   }
 }
@@ -269,7 +271,7 @@
 @media screen and (min-width: 1440px) {
   .eyes {
     top: -1.5em;
-    left: 37%;
+    left: 39%;
     font-size: 2em;
   }
 }

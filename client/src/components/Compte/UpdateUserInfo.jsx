@@ -2,7 +2,6 @@ import { Form, useActionData, useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import "./UpdateUserInfo.css";
-import Footer from "../Footer";
 
 function UpdateUserInfo() {
   useActionData();
@@ -12,7 +11,7 @@ function UpdateUserInfo() {
   const [responseServEmail, setResponseServEmail] = useState("");
   const { id } = useParams();
 
-  const [submit, setSubmit] = useState(false);
+  const [animation, setAnimation] = useState(false);
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -25,7 +24,7 @@ function UpdateUserInfo() {
       ...prevState,
       [name]: value,
     }));
-    setSubmit(false);
+    setAnimation(false);
     axios
       .get(`http://localhost:3310/api/users/verify/${formData.username}`)
       .then((response) => {
@@ -39,7 +38,7 @@ function UpdateUserInfo() {
   };
 
   const handleSubmit = () => {
-    setSubmit(false);
+    setAnimation(false);
 
     setFormData({
       username: formData.username,
@@ -54,7 +53,7 @@ function UpdateUserInfo() {
       formData.email !== responseServEmail &&
       regexPass.test(formData.password)
     ) {
-      setSubmit(true);
+      setAnimation(true);
 
       axios.put(`http://localhost:3310/api/users/${id}`, formData);
     }
@@ -151,7 +150,7 @@ function UpdateUserInfo() {
                 regex.test(formData.email) &&
                 formData.email !== responseServEmail &&
                 regexPass.test(formData.password) &&
-                submit && <h3 className="validate">ENREGISTRER !</h3>}
+                animation && <h3 className="validate">ENREGISTRER !</h3>}
             </li>
           </ul>
         </div>
@@ -173,7 +172,6 @@ function UpdateUserInfo() {
           className="background"
         />
       </Form>
-      <Footer />
     </>
   );
 }

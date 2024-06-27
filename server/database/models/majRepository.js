@@ -35,6 +35,14 @@ class MajRepository extends AbstractRepository {
     );
     return info;
   }
+
+  async verifyPseudoOrEmail(pseudoOrEmail) {
+    const [info] = await this.database.query(
+      `select * from user_data where username = ? or email = ?`,
+      [pseudoOrEmail, pseudoOrEmail]
+    );
+    return info;
+  }
 }
 
 module.exports = MajRepository;

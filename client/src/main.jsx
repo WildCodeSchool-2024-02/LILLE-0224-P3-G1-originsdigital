@@ -12,7 +12,9 @@ import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
 import Header from "./components/Header/header";
 import Home from "./pages/Home";
-
+import Connexion from "./components/Connexion/Connexion";
+import { ContextProvider } from "./components/Context";
+import Deconnexion from "./components/Deconnexion";
 
 const router = createBrowserRouter([
   {
@@ -74,12 +76,23 @@ const router = createBrowserRouter([
       return result;
     },
   },
+  {
+    path: "/connexion",
+    element: <Connexion />,
+    action: () => null,
+  },
+  {
+    path: "/deconnexion",
+    element: <Deconnexion />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ContextProvider>
+      <RouterProvider router={router} />
+    </ContextProvider>
   </React.StrictMode>
 );
