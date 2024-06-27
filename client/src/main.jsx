@@ -12,6 +12,7 @@ import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
 import Header from "./components/Header/header";
 import Home from "./pages/Home";
+import PlayerPage from "./pages/Player";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/play",
         element: <Header />,
+      },
+      {
+        path: "/player",
+        element: <PlayerPage />,
       },
     ],
   },
