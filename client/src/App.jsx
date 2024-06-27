@@ -1,15 +1,8 @@
 import "./App.css";
-import Questions from "./components/Contact/Questions";
-
-
-
+import { Outlet } from "react-router-dom";
 
 function App() {
-  return (
-    
-      <Questions/>
-    
-  )
+  return <Outlet />;
 }
 
 export default App;
