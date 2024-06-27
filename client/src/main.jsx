@@ -15,6 +15,9 @@ import Home from "./pages/Home";
 import Connexion from "./components/Connexion/Connexion";
 import { ContextProvider } from "./components/Context";
 import Deconnexion from "./components/Deconnexion";
+import VideoCard from "./components/VideoCard/VideoCard";
+import PageBrowse from "./pages/PageBrowse";
+
 
 const router = createBrowserRouter([
   {
@@ -50,6 +53,18 @@ const router = createBrowserRouter([
         element: <Header />,
       },
     ],
+  },
+  {
+    path: "/videocard",
+    element: <VideoCard />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
+  },
+  {
+    path: "/browsepage",
+    element: <PageBrowse />,
   },
   {
     path: "/users/:id",
