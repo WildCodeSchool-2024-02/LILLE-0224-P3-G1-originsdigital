@@ -3,7 +3,7 @@ const AdminSeeder = require("./AdminSeeder");
 const ModeratorSeeder = require("./ModeratorSeeder");
 const UserSeeder = require("./UserSeeder");
 
-class CompteSeeder extends AbstractSeeder {
+class AccountSeeder extends AbstractSeeder {
     constructor(){
         super({ table: "compte", truncate: true, dependencies: [AdminSeeder, ModeratorSeeder, UserSeeder] });
     }
@@ -37,9 +37,8 @@ class CompteSeeder extends AbstractSeeder {
               };
 
             this.insert(accountWithRefName);
-
         });
     }
 }
 
-module.exports = CompteSeeder;
+module.exports = AccountSeeder;
