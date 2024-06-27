@@ -24,7 +24,7 @@ function NavBar() {
           </Link>
         </div>
         <div className="menu">
-          <Link to="/login" className="login-button">
+          <Link to="/connexion" className="login-button">
             Connexion
           </Link>
           <button
