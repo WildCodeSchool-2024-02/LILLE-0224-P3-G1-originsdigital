@@ -1,8 +1,7 @@
-import { Form, useActionData } from "react-router-dom";
+import { Form, Link, useActionData } from "react-router-dom";
 import "./CreationAccount.css";
 import { useState } from "react";
 import axios from "axios";
-import Footer from "../Footer";
 
 function CreationAccount() {
   const regexMail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
@@ -81,17 +80,17 @@ function CreationAccount() {
         className="backgroud-creation-accound"
       />
       <img
-        src="src/assets/images/logo.png"
+        src="src/assets/images/Logo1.png"
         alt="this is a logo"
         className="logo-creation-account"
       />
-      <section className="form-creation-account">
-        <h1 className="h1-creation-account">Inscription</h1>
+      <section>
         <Form
           className="form-creation-account"
           method="post"
           onSubmit={handleSubmit}
         >
+          <h1 className="h1-creation-account">Inscription</h1>
           {dataForm && dataForm.lastname.length < 3 && (
             <h3 className="errors">
               Le nom doit contenir au moins <br />3 caractère et maximum 100
@@ -182,7 +181,12 @@ function CreationAccount() {
           <div id={animation !== null && "connect"}>
             <h3 className="errors-ok">{responseServer}</h3>
             {responseServer.length > 0 && animation !== null ? (
-              <h2 className="connexion">se connecter</h2>
+              <Link
+                to="/connexion"
+                style={{ textDecoration: "none", cursor: "pointer" }}
+              >
+                <h2 className="connexion">se connecter</h2>
+              </Link>
             ) : (
               ""
             )}
@@ -203,7 +207,6 @@ function CreationAccount() {
           </div>
         </Form>
       </section>
-      <Footer />
     </>
   );
 }

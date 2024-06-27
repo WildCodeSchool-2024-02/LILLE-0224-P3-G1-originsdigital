@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap");
+
+.section-connexion {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#fade-out {
+  opacity: 0;
+  animation-name: fadeOut;
+  animation-duration: 1s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.img-background-connexion {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.3;
+}
+
+.logo-connexion {
+  width: 10em;
+  position: absolute;
+  padding: 0.4em;
+  opacity: 0.8;
+  top: 0;
+}
+
+.form-connexion {
+  position: absolute;
+  top: 2.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 2em;
+}
+
+.h1-connexion {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  width: 100%;
+  font-family: "Glitch";
+  color: var(--color-three);
+}
+
+.input-connexion {
+  width: 60%;
+  height: 2em;
+  margin-top: 0.5em;
+  font-size: 1em;
+  background-color: #333333;
+  border: 1px solid white;
+  color: white;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.input-connexion:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border: 1px solid var(--color-one);
+}
+
+.input-connexion:focus {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border: 3px solid var(--color-one);
+}
+
+#input-connexion-pseudo {
+  animation-name: pseudo;
+  animation-duration: 0.75s;
+}
+
+#input-connexion-password {
+  animation-name: password;
+  animation-duration: 0.5s;
+}
+
+@keyframes pseudo {
+  from {
+    margin-left: -20em;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes password {
+  from {
+    margin-left: -20em;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+#submit-connexion {
+  font-size: 1em;
+  margin-top: 1em;
+  background-color: var(--color-three);
+  color: var(--color-one);
+  font-weight: bold;
+  animation-name: connexion;
+  animation-duration: 0.25s;
+}
+
+@keyframes connexion {
+  from {
+    margin-left: -20em;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+#checkbox-connexion {
+  margin-right: 0em;
+}
+
+.right-label {
+  float: right;
+  color: white;
+  margin-left: 0.5em;
+  margin-top: -0.2em;
+}
+
+#check {
+  width: 1.3em;
+  height: 1.3em;
+}
+
+input[type="checkbox"]:checked {
+  appearance: none;
+  border-radius: 4px;
+  height: 15px;
+  width: 15px;
+  background: var(--color-three);
+  border: 2px solid var(--color-one);
+}
+
+.error-mail-invalid {
+  color: red;
+  font-weight: bold;
+}
+
+.first-visit {
+  color: white;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.span-vhs-first-visit {
+  color: var(--color-one);
+}
+
+.register-you {
+  color: var(--color-three);
+  font-weight: bolder;
+  animation-name: register;
+  animation-duration: 2s;
+  font-size: 1.5em;
+}
+
+#animate {
+  animation-name: animate;
+  animation-duration: 2s;
+  -webkit-text-stroke: 0.5px var(--color-one);
+}
+
+@keyframes animate {
+  from {
+    -webkit-text-stroke: 0px;
+  }
+  to {
+    -webkit-text-stroke: 0.5px var(--color-one);
+  }
+}
+
+@keyframes register {
+  from {
+    font-size: 2.5em;
+    color: white;
+  }
+  to {
+    font-size: 1.5em;
+    color: var(--color-three);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .h1-connexion {
+    font-size: 2.5em;
+  }
+
+  .input-connexion {
+    width: 30%;
+  }
+
+  .logo-connexion {
+    width: 25em;
+    top: -5em;
+    opacity: 1;
+  }
+
+  .eyes {
+    top: -1.2em;
+    left: 18.5%;
+    font-size: 2em;
+  }
+}
