@@ -1,0 +1,74 @@
+.videoplayer_list {
+  list-style: none;
+  color: var(--color-four);
+  font-size: 0.55em;
+  line-height: initial;
+}
+.vignette_description {
+  font-size: small;
+}
+.videoplayer_none_on_mobile {
+  display: none;
+}
+
+.videoplayer_image {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--color-one);
+  font-family: "Darker Grotesque", sans-serif;
+}
+.vignette_image {
+  height: 50%;
+  width: 50%;
+}
+
+@media (min-width: 992px) {
+  .videoplayer_none_on_mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .videoplayer_description_categories {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--color-four);
+  }
+  .videoplayer_categories {
+    color: var(--color-one);
+  }
+  .videoplayer_genre {
+    color: var(--color-one);
+  }
+  .videoplayer_image {
+    width: 60%;
+  }
+  .vignette_image {
+    height: 100%;
+    width: 100%;
+  }
+  .categories {
+    display: flex;
+  }
+  .genre {
+    color: var(--color-five);
+    font-size: 0.8em;
+    margin: 0.6em;
+    font-family: "Darker Grotesque", sans-serif;
+  }
+
+  .videoplayer_list {
+    margin: 0.6em;
+    font-size: x-large;
+  }
+  .title_categories {
+    font-size: xx-large;
+    font-family: "Glitch";
+  }
+  .title_genre {
+    font-size: xx-large;
+    font-family: "Glitch";
+  }
+}

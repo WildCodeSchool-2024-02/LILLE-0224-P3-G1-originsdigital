@@ -1,13 +1,18 @@
 import ReactDOM from "react-dom/client";
+// import axios from "axios";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
+import CreationAccount from "./components/creationAccount/CreationAccount";
+import UpdateUserInfo from "./components/Compte/UpdateUserInfo";
 import TermsOfUse from "./components/Contact/TermsOfUse";
 import Contact from "./components/Contact/Contact";
 import Questions from "./components/Contact/Questions";
-import  ContactPage from "./components/Contact/ContactPage";
+import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
-import Count from "./components/Compte/Compte";
+import Header from "./components/Header/header";
+import VideoCard from "./components/VideoCard/VideoCard";
+import Home from "./pages/Home";
 
 
 const router = createBrowserRouter([
@@ -17,7 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/Terms-Of-Use",
-        element: <TermsOfUse/>,
+        element: <TermsOfUse />,
       },
       {
         path: "/informations",
@@ -33,38 +38,49 @@ const router = createBrowserRouter([
       },
       {
         path: "/foire-aux-questions",
-        element: <Faq/>,
+        element: <Faq />,
       },
-    ],
+      {
         path: "/play",
-        element: <>coucou</>,
+        element: <Header />,
       },
     ],
   },
   {
-    path: "/compte",
-    element: <Count />,
+    path: "/videocard",
+    element: <VideoCard />,
+ },
+  {
+    path: "/home",
+    element: <Home />,
+  },
+  {
+    path: "/browsepage",
+    element: <PageBrowse />,
+  },
+  {
+    path: "/users/:id",
+    element: <UpdateUserInfo />,
+    action: async ({ request }) => request.formData(),
+  },
+  {
+    path: "/subscribe",
+    element: <CreationAccount />,
     action: async ({ request }) => {
-      const form = await request.formData();
-      const username = form.get("username");
-      const email = form.get("email");
-      const password = form.get("password");
-      const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-      const regexPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/;
-      const formulaire = {
-        user: username,
-        mail: email,
-        pass: password,
+      const data = await request.formData();
+      const last = data.get("last");
+      const first = data.get("first");
+      const mail = data.get("mail");
+      const user = data.get("user");
+      const pass = data.get("pass");
+      const result = {
+        lastname: last,
+        firstname: first,
+        email: mail,
+        username: user,
+        password: pass,
       };
-
-      if (
-        username.length > 3 &&
-        regex.test(email) &&
-        regexPass.test(password)
-      ) {
-        alert("modification enregistré !");
-      }
-      return formulaire;
+      return result;
     },
   },
 ]);

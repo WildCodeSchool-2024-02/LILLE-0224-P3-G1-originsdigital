@@ -21,6 +21,9 @@ body {
   font-style: normal;
   text-align: center;
   font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
 }
 
 .form-mon-compte {
@@ -40,10 +43,23 @@ body {
 
 .input {
   padding: 0.2em;
-  background-color: black;
+  background-color: #333333;
   color: white;
   border: 1px solid white;
   border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.input:focus {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border: 3px solid var(--color-one);
+}
+
+.input:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border: 3px solid var(--color-one);
 }
 
 .ul-form {
@@ -83,7 +99,7 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  opacity: 0.25;
+  opacity: 0.3;
   z-index: 0;
 }
 
@@ -105,4 +121,68 @@ body {
   color: red;
   font-weight: bold;
   max-width: 3em;
+}
+
+.validate {
+  top: 1em;
+  text-align: center;
+  color: green;
+  text-shadow: 5px 5px 10px black;
+  font-weight: bold;
+  font-size: 1.3em;
+  position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .div-form {
+    flex-direction: row;
+  }
+
+  .info {
+    font-size: 2em;
+  }
+
+  .h1-my-account {
+    font-size: 2em;
+  }
+
+  .input {
+    font-size: 0.8em;
+  }
+
+  .ul-form {
+    list-style-type: none;
+    z-index: 1;
+    margin-left: 15em;
+  }
+
+  .rec-cancel {
+    position: absolute;
+    top: 8.5em;
+    left: 55%;
+    width: 15em;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .ul-form {
+      margin-left: 10em;
+    }
+  }
+
+  #save {
+    font-size: 1.2em;
+    margin-top: 2em;
+    cursor: pointer;
+  }
+
+  #cancel {
+    font-size: 1.2em;
+    margin-top: 2em;
+    cursor: pointer;
+  }
+
+  .background {
+    opacity: 0.3;
+  }
 }

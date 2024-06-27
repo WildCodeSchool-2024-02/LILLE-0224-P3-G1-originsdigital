@@ -37,6 +37,7 @@ class CompteSeeder extends AbstractSeeder {
               };
 
             this.insert(accountWithRefName);
+
         });
     }
 }
