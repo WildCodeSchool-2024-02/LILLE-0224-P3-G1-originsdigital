@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import axios from "axios";
+// import axios from "axios";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
@@ -12,16 +12,13 @@ import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
 import Header from "./components/Header/header";
 import VideoCard from "./components/VideoCard/VideoCard";
+import Home from "./pages/Home";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <App />
-        <Header />
-      </>
-    ),
+    element: <App />,
     children: [
       {
         path: "/Terms-Of-Use",
@@ -52,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: "/videocard",
     element: <VideoCard />,
+ },
+  {
+    path: "/home",
+    element: <Home />,
   },
   {
     path: "/browsepage",
@@ -60,29 +61,7 @@ const router = createBrowserRouter([
   {
     path: "/users/:id",
     element: <UpdateUserInfo />,
-    action: async ({ request }) => {
-      const form = await request.formData();
-      const username = form.get("username");
-      const email = form.get("email");
-      const password = form.get("password");
-      const regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-      const regexPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/;
-      const formulaire = {
-        user: username,
-        mail: email,
-        pass: password,
-        id: window.location.href.split("/")[4],
-      };
-
-      if (
-        username.length > 3 &&
-        regex.test(email) &&
-        regexPass.test(password)
-      ) {
-        axios.put("http://localhost:3310/api/users", formulaire);
-      }
-      return formulaire;
-    },
+    action: async ({ request }) => request.formData(),
   },
   {
     path: "/subscribe",
