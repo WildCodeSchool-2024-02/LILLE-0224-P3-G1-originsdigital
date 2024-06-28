@@ -6,7 +6,6 @@ function Videoplayer() {
       <iframe
         className="video_player"
         src="https://www.youtube.com/embed/xLWxiDO2WT0?autoplay=1&mute=1"
-        frameBorder="0"
         allow="autoplay; encrypted-media"
         allowFullScreen
         title="Video Player"

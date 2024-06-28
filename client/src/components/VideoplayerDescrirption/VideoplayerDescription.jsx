@@ -5,14 +5,14 @@ function VideoplayerDescription() {
     <div className="videoplayer_description_container">
       <div className="videoplayer_description_categories">
         <div className="videoplayer_none_on_mobile">
-          <ul className="videoplayer_categories">
             <h2 className="title_categories">CATEGORIES</h2>
+          <ul className="videoplayer_categories">
             <li className="genre">FILM</li>
             <li className="genre">SERIE</li>
           </ul>
           <div className="categories">
-            <ul className="videoplayer_genre">
               <h2 className="title_genre">FILMS PAR GENRE</h2>
+            <ul className="videoplayer_genre">
               <li className="genre">ACTION</li>
               <li className="genre">AVENTURE</li>
               <li className="genre">ANIMATION</li>

@@ -2,6 +2,8 @@ import { Form, Link, useActionData } from "react-router-dom";
 import "./CreationAccount.css";
 import { useState } from "react";
 import axios from "axios";
+import Footer from "../Footer/Footer";
+
 
 function CreationAccount() {
   const regexMail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
