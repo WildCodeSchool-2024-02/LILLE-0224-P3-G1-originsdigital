@@ -2,6 +2,8 @@ import { Form, useActionData, useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import "./UpdateUserInfo.css";
+import Footer from "../Footer/Footer";
+
 
 function UpdateUserInfo() {
   useActionData();

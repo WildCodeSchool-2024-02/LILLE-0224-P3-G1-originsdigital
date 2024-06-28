@@ -1,9 +1,16 @@
 .videoplayer_list {
   list-style: none;
   color: var(--color-four);
-  font-size: 0.55em;
+  font-size: 1.2em;
+  font-weight: 800;
+  margin: 0px 10px;
   line-height: initial;
 }
+
+.videoplayer_description_container {
+  margin-top: 100px;
+}
+
 .vignette_description {
   font-size: small;
 }
@@ -17,17 +24,18 @@
   align-items: center;
   background-color: var(--color-one);
   font-family: "Darker Grotesque", sans-serif;
+  margin: 100px 15px 15px 15px;
+  padding: 15px;
 }
 .vignette_image {
-  height: 50%;
-  width: 50%;
+  height: 30%;
+  width: 30%;
 }
 
 @media (min-width: 992px) {
   .videoplayer_none_on_mobile {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: flex-start;
   }
 
@@ -38,12 +46,26 @@
   }
   .videoplayer_categories {
     color: var(--color-one);
+    column-count: 2;
+    column-gap: 10px;
+    font-size: x-large;
+    margin-bottom: 10px;
+    font-weight: 600;
   }
   .videoplayer_genre {
     color: var(--color-one);
+    column-count: 2;
+    column-gap: 10px;
+    font-size: x-large;
+    font-weight: 600;
+  }
+  .videoplayer_description_container {
+    margin-top: 170px;
   }
   .videoplayer_image {
     width: 60%;
+    margin: 15px;
+    padding: 15px;
   }
   .vignette_image {
     height: 100%;
@@ -51,12 +73,13 @@
   }
   .categories {
     display: flex;
+    flex-direction: column;
   }
   .genre {
     color: var(--color-five);
     font-size: 0.8em;
-    margin: 0.6em;
     font-family: "Darker Grotesque", sans-serif;
+    break-inside: avoid;
   }
 
   .videoplayer_list {
@@ -64,11 +87,17 @@
     font-size: x-large;
   }
   .title_categories {
-    font-size: xx-large;
+    color: var(--color-one);
+    font-size: x-large;
     font-family: "Glitch";
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .title_genre {
-    font-size: xx-large;
+    color: var(--color-one);
+    font-size: x-large;
     font-family: "Glitch";
+    text-align: center;
+    margin-bottom: 10px;
   }
 }

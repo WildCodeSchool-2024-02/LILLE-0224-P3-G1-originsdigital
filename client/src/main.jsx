@@ -12,12 +12,12 @@ import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
 import Header from "./components/Header/header";
 import Home from "./pages/Home";
+import PlayerPage from "./pages/Player";
 import Connexion from "./components/Connexion/Connexion";
 import { ContextProvider } from "./components/Context";
 import Deconnexion from "./components/Deconnexion";
 import VideoCard from "./components/VideoCard/VideoCard";
 import PageBrowse from "./pages/PageBrowse";
-
 
 const router = createBrowserRouter([
   {
@@ -51,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/play",
         element: <Header />,
+      },
+      {
+        path: "/player",
+        element: <PlayerPage />,
       },
     ],
   },
