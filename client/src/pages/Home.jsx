@@ -3,7 +3,7 @@ import HomePartPub from "../components/Home/HomePartPub";
 import CardPub from "../components/Home/CardPub";
 import PlanFormula from "../components/Home/PlanFormula";
 import CardPlan from "../components/Home/CardPlan";
-import TablePlan from "../components/Home/TablePlan";
+// import TablePlan from "../components/Home/TablePlan";
 import PubSuggestion from "../components/Home/PubSuggestion";
 import "./Home.css";
 
@@ -15,7 +15,7 @@ function Home() {
       <CardPub />
       <PlanFormula />
       <CardPlan />
-      <TablePlan />
+      {/* {<TablePlan />} */}
       <PubSuggestion />
     </div>
   );

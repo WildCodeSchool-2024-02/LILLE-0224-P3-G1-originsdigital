@@ -18,10 +18,8 @@ function HomePartPub() {
       </section>
       <article className="artcileP">
         <h1 className="titleP">Profitez du Cinéma Chez Vous</h1>
-        <p className="textP">
-          Regardez des saisons complètes de séries exclusives en streaming, des
-          épisodes de la saison en cours, des films à succès, des VHS Originals,
-          des émissions pour enfants et bien plus encore.
+        <p className="textP" style={{textAlign:"center"}}>
+          Regardez des saisons complètes de séries en streaming, des films à succès, des VHS originals.
         </p>
       </article>
     </div>
