@@ -9,7 +9,7 @@ import "./Home.css";
 
 function Home() {
   return (
-    <>
+    <div className="home">
       <NavBar />
       <HomePartPub />
       <CardPub />
@@ -17,7 +17,7 @@ function Home() {
       <CardPlan />
       <TablePlan />
       <PubSuggestion />
-    </>
+    </div>
   );
 }
 export default Home;

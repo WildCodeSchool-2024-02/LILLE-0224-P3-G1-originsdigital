@@ -1,5 +1,5 @@
 const AbstractSeeder = require("./AbstractSeeder");
-const VideoSeeder = require("./B_VideoSeeder");
+const VideoSeeder = require("./BVideoSeeder");
 const GenreSeeder = require("./GenreSeeder");
 
 class VideoGenreSeeder extends AbstractSeeder {

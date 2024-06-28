@@ -9,7 +9,7 @@
 
 header {
   width: 100%;
-  height: 5em;
+  height: 10em;
   background-color: black;
   position: fixed;
   z-index: 99;
@@ -39,14 +39,16 @@ header {
 }
 
 .marquee-rtl {
-  width: 25%;
+  font-size: 1.5em;
+  border: 1px solid black;
+  width: 26%;
   background-color: #666867;
   color: #3bad49;
   overflow: hidden;
   position: absolute;
   left: 37.5%;
-  top: 3em;
-  padding: 0.3em;
+  top: 4.1em;
+  padding: 0.1em;
   font-family: "DS-Digital", sans-serif;
   font-weight: 900;
 }
@@ -73,49 +75,50 @@ header {
     width: 40%;
     position: absolute;
     left: 100%;
-    top: 10em;
+    top: 20em;
     opacity: 1;
-    height: 100%;
+    height: 7em;
   }
   25% {
     width: 40%;
     position: absolute;
     left: 30%;
-    top: 10em;
+    top: 20em;
     opacity: 1;
-    height: 100%;
+    height: 7em;
   }
   50% {
     width: 40%;
     position: absolute;
     left: 30%;
-    top: 1.5em;
+    top: 3em;
     opacity: 0.5;
-    height: 1.5em;
+    height: 3em;
   }
   75% {
     width: 40%;
     position: absolute;
     left: 30%;
-    top: 1.5em;
+    top: 3em;
     opacity: 0;
-    height: 1.5em;
+    height: 3em;
   }
   100% {
     width: 40%;
     position: absolute;
     left: 30%;
-    top: 1.5em;
+    top: 3em;
     opacity: 0;
-    height: 1.5em;
+    height: 3em;
   }
 }
 
 .searchBar {
+  font-size: 1.7em;
   position: absolute;
   top: 1.7em;
   left: 30%;
-  width: 39%;
+  width: 40%;
   padding: 0.4em;
   background-color: #666867;
   border: 1px solid #3bad49;
@@ -137,7 +140,7 @@ header {
     left: 69%;
   }
   to {
-    width: 39%;
+    width: 40%;
     left: 30%;
   }
 }
@@ -175,66 +178,69 @@ header {
       width: 40%;
       position: absolute;
       left: 100%;
-      top: 15em;
+      top: 25em;
       opacity: 1;
-      height: 100%;
+      height: 15em;
     }
     25% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 15em;
+      top: 25em;
       opacity: 1;
-      height: 100%;
+      height: 15em;
     }
     50% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 4em;
       opacity: 0.5;
-      height: 3em;
+      height: 5em;
     }
     75% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 4em;
       opacity: 0;
-      height: 3em;
+      height: 5em;
     }
     100% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 4em;
       opacity: 0;
-      height: 3em;
+      height: 5em;
     }
   }
   .marquee-rtl {
-    width: 25%;
+    width: 26%;
     background-color: #666867;
     overflow: hidden;
     position: absolute;
     left: 37.5%;
-    top: 5.5em;
-    font-size: 1.1em;
-    padding-top: 0.5em;
-    padding-bottom: 1.3em;
+    top: 4.5em;
+    font-size: 2.1em;
     font-weight: 900;
+  }
+
+  .img_background_header {
+    height: 15em;
   }
 
   .searchBar {
     position: absolute;
     left: 30%;
-    width: 39%;
+    width: 40%;
     background-color: #666867;
     border: 1px solid #3bad49;
     font-family: DS-Digital;
     color: #3bad49;
     font-weight: 900;
     font-size: 27px;
+    top: 1.5em;
   }
 
   .img_loupe {
@@ -256,6 +262,10 @@ header {
     left: 5%;
   }
 
+  .img_background_header {
+    height: 18em;
+  }
+
   .img_k7 {
     animation-name: k7;
     width: 40%;
@@ -271,56 +281,53 @@ header {
       width: 40%;
       position: absolute;
       left: 100%;
-      top: 15em;
+      top: 30em;
       opacity: 1;
-      height: 100%;
+      height: 15em;
     }
     25% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 15em;
+      top: 30em;
       opacity: 1;
-      height: 100%;
+      height: 15em;
     }
     50% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 5em;
       opacity: 0.5;
-      height: 3.5em;
+      height: 6em;
     }
     75% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 5em;
       opacity: 0;
-      height: 3.5em;
+      height: 6em;
     }
     100% {
       width: 40%;
       position: absolute;
       left: 30%;
-      top: 3em;
+      top: 5em;
       opacity: 0;
-      height: 3.5em;
+      height: 6em;
     }
   }
 
   .marquee-rtl {
-    width: 25%;
+    width: 26%;
     background-color: #666867;
     overflow: hidden;
     position: absolute;
     left: 37.5%;
-    top: 6em;
+    top: 3.6em;
     padding: 0.1em;
-    font-size: 1.1em;
-    padding-top: 0.8em;
-    padding-bottom: 1.3em;
-    padding-right: 0.3em;
+    font-size: 3em;
     font-weight: 900;
   }
 
@@ -328,13 +335,14 @@ header {
     position: absolute;
     font-weight: bold;
     left: 30%;
-    width: 39%;
+    width: 40%;
     background-color: #666867;
     border: 1px solid #3bad49;
     font-family: DS-Digital;
     color: #3bad49;
     font-weight: 900;
     font-size: 30px;
+    top: 1.7em;
   }
 }
 /* ///////////////////////////////////////////////////////////////////////////////// */

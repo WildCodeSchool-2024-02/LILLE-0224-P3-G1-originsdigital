@@ -8,11 +8,9 @@ class InsertUserRepository extends AbstractRepository {
   async add(data) {
     await this.database.query(
       `insert into ${this.table} (lastname,firstname,email,username,password,status) values (?,?,?,?,?,?)`,
-      [data.last, data.first, data.mail, data.user,data.pass,1]
+      [data.last, data.first, data.mail, data.user, data.hashedPassword, 1]
     );
   }
-
- 
 }
 
 module.exports = InsertUserRepository;

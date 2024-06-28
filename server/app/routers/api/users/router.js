@@ -8,16 +8,20 @@ const {
   read,
   verify,
   verifyEmail,
+  verifyPseudoOrEmail,
 } = require("../../../controllers/userActions");
+const hashPassword = require("../../../services/hashPassword");
 
 router.put("/:id", edit);
 
-router.post("/create", add);
+router.post("/create", hashPassword, add);
 
 router.get("/:id", read);
 
 router.get("/verify/:name", verify);
 
-router.get("/verifyEmail/:email", verifyEmail);
+router.get("/verify-email/:email", verifyEmail);
+
+router.post("/verify-pseudo-or-email", verifyPseudoOrEmail);
 
 module.exports = router;
