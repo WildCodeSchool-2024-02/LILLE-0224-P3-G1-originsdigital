@@ -15,7 +15,6 @@ function Home() {
       <CardPub />
       <PlanFormula />
       <CardPlan />
-      {/* {<TablePlan />} */}
       <PubSuggestion />
     </div>
   );
