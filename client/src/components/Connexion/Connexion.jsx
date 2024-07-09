@@ -102,7 +102,7 @@ function Connexion() {
 
         <button
           type="button"
-          className="eyes"
+          className="eyes-connexion"
           onClick={() => {
             setEyes(!eyes);
           }}

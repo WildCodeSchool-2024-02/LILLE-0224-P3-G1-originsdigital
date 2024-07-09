@@ -204,6 +204,19 @@ input[type="checkbox"]:checked {
   }
 }
 
+.eyes-connexion {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  width: 2em;
+  position: relative;
+  top: -1.3em;
+  left: 37.5%;
+  cursor: pointer;
+  z-index: 1;
+}
+
 @media screen and (min-width: 992px) {
   .h1-connexion {
     font-size: 2.5em;
@@ -219,9 +232,16 @@ input[type="checkbox"]:checked {
     opacity: 1;
   }
 
-  .eyes {
-    top: -1.2em;
+  .eyes-connexion {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    width: 2em;
+    position: relative;
+    top: -1.3em;
     left: 18.5%;
-    font-size: 2em;
+    cursor: pointer;
+    z-index: 1;
   }
 }

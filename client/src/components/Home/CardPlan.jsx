@@ -7,7 +7,7 @@ function CardPlan() {
     <div className="card-container">
       <Link className="underlineText" to="/payment">
         <CardPay
-          title="VHS Premium sans publicité"
+          title="VHS Premium"
           price={3.99}
           buttonText="S'abonner"
           background="02DF93"
@@ -15,7 +15,7 @@ function CardPlan() {
       </Link>
       <Link className="underlineText" to="/subscribe">
         <CardPay
-          title="VHS Lite avec publicités"
+          title="VHS free"
           buttonText="Gratuit"
           background="FFFFFF"
         />
