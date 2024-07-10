@@ -18,6 +18,17 @@ class VideoRepository extends AbstractRepository {
     // Return the array of results
     return rows;
   }
+
+  async read(id) {
+    const [row] = await this.database.query(
+      `SELECT *
+      FROM video
+      JOIN video_genre ON video.id = video_genre.videoID
+      JOIN genre ON video_genre.genreID = genre.id where video.id = ?;`,
+      [id]
+    );
+    return row;
+  }
 }
 
 module.exports = VideoRepository;

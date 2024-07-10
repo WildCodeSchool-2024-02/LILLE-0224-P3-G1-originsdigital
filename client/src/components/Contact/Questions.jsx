@@ -1,6 +1,5 @@
 import "./Questions.css";
 
-
 export default function Questions() {
   return (
     <div className="container-body">

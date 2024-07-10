@@ -38,6 +38,17 @@
   align-items: center;
   width: 100%;
   font-size: 2em;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .input-creation-account {
@@ -80,6 +91,7 @@
   text-align: start;
   font-size: 1em;
   margin-left: 0em;
+  font-weight: bold;
 }
 
 .errors-ok {
@@ -122,6 +134,7 @@
   top: -1.3em;
   left: 37%;
   cursor: pointer;
+  z-index: 1;
 }
 
 .hr-eyes {
@@ -179,7 +192,7 @@
     display: flex;
     align-items: flex-start;
     width: 100%;
-    font-size: 1.2em;
+    font-size: 2em;
   }
 
   .backgroud-creation-accound {

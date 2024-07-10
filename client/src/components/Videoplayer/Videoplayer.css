@@ -1,15 +1,34 @@
 .video_player_container {
-  width: 100%;
-  max-width: 100%;
-  padding-top: 56.25%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
   position: relative;
+  height: 0;
 }
 
 .video_player_container iframe {
-  position: absolute;
-  top: 0;
   left: 0;
-  width: 100%;
+  top: 0;
   height: 100%;
-  border: none;
+  width: 100%;
+  position: absolute;
+}
+
+@media screen and (max-width: 427px) and (min-width: 320px) {
+  .iframe_player_none {
+    display: none;
+  }
+
+  .iframe-player {
+    animation-name: opacity;
+    animation-duration: 6s;
+  }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }

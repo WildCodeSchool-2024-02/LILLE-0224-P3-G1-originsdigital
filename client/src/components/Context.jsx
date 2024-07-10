@@ -20,6 +20,27 @@ export function ContextProvider({ children }) {
   const contextValue = useMemo(
     () => ({ userName, setUserName, videos, setVideos }),
     [userName, videos]
+
+  const [style, setStyle] = useState(false);
+  const [textDefile, setTexDefile] = useState("");
+
+  const fctStyle = (title) => {
+    setStyle(!style);
+    setTexDefile(title);
+  };
+  if (style) {
+    setTimeout(() => {
+      setStyle(!style);
+    }, 2500);
+  }
+
+  if (style) {
+    setTimeout(() => {}, 800);
+  }
+
+  const contextValue = useMemo(
+    () => ({ userName, setUserName, fctStyle, textDefile, style }),
+    [userName, textDefile, style]
   );
 
   return <context.Provider value={contextValue}>{children}</context.Provider>;

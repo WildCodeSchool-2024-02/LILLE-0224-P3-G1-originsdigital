@@ -32,14 +32,14 @@ function CreationAccount() {
       ...prevState,
       [name]: value,
     }));
-  };
 
-  axios
-    .get(`http://localhost:3310/api/users/verify/${user.user}`)
-    .then((response) => setVerify(response.data[0].username));
-  axios
-    .get(`http://localhost:3310/api/users/verify-email/${user.mail}`)
-    .then((response) => setVerifyEmail(response.data[0].email));
+    axios
+      .get(`http://localhost:3310/api/users/verify/${user.user}`)
+      .then((response) => setVerify(response.data[0].username));
+    axios
+      .get(`http://localhost:3310/api/users/verify-email/${user.mail}`)
+      .then((response) => setVerifyEmail(response.data[0].email));
+  };
 
   const handleSubmit = () => {
     if (
@@ -79,11 +79,13 @@ function CreationAccount() {
         alt="this is a fond screen"
         className="backgroud-creation-accound"
       />
-      <img
-        src="src/assets/images/Logo1.png"
-        alt="this is a logo"
-        className="logo-creation-account"
-      />
+      <Link to="/">
+        <img
+          src="src/assets/images/Logo1.png"
+          alt="this is a logo"
+          className="logo-creation-account"
+        />
+      </Link>
       <section>
         <Form
           className="form-creation-account"

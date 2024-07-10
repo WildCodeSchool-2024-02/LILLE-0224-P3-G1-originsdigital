@@ -8,7 +8,7 @@ body {
   font-family: "Darker Grotesque", sans-serif;
   margin: 0;
 }
-h3 {
+.h3-a-propos {
   color: var(--color-four);
   padding-left: 1rem;
 }
@@ -92,8 +92,6 @@ ul {
   margin: 0;
   justify-content: center;
   background-color: var(--color-four);
-
-  /*width: 100%;*/
 }
 .SectionAbout {
   background-color: var(--color-two);
