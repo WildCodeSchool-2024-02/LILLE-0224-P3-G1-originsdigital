@@ -203,7 +203,7 @@ class VideoSeeder extends AbstractSeeder {
           "https://images.allocine.fr/medias/nmedia/18/36/00/95/19884323.jpg",
         link: "https://www.youtube.com/watch?v=qo5jJpHtI1Y",
         rating: 4.8,
-        status: "free",
+        status: "premium",
       },
       {
         titre: "Le Silence des Agneaux",
@@ -353,7 +353,7 @@ class VideoSeeder extends AbstractSeeder {
           "https://images.allocine.fr/medias/nmedia/18/35/75/74/19259354.jpg",
         link: "https://www.youtube.com/watch?v=1nCqRmx3Dnw",
         rating: 4.9,
-        status: "free",
+        status: "premium",
       },
       {
         titre: "ER",
@@ -368,7 +368,7 @@ class VideoSeeder extends AbstractSeeder {
           "https://images.allocine.fr/medias/nmedia/18/35/75/55/19259357.jpg",
         link: "https://www.youtube.com/watch?v=A_g8M4wMGow",
         rating: 4.2,
-        status: "free",
+        status: "premium",
       },
 
       // Ajoutez d'autres films de manière similaire

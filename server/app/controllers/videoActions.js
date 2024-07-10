@@ -14,6 +14,21 @@ const browse = async (req, res, next) => {
     next(err);
   }
 };
+
+const browseFree = async (req, res, next) => {
+  try {
+    // Fetch only free items from the database
+    const freeVideos = await tables.video.readFree();
+
+    // Respond with the items in JSON format
+    res.json(freeVideos);
+  } catch (err) {
+    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
+
 module.exports = {
   browse,
+  browseFree,
 };
