@@ -1,5 +1,5 @@
 import "./PubSuggestion.css";
-import Card from "../Card/Card";
+// import Card from "../Card/Card";
 
 function PubSuggestion() {
   return (
@@ -8,10 +8,10 @@ function PubSuggestion() {
         <h1 className="h1-title">Plongez dans l’Univer du VHS</h1>
         <h3 className="h3-p">Derniers ajouts</h3>
         <article className="cardSuggestion">
+          {/* {<Card />
           <Card />
           <Card />
-          <Card />
-          <Card />
+          <Card />} */}
         </article>
       </div>
       <article className="SectionSuggestionFilms">
