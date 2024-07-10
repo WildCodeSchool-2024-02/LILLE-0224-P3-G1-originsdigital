@@ -1,4 +1,4 @@
-Global Styles body {
+body {
   margin-top: 5em;
   font-family: "Darker Grotesque", sans-serif;
   font-weight: 400;
@@ -26,8 +26,8 @@ body {
 .card {
   perspective: 150rem;
   position: relative;
-  width: 30em;
-  height: 52rem;
+  width: 33em;
+  height: 17rem;
   margin: 0 auto;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -58,6 +58,7 @@ body {
 .card_side-back {
   color: var(--color-one);
   transform: rotateY(180deg);
+  background-color: var(--color-three);
 }
 
 .card_image {
@@ -66,20 +67,13 @@ body {
   object-fit: cover;
 }
 
-@media screen and (max-width: 992px) {
-  .card_mobile {
-    display: none;
-  }
+.card_details {
+  font-weight: bolder;
+}
 
+@media screen and (max-width: 992px) {
   .card_details_mobile {
-    color: var(--color-one);
-    font-size: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 2em;
+    display: none;
   }
 
   .card_image {
@@ -116,5 +110,8 @@ body {
   }
   .card_details_mobile {
     display: none;
+  }
+  .card {
+    height: 52rem;
   }
 }

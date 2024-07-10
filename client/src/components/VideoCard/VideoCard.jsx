@@ -1,21 +1,14 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import "./VideoCard.css";
+import { Mycontext } from "../Context";
 
 function VideoCard() {
   const [flippedIndex, setFlippedIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
-  const [videos, setVideos] = useState([]);
+  const { videos } = Mycontext();
   const [hoverTimeout, setHoverTimeout] = useState(null);
 
   useEffect(() => {
-    const fetchVideos = async () => {
-      const response = await axios.get("http://localhost:3310/api/videos");
-      setVideos(response.data);
-    };
-
-    fetchVideos();
-
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 992);
     };
