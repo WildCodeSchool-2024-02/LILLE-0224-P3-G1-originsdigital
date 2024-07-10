@@ -5,7 +5,9 @@ export default function CardPay({ title, price, buttonText, background }) {
     <div className="cardP" style={{ background: `#${background}` }}>
       <h2 className="textTitle">{title}</h2>
       {price && <p className="textPrice">Prix: €{price}</p>}
-      <button type='button' className="btn-buy">{buttonText}</button>
+      <button type="button" className="btn-buy">
+        {buttonText}
+      </button>
     </div>
   );
 }

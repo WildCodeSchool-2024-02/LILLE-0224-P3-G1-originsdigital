@@ -20,7 +20,7 @@ export default function ContactPage() {
 
   return (
     <div className="sectionForm">
-      <h1>Contact</h1>
+      <h1 className="h1-contact-page">Contact</h1>
 
       <form ref={form} onSubmit={sendEmail} className="form-contact">
         <label className="fields" htmlFor="name">
