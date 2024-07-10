@@ -35,18 +35,25 @@ function Faq() {
   ];
 
   return (
-    <div className="fair-Container">
-      {questions.map((question, index) => (
-        <div key={`question_${question}`} className="fair-item">
-          <button type='button' className="question" onClick={() => toggleAnswer(index)}>
-            {question}
-          </button>
-          {showAnswers[index] && (
-            <div className="answer">{answers[index]}</div>
-          )}
-        </div>
-      ))}
-    </div>
+    <>
+      <h1 className="h1-faq">Foire aux questions</h1>
+      <div className="fair-Container">
+        {questions.map((question, index) => (
+          <div key={`question_${question}`} className="fair-item">
+            <button
+              type="button"
+              className="question"
+              onClick={() => toggleAnswer(index)}
+            >
+              {question}
+            </button>
+            {showAnswers[index] && (
+              <div className="answer">{answers[index]}</div>
+            )}
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 

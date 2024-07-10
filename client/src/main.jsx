@@ -18,6 +18,7 @@ import { ContextProvider } from "./components/Context";
 import Deconnexion from "./components/Deconnexion";
 import VideoCard from "./components/VideoCard/VideoCard";
 import PageBrowse from "./pages/PageBrowse";
+import InfoContact from "./components/Contact/InfoContact";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/Terms-Of-Use",
         element: <TermsOfUse />,
+      },
+      {
+        path: "/info-contact",
+        element: <InfoContact />,
       },
       {
         path: "/informations",
@@ -102,8 +107,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/deconnexion",
-    element: <Deconnexion />
-  }
+    element: <Deconnexion />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
