@@ -7,13 +7,13 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import item-related actions
-const { browse} = require("../../../controllers/videoActions");
+const { browse, read } = require("../../../controllers/videoActions");
 
 // Route to get a list of videos
 
 router.get("/", browse);
 
-
+router.get("/:id", read);
 
 /* ************************************************************************* */
 

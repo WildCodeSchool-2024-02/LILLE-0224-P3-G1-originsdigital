@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap");
+
 .imgHomePartPub {
-  width: 100%;
+  max-width: 100%;
+  margin-top: 5em;
 }
 
 .container-Home {
@@ -14,14 +17,18 @@
 }
 .TextChoose {
   color: white;
-  font-size: 36px;
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
 }
 .choosePlan {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  font-family: "Darker Grotesque", sans-serif;
   gap: 2rem;
-  width: 50%;
+  width: 100%;
 }
 .btn-Choose {
   color: var(--color-one);
@@ -30,7 +37,7 @@
   background-color: var(--color-three);
   display: flex;
   padding: 1rem;
-  border-radius: 25px;
+  border-radius: 5px;
   justify-content: center;
   align-items: center;
   width: auto;
@@ -47,7 +54,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 50%;
+  width: 100%;
 }
 .textP {
   color: white;
@@ -60,10 +67,11 @@
 .titleP {
   display: flex;
   justify-content: center;
-  font-size: xx-large;
+  font-size: 2em;
   font-weight: bolder;
+  font-family: "Darker Grotesque", sans-serif;
 }
-@media (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .artcileP {
     display: flex;
     flex-direction: column;
@@ -86,5 +94,11 @@
     gap: 2rem;
     width: 80%;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .imgHomePartPub {
+    width: 200%;
   }
 }

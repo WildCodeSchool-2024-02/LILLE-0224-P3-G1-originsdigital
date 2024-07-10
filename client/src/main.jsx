@@ -1,5 +1,4 @@
 import ReactDOM from "react-dom/client";
-// import axios from "axios";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
@@ -58,7 +57,7 @@ const router = createBrowserRouter([
         element: <Header />,
       },
       {
-        path: "/player",
+        path: "/player/:id",
         element: <PlayerPage />,
       },
     ],

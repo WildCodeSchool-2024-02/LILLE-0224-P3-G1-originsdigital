@@ -20,6 +20,7 @@ export default function ContactPage() {
   };
 
   return (
+
     <div className="container-form">
       <div className="sectionForm">
         <h1 className="h1contact">Contact</h1>
@@ -30,7 +31,6 @@ export default function ContactPage() {
             alt="home icon"
           />
         </Link>
-
         <form ref={form} onSubmit={sendEmail} className="form-contact">
           <label className="fields" htmlFor="name">
             Name
