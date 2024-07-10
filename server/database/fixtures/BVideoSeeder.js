@@ -203,7 +203,7 @@ class VideoSeeder extends AbstractSeeder {
           "https://fr.web.img6.acsta.net/c_310_420/medias/nmedia/00/02/56/92/aff.jpg",
         link: "https://www.youtube.com/watch?v=2ilzidi_J8Q&ab_channel=RottenTomatoesClassicTrailers",
         rating: 4.8,
-        status: "free",
+        status: "premium",
       },
       {
         titre: "Le Silence des Agneaux",
@@ -353,7 +353,7 @@ class VideoSeeder extends AbstractSeeder {
           "https://fr.web.img2.acsta.net/c_310_420/pictures/21/01/05/18/10/0510470.jpg",
         link: "https://www.youtube.com/watch?v=_u6vYpbfCmQ&ab_channel=SoulMediaDenmark",
         rating: 4.9,
-        status: "free",
+        status: "premium",
       },
       {
         titre: "ER",
@@ -368,7 +368,7 @@ class VideoSeeder extends AbstractSeeder {
           "https://fr.web.img3.acsta.net/c_310_420/pictures/19/08/27/10/31/1817615.jpg",
         link: "https://www.youtube.com/watch?v=q6Qgrb8lP4k&ab_channel=SoulMediaDenmark",
         rating: 4.2,
-        status: "free",
+        status: "premium",
       },
     ];
 
