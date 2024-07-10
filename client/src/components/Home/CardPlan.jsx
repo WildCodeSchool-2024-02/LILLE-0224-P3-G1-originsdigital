@@ -14,11 +14,7 @@ function CardPlan() {
         />
       </Link>
       <Link className="underlineText" to="/subscribe">
-        <CardPay
-          title="VHS free"
-          buttonText="Gratuit"
-          background="FFFFFF"
-        />
+        <CardPay title="VHS free" buttonText="Gratuit" background="FFFFFF" />
       </Link>
     </div>
   );

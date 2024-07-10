@@ -8,7 +8,29 @@ class InsertUserRepository extends AbstractRepository {
   async add(data) {
     await this.database.query(
       `insert into ${this.table} (lastname,firstname,email,username,password,status) values (?,?,?,?,?,?)`,
-      [data.last, data.first, data.mail, data.user, data.hashedPassword, 1]
+      [
+        data.last
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;"),
+        data.first
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;"),
+        data.mail,
+        data.user
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#39;"),
+        data.hashedPassword,
+        1,
+      ]
     );
   }
 }

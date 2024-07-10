@@ -1,5 +1,7 @@
 const argon2 = require("argon2");
 
+const jwt = require("jsonwebtoken");
+
 const tables = require("../../database/tables");
 
 const add = async (req, res, next) => {
@@ -59,7 +61,15 @@ const verifyPseudoOrEmail = async (req, res, next) => {
       const verified = await argon2.verify(verif.password, req.body.password);
 
       if (verified) {
-        res.json({ password: true, results: verif });
+        const token = await jwt.sign(
+          { sub: verif.id, isAdmin: verif.status },
+          process.env.APP_SECRET,
+          {
+            expiresIn: "1m",
+          }
+        );
+
+        res.json({ password: true, results: verif, secureKey: token });
       } else {
         res.json({ password: false });
       }

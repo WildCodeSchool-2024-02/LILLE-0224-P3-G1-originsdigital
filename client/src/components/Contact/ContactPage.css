@@ -4,7 +4,7 @@
   font-weight: weight;
   font-style: normal;
 }
-h1 {
+.h1-contact-page {
   color: var(--color-one);
 }
 body {
