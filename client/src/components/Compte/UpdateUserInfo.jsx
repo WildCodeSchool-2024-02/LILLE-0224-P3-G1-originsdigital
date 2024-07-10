@@ -1,4 +1,4 @@
-import { Form, useActionData, useParams } from "react-router-dom";
+import { Form, Link, useActionData, useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import "./UpdateUserInfo.css";
@@ -61,11 +61,13 @@ function UpdateUserInfo() {
 
   return (
     <>
-      <img
-        src="../src/assets/images/Logo1.png"
-        alt="this is a logo"
-        className="logo-creation-account"
-      />
+      <Link to="/">
+        <img
+          src="../src/assets/images/Logo1.png"
+          alt="this is a logo"
+          className="logo-creation-account"
+        />
+      </Link>
       <Form className="form-mon-compte" method="put" onSubmit={handleSubmit}>
         <h1 className="h1-my-account">Modifier mon profil </h1> <hr />
         <div className="div-form">

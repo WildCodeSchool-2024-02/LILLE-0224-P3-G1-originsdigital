@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import "./Card.css";
 
-function Card() {
+function Card({ video }) {
   const [flipped, setFlipped] = useState(false);
   const [cooldown, setCooldown] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
@@ -14,16 +15,17 @@ function Card() {
         setCooldown(false);
       }, 2000);
     }
-    useEffect(() => {
-      const handleResize = () => {
-        setIsMobile(window.innerWidth <= 992);
-      };
-      window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }, []);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 992);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div
@@ -32,28 +34,26 @@ function Card() {
       onFocus={HandleFlip}
     >
       <div className="card_side card_side-front">
-        <img
-          src="https://fr.web.img6.acsta.net/c_310_420/pictures/22/01/14/08/39/1848157.jpg"
-          alt="Movie Poster"
-          className="card_image"
-        />
+        <img src={video.image} alt="Movie Poster" className="card_image" />
         <div className="card_details_mobile">
           <ul>
-            <li>Release_Date</li>
-            <li>Duration Rating</li>
-            <li>Director</li>
+            <li>{video.release_date}</li>
+            <li>
+              {video.duration} {video.rating}
+            </li>
+            <li>{video.director}</li>
           </ul>
         </div>
       </div>
       <div className="card_side card_side-back">
         <div className="card_cta">
           <div className="card_details">
-            <h2 className="card_title">Titre</h2>
+            <h2 className="card_title">{video.titre}</h2>
             <ul>
-              <li>Release_Date</li>
-              <li>Duration Rating</li>
-              <li>Director</li>
-              <li>Synopsis</li>
+              <li>{new Date(video.release_date).toLocaleDateString()}</li>
+              <li>{video.duration}</li>
+              <li>{video.director}</li>
+              <li>{video.synopsis}</li>
             </ul>
           </div>
         </div>
@@ -61,5 +61,17 @@ function Card() {
     </div>
   );
 }
+
+Card.propTypes = {
+  video: PropTypes.shape({
+    image: PropTypes.string.isRequired,
+    release_date: PropTypes.string.isRequired,
+    duration: PropTypes.string.isRequired,
+    director: PropTypes.string.isRequired,
+    titre: PropTypes.string.isRequired,
+    synopsis: PropTypes.string.isRequired,
+    rating: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default Card;

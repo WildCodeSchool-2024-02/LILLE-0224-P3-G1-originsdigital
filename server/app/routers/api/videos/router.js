@@ -7,6 +7,7 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import item-related actions
+
 const { browse } = require("../../../controllers/videoActions");
 const { browseFree } = require("../../../controllers/videoActions");
 
@@ -14,6 +15,7 @@ const { browseFree } = require("../../../controllers/videoActions");
 
 router.get("/", browse);
 router.get("/free", browseFree);
+
 
 /* ************************************************************************* */
 

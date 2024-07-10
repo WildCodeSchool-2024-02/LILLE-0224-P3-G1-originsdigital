@@ -47,11 +47,13 @@ function Connexion() {
           response.data.username !== "no username" &&
           response.data.password === true
         ) {
+          console.info(response.data.secureKey);
           Cookies.set("auth", response.data.results.username);
+          Cookies.set("token", response.data.secureKey);
           setAnimateFadeOut("fade-out");
 
           setTimeout(() => {
-            window.location.href = "http://localhost:3000/play";
+            window.location.href = "http://localhost:3000/browsepage";
           }, 1000);
         }
       });
@@ -64,11 +66,13 @@ function Connexion() {
         alt="this is a vhs pictures"
         className="img-background-connexion"
       />
-      <img
-        src="src/assets/images/Logo1.png"
-        alt="this is a logo"
-        className="logo-connexion"
-      />
+      <Link to="/">
+        <img
+          src="src/assets/images/Logo1.png"
+          alt="this is a logo"
+          className="logo-connexion"
+        />
+      </Link>
       <Form className="form-connexion" method="post" onSubmit={submitForm}>
         <h1 className="h1-connexion">Connexion</h1>
 
@@ -102,7 +106,7 @@ function Connexion() {
 
         <button
           type="button"
-          className="eyes"
+          className="eyes-connexion"
           onClick={() => {
             setEyes(!eyes);
           }}

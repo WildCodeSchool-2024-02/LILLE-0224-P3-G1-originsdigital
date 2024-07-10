@@ -1,21 +1,22 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import "./VideoCard.css";
+import { Link } from "react-router-dom";
+import { Mycontext } from "../Context";
 
 function VideoCard() {
+  const { fctStyle } = Mycontext();
+
   const [flippedIndex, setFlippedIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
-  const [videos, setVideos] = useState([]);
+  const { videos } = Mycontext();
   const [hoverTimeout, setHoverTimeout] = useState(null);
+  const [title, setTitle] = useState(false);
+
+  setTimeout(() => {
+    setTitle(true);
+  }, 1000);
 
   useEffect(() => {
-    const fetchVideos = async () => {
-      const response = await axios.get("http://localhost:3310/api/videos");
-      setVideos(response.data);
-    };
-
-    fetchVideos();
-
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 992);
     };
@@ -45,21 +46,42 @@ function VideoCard() {
 
   return (
     <div>
-      <h1 className="video-card-title">TOUS NOS FILMS</h1>
+      {title && (
+        <h1 className="video-card-title-main">DANS LA MEME CATEGORIE</h1>
+      )}
+
       <div className="video-card-container">
         {videos.map((video, index) => (
           <div
             key={video.videoID}
             id="test"
-            className={`card ${flippedIndex === index ? "flipped" : ""}`}
+            className={`video-card ${flippedIndex === index ? "flipped" : ""}`}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
             onFocus={() => handleMouseEnter(index)}
             onBlur={handleMouseLeave}
           >
-            <div className="card-side card-side-front">
-              <img src={video.image} alt={video.titre} className="card-image" />
-              <div className="card-details-mobile">
+            <Link to={`/player/${video.videoID}#top`}>
+              <button
+                className="button-random2"
+                type="button"
+                onClick={() => {
+                  fctStyle(video.titre);
+                }}
+              >
+                {" "}
+              </button>
+            </Link>
+
+            <div className="video-card-side video-card-side-front">
+              <Link to={`/player/${video.videoID}#top`}>
+                <img
+                  src={video.image}
+                  alt={video.titre}
+                  className="video-card-image"
+                />
+              </Link>
+              <div className="video-card-details-mobile">
                 <ul>
                   <li>{new Date(video.release_date).toLocaleDateString()}</li>
                   <li>
@@ -69,10 +91,10 @@ function VideoCard() {
                 </ul>
               </div>
             </div>
-            <div className="card-side card-side-back">
-              <div className="card-back-content">
-                <div className="card-details">
-                  <h2 className="card-title">{video.titre}</h2>
+            <div className="video-card-side video-card-side-back">
+              <div className="video-card-back-content">
+                <div className="video-card-details">
+                  <h2 className="video-card-title">{video.titre}</h2>
                   <ul>
                     <li>{new Date(video.release_date).toLocaleDateString()}</li>
                     <li>

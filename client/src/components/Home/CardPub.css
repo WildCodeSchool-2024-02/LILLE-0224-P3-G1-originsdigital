@@ -8,6 +8,19 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
+
+.card-film {
+  background-image: url("https://media.senscritique.com/media/000019428895/0/speed.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.card-serie {
+  background-image: url("https://www.rollingstone.fr/wp-content/uploads/2022/05/marie-deux-enfants.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .container-cardPub {
   display: flex;
   justify-content: space-between;
@@ -18,8 +31,13 @@
 }
 
 .card-title {
-  font-size: 1.5em;
+  font-size: 3em;
   margin-bottom: 10px;
+  font-weight: bolder;
+  border: 1px solid black;
+  background-color: white;
+  width: 50%;
+  margin-left: 25%;
 }
 .cardPubSec {
   display: flex;
@@ -30,11 +48,92 @@
   font-size: 1.2em;
   color: #555;
 }
+
+#card-film-pub {
+  height: 20em;
+}
+
+#card-film-pub2 {
+  height: 20em;
+}
+
 @media (max-width: 480px) {
   .cardPubSec {
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #card-film-pub {
+    height: 25em;
+  }
+
+  #card-film-pub2 {
+    height: 25em;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  #card-film-pub {
+    height: 30em;
+  }
+
+  #card-film-pub2 {
+    height: 30em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #card-film-pub {
+    height: 35em;
+  }
+
+  #card-film-pub2 {
+    height: 35em;
+  }
+
+  #card-film-pub3 {
+    height: 35em;
+    background-image: url("https://m.media-amazon.com/images/I/911HM0CmzfL._AC_UF1000,1000_QL80_.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #card-film-pub {
+    height: 35em;
+  }
+
+  #card-film-pub2 {
+    height: 35em;
+  }
+
+  #card-film-pub3 {
+    height: 35em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #card-film-pub {
+    height: 35em;
+  }
+
+  #card-film-pub2 {
+    height: 35em;
+  }
+
+  #card-film-pub3 {
+    height: 35em;
+  }
+
+  #card-film-pub4 {
+    height: 35em;
+    background-image: url("https://fr.web.img3.acsta.net/pictures/19/07/04/09/54/2363561.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 }

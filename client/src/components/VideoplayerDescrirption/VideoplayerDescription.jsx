@@ -1,18 +1,35 @@
+import { useParams } from "react-router-dom";
 import "./VideoplayerDescription.css";
+import { useEffect, useState } from "react";
 
 function VideoplayerDescription() {
+  const [info, setInfo] = useState();
+  const [release, setRelease] = useState();
+  const [container, setContainer] = useState("videoplayer_description_container_none");
+  const { id } = useParams();
+  useEffect(() => {
+    fetch(`http://localhost:3310/api/videos/${id}`)
+      .then((response) => response.json())
+      .then((response) => {
+        setInfo(response);
+        setRelease(response[0].release_date.split("-"));
+      });
+  }, []);
+setTimeout(()=>{
+  setContainer("videoplayer_description_container")
+},1000)
   return (
-    <div className="videoplayer_description_container">
+    <div className={container}>
       <div className="videoplayer_description_categories">
         <div className="videoplayer_none_on_mobile">
+          <h2 className="title_categories">CATEGORIES</h2>
           <ul className="videoplayer_categories">
-            <h2 className="title_categories">CATEGORIES</h2>
             <li className="genre">FILM</li>
             <li className="genre">SERIE</li>
           </ul>
           <div className="categories">
+            <h2 className="title_genre">FILMS PAR GENRE</h2>
             <ul className="videoplayer_genre">
-              <h2 className="title_genre">FILMS PAR GENRE</h2>
               <li className="genre">ACTION</li>
               <li className="genre">AVENTURE</li>
               <li className="genre">ANIMATION</li>
@@ -33,23 +50,25 @@ function VideoplayerDescription() {
         <div className="videoplayer_image">
           <img
             className="vignette_image"
-            src="https://fr.web.img6.acsta.net/c_310_420/medias/nmedia/18/35/14/33/18366630.jpg"
+            src={info && info[0].image}
             alt="img"
           />
 
           <ul className="videoplayer_list">
             <li className="vignette_descritpion">
-              TITRE : LE SEIGNEUR DES ANNEAUX LE RETOUR DU ROI
+              TITRE : {info && info[0].titre}
             </li>
-            <li className="vignette_descritpion">DATE DE SORTIE : 2023</li>
             <li className="vignette_descritpion">
-              GENRE : ACTION AVENTURE FANTASTIQUE
+              DATE DE SORTIE : {info && `${release[1]}-${release[0]}`}{" "}
             </li>
-            <li className="vignette_descritpion">DUREE : 3H21</li>
             <li className="vignette_descritpion">
-              SYNOPSIS : Gandalf et Aragorn mènent le Monde des Hommes contre
-              l''armée de Sauron pour détourner son regard de Frodon et Sam
-              alors qu''ils approchent du Mont Destin avec l''Anneau Unique.
+              GENRE : {info && info[0].name}
+            </li>
+            <li className="vignette_descritpion">
+              DUREE : {info && info[0].duration}
+            </li>
+            <li className="vignette_descritpion">
+              SYNOPSIS : {info && info[0].synopsis}
             </li>
           </ul>
         </div>

@@ -2,32 +2,19 @@
 
 import { useState } from "react";
 import "./Header.css";
-import { Form, Link } from "react-router-dom";
+import { Form, Link, useParams } from "react-router-dom";
 import Cookies from "js-cookie";
+import { Mycontext } from "../Context";
 
 function Header() {
+  const { style, textDefile } = Mycontext();
   if (!Cookies.get("auth"))
     window.location.href = "http://localhost:3000/connexion";
 
-  const [style, setStyle] = useState(false);
   const [searchbar, setSearchBar] = useState(false);
   const [onBlur, setOnBlur] = useState(false);
-  const [textDefile, setTexDefile] = useState("");
   const session = Cookies.get("auth");
-
-  const fctStyle = () => {
-    setStyle(!style);
-    setTexDefile("terminator");
-  };
-  if (style) {
-    setTimeout(() => {
-      setStyle(!style);
-    }, 2500);
-  }
-
-  if (style) {
-    setTimeout(() => {}, 800);
-  }
+  const { id } = useParams();
 
   const searchBar = () => {
     setSearchBar(!searchbar);
@@ -45,16 +32,16 @@ function Header() {
   }
 
   return (
-    <>
+    <div id="apparition">
       <header>
         <img
-          src="src/assets/images/magn1.png"
+          src="/public/magn1.png"
           alt="ceci est une iage de magnétoscope"
           className="img_background_header"
         />
 
         <img
-          src="src/assets/images/magn2.png"
+          src="/public/magn2.png"
           alt="ceci est une iage de cassete video"
           className={style ? "img_k7" : "img_k7_none"}
         />
@@ -96,15 +83,21 @@ function Header() {
         >
           b
         </button>
-
-        <Link to="/play">
-          <button type="button" onClick={() => fctStyle()}>
-            click
-          </button>
-        </Link>
       </header>
-      <h1 style={{ color: "white", fontSize: "2em",marginTop:"10em" }}>Bienvenue {session} ! <Link to="/deconnexion">déconnexion</Link></h1>
-    </>
+      {!id && (
+        <h1
+          style={{
+            color: "white",
+            fontSize: "2em",
+            position: "relative",
+            top: "2.5em",
+          }}
+        >
+          Bienvenue {session} <br /> Nous vous recommandons:{" "}
+          <Link to="/deconnexion">déconnexion</Link>
+        </h1>
+      )}
+    </div>
   );
 }
 

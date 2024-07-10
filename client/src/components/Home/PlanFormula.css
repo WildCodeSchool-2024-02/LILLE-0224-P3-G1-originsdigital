@@ -24,6 +24,7 @@
   font-weight: bolder;
   color: var(--color-five);
   width: 50%;
+  text-align: center;
 }
 .textFormula {
   display: flex;

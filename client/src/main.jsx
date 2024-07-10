@@ -1,5 +1,4 @@
 import ReactDOM from "react-dom/client";
-// import axios from "axios";
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
@@ -12,12 +11,12 @@ import ContactPage from "./components/Contact/ContactPage";
 import Faq from "./components/Contact/Faq";
 import Header from "./components/Header/header";
 import Home from "./pages/Home";
+import PlayerPage from "./pages/Player";
 import Connexion from "./components/Connexion/Connexion";
 import { ContextProvider } from "./components/Context";
 import Deconnexion from "./components/Deconnexion";
 import VideoCard from "./components/VideoCard/VideoCard";
 import PageBrowse from "./pages/PageBrowse";
-
 
 const router = createBrowserRouter([
   {
@@ -51,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/play",
         element: <Header />,
+      },
+      {
+        path: "/player/:id",
+        element: <PlayerPage />,
       },
     ],
   },
@@ -98,8 +101,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/deconnexion",
-    element: <Deconnexion />
-  }
+    element: <Deconnexion />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

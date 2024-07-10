@@ -5,7 +5,7 @@ export default function About() {
     <div className="ContainerAbout">
       <div className="SectionAbout">
         <article className="Description">
-          <h3>À propos de nous</h3>
+          <h3 className="h3-a-propos">À propos de nous</h3>
           <p>
             Bienvenue sur VHS, votre destination incontournable pour redécouvrir
             les trésors cinématographiques et télévisuels des années 90 ! Créé
@@ -21,7 +21,7 @@ export default function About() {
           alt="groupe de développeurs"
         />
         <article className="Description">
-          <h3>Notre Mission</h3>
+          <h3 className="h3-a-propos">Notre Mission</h3>
           <p>
             Chez VHS, notre mission est claire : offrir à nos utilisateurs une
             plateforme où ils peuvent revivre les meilleures séries et films des
@@ -36,7 +36,7 @@ export default function About() {
           alt="groupe de développeurs"
         />
         <article className="Description1">
-          <h3>Notre Histoire</h3>
+          <h3 className="h3-a-propos">Notre Histoire</h3>
           <p>
             L’idée de VHS a émergé lors d’une soirée entre amis, pleine de
             souvenirs et de discussions sur les classiques des années 90.
@@ -46,7 +46,7 @@ export default function About() {
             combiner leurs compétences et leur passion pour créer VHS, un site
             de streaming unique en son genre.
           </p>
-          <h3>Ce que nous proposons</h3>
+          <h3 className="h3-a-propos">Ce que nous proposons</h3>
           <p>
             Sur VHS, vous trouverez une vaste collection de séries et de films
             des années 90, soigneusement sélectionnés pour satisfaire les
@@ -55,7 +55,7 @@ export default function About() {
             classiques intemporels, notre catalogue a de quoi ravir tous les
             goûts.
           </p>
-          <h3>Pourquoi choisir VHS ?</h3>
+          <h3 className="h3-a-propos">Pourquoi choisir VHS ?</h3>
           <ul>
             <li>
               Passion et Engagement : Notre équipe est composée de véritables
