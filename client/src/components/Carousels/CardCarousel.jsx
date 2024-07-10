@@ -72,7 +72,6 @@ function CardCarousel() {
       infiniteLoop
       selectedItem={0}
       width="100%"
-      // autoPlay
     >
       {videoGroups.map((group) => (
         <div
