@@ -11,6 +11,7 @@ function CardCarousel() {
   const [flippedIndex, setFlippedIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
   const [hoverTimeout, setHoverTimeout] = useState(null);
+  const win = window.innerWidth;
 
   useEffect(() => {
     if (a.length > 0) {
@@ -95,8 +96,7 @@ function CardCarousel() {
               >
                 <div className="card_side card_side-front">
                   <img
-                    // src={video.image_1}
-                    src="https://i.ytimg.com/vi/to-tCnJ0kkM/maxresdefault.jpg"
+                    src={win < 1024 ? video.image_1 : video.image_2}
                     alt="Movie Poster"
                     className="card_image"
                   />

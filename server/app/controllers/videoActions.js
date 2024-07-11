@@ -28,7 +28,17 @@ const browseFree = async (req, res, next) => {
   }
 };
 
+const read = async (req, res, next) => {
+  try {
+    const video = await tables.video.read(req.params.id);
+    res.json(video);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   browse,
   browseFree,
+  read
 };
