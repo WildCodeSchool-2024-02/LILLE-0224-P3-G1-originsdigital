@@ -66,67 +66,73 @@ function CardCarousel() {
   }
 
   return (
-    <Carousel
-      showArrows
-      showStatus={false}
-      showThumbs={false}
-      emulateTouch
-      infiniteLoop
-      selectedItem={0}
-      width="100%"
-    >
-      {videoGroups.map((group) => (
-        <div
-          className="car-arnauld"
-          key={group.map((video) => video.id).join("-")}
-          style={{ display: "flex", gap: "1em" }}
-        >
-          {group.map((video, index) => (
-            <div
-              style={{ border: "none" }}
-              key={video.id}
-              className={`card ${flippedIndex === index ? "flipped" : ""}`}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
-              onFocus={() => handleMouseEnter(index)}
-              onBlur={handleMouseLeave}
-            >
-              <div className="card_side card_side-front">
-                <img
-                  src={video.image}
-                  alt="Movie Poster"
-                  className="card_image"
-                />
-                <div className="card_details_mobile">
-                  <ul>
-                    <li>{new Date(video.release_date).toLocaleDateString()}</li>
-                    <li>
-                      {video.duration} {video.rating}
-                    </li>
-                    <li>{video.director}</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="card_side card_side-back">
-                <div className="card_cta">
-                  <div className="card_details">
-                    <h2 className="card_title">{video.titre}</h2>
+    <>
+      <h1 id="h1-film-welcom">FILMS</h1>
+      <Carousel
+        showArrows
+        showStatus={false}
+        showThumbs={false}
+        emulateTouch
+        infiniteLoop
+        selectedItem={0}
+        width="100%"
+      >
+        {videoGroups.map((group) => (
+          <div
+            className="car-arnauld"
+            key={group.map((video) => video.id).join("-")}
+            style={{ display: "flex", gap: "1em" }}
+          >
+            {group.map((video, index) => (
+              <div
+                style={{ border: "none" }}
+                key={video.id}
+                className={`card ${flippedIndex === index ? "flipped" : ""}`}
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
+                onFocus={() => handleMouseEnter(index)}
+                onBlur={handleMouseLeave}
+              >
+                <div className="card_side card_side-front">
+                  <img
+                    // src={video.image_1}
+                    src="https://i.ytimg.com/vi/to-tCnJ0kkM/maxresdefault.jpg"
+                    alt="Movie Poster"
+                    className="card_image"
+                  />
+                  <div className="card_details_mobile">
                     <ul>
                       <li>
                         {new Date(video.release_date).toLocaleDateString()}
                       </li>
-                      <li>{video.duration}</li>
+                      <li>
+                        {video.duration} {video.rating}
+                      </li>
                       <li>{video.director}</li>
-                      <li>{video.synopsis}</li>
                     </ul>
                   </div>
                 </div>
+                <div className="card_side card_side-back">
+                  <div className="card_cta">
+                    <div className="card_details">
+                      <h2 className="card_title">{video.titre}</h2>
+                      <ul>
+                        <li>
+                          {new Date(video.release_date).toLocaleDateString()}
+                        </li>
+                        <li>{video.duration}</li>
+                        <li>{video.director}</li>
+                        <li>{video.synopsis}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      ))}
-    </Carousel>
+            ))}
+          </div>
+        ))}
+      </Carousel>
+    </>
   );
 }
 

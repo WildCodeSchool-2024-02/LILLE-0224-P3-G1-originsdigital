@@ -293,6 +293,8 @@ header {
 
   #h1-film-welcom {
     font-size: 5em;
+    margin-top: 0em;
+    left: 1em;
   }
 
   .img_background_header {

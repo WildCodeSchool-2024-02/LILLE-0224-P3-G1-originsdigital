@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import "./Header.css";
-import { Form, Link, useParams } from "react-router-dom";
+import { Form, useParams } from "react-router-dom";
 import Cookies from "js-cookie";
 import { Mycontext } from "../Context";
 
@@ -86,8 +86,7 @@ function Header() {
       </header>
       {!id && (
         <h1 id="h1-film-welcom">
-          <span>Bienvenue</span> {session} <br /> FILMS{" "}
-          <Link to="/deconnexion">déconnexion</Link>
+          <span>Bienvenue</span> {session}
         </h1>
       )}
     </div>
