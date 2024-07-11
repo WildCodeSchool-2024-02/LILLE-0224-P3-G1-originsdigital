@@ -172,6 +172,19 @@ header {
   -webkit-tap-highlight-color: transparent;
 }
 
+.click_navigate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
 #h1-film-welcom {
   color: white;
   font-size: 2em;

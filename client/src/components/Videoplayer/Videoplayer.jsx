@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 function Videoplayer() {
   const [info, setInfo] = useState();
   const [iframe, setIframe] = useState("iframe_player_none");
-  
+
   const { id } = useParams();
   useEffect(() => {
     fetch(`http://localhost:3310/api/videos/${id}`)
@@ -19,9 +19,9 @@ function Videoplayer() {
         setInfo(splitUrl);
       });
   }, []);
-  setTimeout(()=>{
-    setIframe("iframe_player")
-  },1000)
+  setTimeout(() => {
+    setIframe("iframe_player");
+  }, 1000);
   return (
     <iframe
       className={iframe}
@@ -31,7 +31,7 @@ function Videoplayer() {
       src={`https://www.youtube.com/embed/${info && info}`}
       frameBorder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+      allowFullScreen
     >
       {" "}
     </iframe>
