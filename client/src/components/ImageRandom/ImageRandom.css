@@ -44,6 +44,13 @@
   .synopsis-random {
     display: none;
   }
+
+  .recommanded {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: -5em;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -81,15 +88,11 @@
     padding-bottom: 15px;
   }
 
-  .random-image {
-    width: 48em;
-  }
-
   .synopsis-random {
     color: white;
-    font-size: 5em;
+    font-size: 4em;
     width: 50%;
     margin-left: 1em;
-    margin-top: 1em;
+    margin-top: 3em;
   }
 }

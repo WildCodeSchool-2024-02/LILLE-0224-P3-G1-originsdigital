@@ -109,6 +109,11 @@ body {
     padding: 1rem;
   }
 
+  .carousel .slide img {
+    width: 80%;
+    height: 70%;
+  }
+
   .card_details {
     padding: 0 2rem 2rem;
   }
@@ -133,7 +138,41 @@ body {
   }
   .card {
     width: 48em;
-    height: 65rem;
-    border: 1px solid red;
+    height: 50rem;
+  }
+
+  .card_side-back {
+    color: var(--color-one);
+    transform: rotateY(180deg);
+    background-color: var(--color-three);
+    height: 100%;
+  }
+
+  .card.flipped {
+    height: 35%;
+  }
+
+  .card_side.card_side-front {
+    height: 70%;
+  }
+
+  .card_side.card_side-back {
+    height: 40%;
+  }
+
+  .carousel-root {
+    height: 40em;
+  }
+
+  .carousel.carousel-slider {
+    height: 40em;
+  }
+
+  .control-arrow.control-next {
+    height: 20em;
+  }
+
+  .control-arrow.control-prev {
+    height: 20em;
   }
 }

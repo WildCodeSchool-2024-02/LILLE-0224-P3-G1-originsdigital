@@ -95,7 +95,8 @@ function CardCarouselSeries() {
               >
                 <div className="card_side card_side-front">
                   <img
-                    src={video.image}
+                    // src={video.image_1}
+                    src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B88651E95E652B927F5B2C4A81CD4DD83CE10EC4350333862A5D68AB823392BE/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp"
                     alt="Movie Poster"
                     className="card_image"
                   />

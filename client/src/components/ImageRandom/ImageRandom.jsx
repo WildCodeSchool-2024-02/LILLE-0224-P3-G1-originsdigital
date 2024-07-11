@@ -46,8 +46,8 @@ function ImageRandom() {
             style={{ textDecoration: "none" }}
           >
             <h1 className="recommanded">
-              NOUS VOUS <br />
-              RECOMMANDONS
+              <br />
+              RECOMMANDATION
             </h1>
 
             <img
