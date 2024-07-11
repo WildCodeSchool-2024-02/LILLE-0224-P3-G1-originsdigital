@@ -77,7 +77,7 @@ class UserSeeder extends AbstractSeeder {
         email: "david.lefevre@example.com",
         username: "dlefevre",
         password: "password123",
-        status: 1,
+        status: 2,
       },
       {
         lastname: "Perrin",
@@ -85,7 +85,7 @@ class UserSeeder extends AbstractSeeder {
         email: "julie.perrin@example.com",
         username: "jperrin",
         password: "password123",
-        status: 1,
+        status: 2,
       },
     ];
 

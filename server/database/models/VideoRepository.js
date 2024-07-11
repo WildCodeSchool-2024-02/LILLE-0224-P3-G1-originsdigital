@@ -19,15 +19,15 @@ class VideoRepository extends AbstractRepository {
     return rows;
   }
 
-  async read(id) {
-    const [row] = await this.database.query(
-      `SELECT *
-      FROM video
-      JOIN video_genre ON video.id = video_genre.videoID
-      JOIN genre ON video_genre.genreID = genre.id where video.id = ?;`,
-      [id]
-    );
-    return row;
+  async readFree() {
+    // Execute the SQL SELECT query to retrieve only free videos
+    const [rows] = await this.database.query(`
+      SELECT * FROM video_genre AS vg
+      RIGHT JOIN video AS v ON v.id = vg.videoID
+      LEFT JOIN genre AS g ON g.id = vg.genreID
+      WHERE v.status = 'free'
+      `);
+    return rows;
   }
 }
 

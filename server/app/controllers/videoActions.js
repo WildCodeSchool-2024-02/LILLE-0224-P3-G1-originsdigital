@@ -15,16 +15,20 @@ const browse = async (req, res, next) => {
   }
 };
 
-const read = async (req, res, next) => {
+const browseFree = async (req, res, next) => {
   try {
-    const video = await tables.video.read(req.params.id);
-    res.json(video);
+    // Fetch only free items from the database
+    const freeVideos = await tables.video.readFree();
+
+    // Respond with the items in JSON format
+    res.json(freeVideos);
   } catch (err) {
+    // Pass any errors to the error-handling middleware
     next(err);
   }
 };
 
 module.exports = {
   browse,
-  read,
+  browseFree,
 };
