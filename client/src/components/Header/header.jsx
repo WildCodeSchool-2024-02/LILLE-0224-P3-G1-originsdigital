@@ -86,7 +86,7 @@ function Header() {
       </header>
       {!id && (
         <h1 id="h1-film-welcom">
-          <span>Bienvenue</span> {session} <br /> FILMS{" "}
+          <span>Bienvenue</span> {session} <br />
           <Link to="/deconnexion">déconnexion</Link>
         </h1>
       )}
