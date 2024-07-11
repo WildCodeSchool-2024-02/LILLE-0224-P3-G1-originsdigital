@@ -44,7 +44,7 @@ function VideoCardMovies() {
     setFlippedIndex(null);
   };
 
-  // Filtrer les vidéos pour ne garder que celles qui sont des séries
+  // Filtrer les vidéos pour ne garder que celles qui sont des films
   const moviesVideos = videos.filter((video) => video.typeID === "Film");
 
   return (
