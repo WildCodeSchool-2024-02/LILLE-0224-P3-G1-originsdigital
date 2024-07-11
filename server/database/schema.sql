@@ -35,7 +35,8 @@ CREATE TABLE video (
     director VARCHAR(255),
     duration VARCHAR(50),
     synopsis TEXT,
-    image VARCHAR(255),
+    image_1 VARCHAR(400),
+    image_2 VARCHAR(400),
     link VARCHAR(255),
     rating FLOAT,
     status VARCHAR(50)
