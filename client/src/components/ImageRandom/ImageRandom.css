@@ -13,7 +13,7 @@
 
 #apparition2 {
   animation-name: apparition;
-  animation-duration: 2s;
+  animation-duration: 3s;
   margin-top: -3em;
 }
 
@@ -32,4 +32,64 @@
   position: absolute;
   background-color: transparent;
   border: none;
+}
+
+.recommanded {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 427px) and (min-width: 320px) {
+  .synopsis-random {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .recommanded {
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
+  }
+
+  .button-random {
+    width: 45%;
+    height: 75%;
+  }
+
+  .synopsis-random {
+    color: white;
+    font-size: 3em;
+    width: 50%;
+    margin-left: 1em;
+    margin-top: 3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .recommanded {
+    color: white;
+    font-size: 3.5em;
+    font-weight: bold;
+  }
+
+  .random-image-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 10em;
+    padding-bottom: 15px;
+  }
+
+  .random-image {
+    width: 48em;
+  }
+
+  .synopsis-random {
+    color: white;
+    font-size: 5em;
+    width: 50%;
+    margin-left: 1em;
+    margin-top: 1em;
+  }
 }

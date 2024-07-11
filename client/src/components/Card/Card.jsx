@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import "./Card.css";
 
 function Card({ video }) {
-  console.info(video)
   const [flipped, setFlipped] = useState(false);
   const [cooldown, setCooldown] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);

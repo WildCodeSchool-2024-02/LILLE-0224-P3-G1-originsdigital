@@ -1,0 +1,35 @@
+.car-arnauld {
+  height: 18em;
+  margin-top: 6em;
+}
+
+.title-serie-car {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  position: relative;
+  top: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  .car-arnauld {
+    height: 40em;
+    margin-top: 15em;
+  }
+
+  .title-serie-car {
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
+    position: relative;
+    top: 2em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .car-arnauld {
+    width: 100%;
+    height: 60em;
+    margin-top: 15em;
+  }
+}

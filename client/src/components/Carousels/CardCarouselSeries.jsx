@@ -4,9 +4,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Mycontext } from "../Context";
 import "./CardCarousel.css";
 
-function CardCarousel() {
+function CardCarouselSeries() {
   const { videos } = Mycontext();
-  const a = videos.filter((elem) => elem.typeID === "Film");
+  const a = videos.filter((elem) => elem.typeID === "Série");
   const [displayedVideos, setDisplayedVideos] = useState([]);
   const [flippedIndex, setFlippedIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
@@ -66,68 +66,73 @@ function CardCarousel() {
   }
 
   return (
-    <Carousel
-      showArrows
-      showStatus={false}
-      showThumbs={false}
-      emulateTouch
-      infiniteLoop
-      selectedItem={0}
-      width="100%"
-    >
-      {videoGroups.map((group) => (
-        <div
-          className="car-arnauld"
-          key={group.map((video) => video.id).join("-")}
-          style={{ display: "flex", gap: "1em" }}
-        >
-          {group.map((video, index) => (
-            <div
-              style={{ border: "none" }}
-              key={video.id}
-              className={`card ${flippedIndex === index ? "flipped" : ""}`}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
-              onFocus={() => handleMouseEnter(index)}
-              onBlur={handleMouseLeave}
-            >
-              <div className="card_side card_side-front">
-                <img
-                  src={video.image}
-                  alt="Movie Poster"
-                  className="card_image"
-                />
-                <div className="card_details_mobile">
-                  <ul>
-                    <li>{new Date(video.release_date).toLocaleDateString()}</li>
-                    <li>
-                      {video.duration} {video.rating}
-                    </li>
-                    <li>{video.director}</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="card_side card_side-back">
-                <div className="card_cta">
-                  <div className="card_details">
-                    <h2 className="card_title">{video.titre}</h2>
+    <>
+      <h1 className="title-serie-car">SERIES</h1>
+      <Carousel
+        showArrows
+        showStatus={false}
+        showThumbs={false}
+        emulateTouch
+        infiniteLoop
+        selectedItem={0}
+        width="100%"
+      >
+        {videoGroups.map((group) => (
+          <div
+            className="car-arnauld"
+            key={group.map((video) => video.id).join("-")}
+            style={{ display: "flex", gap: "1em" }}
+          >
+            {group.map((video, index) => (
+              <div
+                style={{ border: "none" }}
+                key={video.id}
+                className={`card ${flippedIndex === index ? "flipped" : ""}`}
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
+                onFocus={() => handleMouseEnter(index)}
+                onBlur={handleMouseLeave}
+              >
+                <div className="card_side card_side-front">
+                  <img
+                    src={video.image}
+                    alt="Movie Poster"
+                    className="card_image"
+                  />
+                  <div className="card_details_mobile">
                     <ul>
                       <li>
                         {new Date(video.release_date).toLocaleDateString()}
                       </li>
-                      <li>{video.duration}</li>
+                      <li>
+                        {video.duration} {video.rating}
+                      </li>
                       <li>{video.director}</li>
-                      <li>{video.synopsis}</li>
                     </ul>
                   </div>
                 </div>
+                <div className="card_side card_side-back">
+                  <div className="card_cta">
+                    <div className="card_details">
+                      <h2 className="card_title">{video.titre}</h2>
+                      <ul>
+                        <li>
+                          {new Date(video.release_date).toLocaleDateString()}
+                        </li>
+                        <li>{video.duration}</li>
+                        <li>{video.director}</li>
+                        <li>{video.synopsis}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      ))}
-    </Carousel>
+            ))}
+          </div>
+        ))}
+      </Carousel>
+    </>
   );
 }
 
-export default CardCarousel;
+export default CardCarouselSeries;

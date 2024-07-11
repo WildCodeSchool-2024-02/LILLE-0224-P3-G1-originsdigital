@@ -17,10 +17,6 @@ export function ContextProvider({ children }) {
     fetchVideos();
   }, []);
 
-  // const contextValue = useMemo(
-  //   () => ({ userName, setUserName, videos, setVideos }),
-  //   [userName, videos]
-
   const [style, setStyle] = useState(false);
   const [textDefile, setTexDefile] = useState("");
 

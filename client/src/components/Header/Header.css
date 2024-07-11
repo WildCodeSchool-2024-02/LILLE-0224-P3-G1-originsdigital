@@ -9,7 +9,7 @@
 
 #apparition {
   animation-name: apparition;
-  animation-duration: 2s;
+  animation-duration: 0.1s;
 }
 
 @keyframes apparition {
@@ -172,9 +172,24 @@ header {
   -webkit-tap-highlight-color: transparent;
 }
 
+#h1-film-welcom {
+  color: white;
+  font-size: 2em;
+  position: relative;
+  top: 2.5em;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 768px) {
   header {
     height: 10em;
+  }
+
+  #h1-film-welcom {
+    position: relative;
+    top: 3em;
+    font-weight: "bold";
+    font-size: 4em;
   }
 
   .img_k7 {
@@ -274,6 +289,10 @@ header {
     background-color: black;
     position: fixed;
     left: 5%;
+  }
+
+  #h1-film-welcom {
+    font-size: 5em;
   }
 
   .img_background_header {
