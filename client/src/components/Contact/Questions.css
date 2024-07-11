@@ -31,6 +31,12 @@ span {
   box-shadow: 0px 0px 44px 0px rgba(2, 223, 147, 1);
   animation: bounce 1s forwards;
 }
+.h3-questions {
+  font-size: 26px;
+}
+.space {
+  padding-left: 3rem;
+}
 .bounce {
   -webkit-animation-name: bounce;
   animation-name: bounce;

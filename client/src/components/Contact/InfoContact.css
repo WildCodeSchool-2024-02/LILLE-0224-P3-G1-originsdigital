@@ -16,6 +16,7 @@ span {
   color: var(--color-six);
   cursor: pointer;
 }
+
 .container-body {
   display: flex;
   flex-direction: column;
@@ -24,7 +25,52 @@ span {
   width: 100%;
   background-color: var(--color-four);
   margin-top: 10rem;
+  gap: 4rem;
   animation: bounceInDown 2s forwards;
+}
+
+.h2-contact {
+  font-size: 24px;
+  color: var(--color-one);
+}
+.h3-contact {
+  font-size: 22px;
+}
+.p-contact {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  margin: 16px 0;
+  padding: 8px;
+}
+.li-contact {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  font-family: Arial, sans-serif;
+  margin: 16px 0;
+  padding: 8px;
+}
+.phoneText {
+  text-decoration: aliceblue;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  font-family: Arial, sans-serif;
+  color: blue;
+  margin: 16px 0;
+  padding: 8px;
+}
+.span-contact {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  font-family: Arial, sans-serif;
+  color: blue;
+  margin: 16px 0;
+  padding: 8px;
 }
 .bounceInDown {
   -webkit-animation-name: bounceInDown;
@@ -116,15 +162,25 @@ span {
   flex-direction: row;
   justify-content: space-around;
   align-items: baseline;
-  width: 80%;
+  width: 70%;
+}
+.supportSection {
+  display: flex;
+  background-color: var(--color-two);
+  flex-direction: row;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  box-shadow: 0px 0px 44px 0px rgba(2, 223, 147, 1);
+  margin-bottom: 3rem;
 }
 .SectionInfoContact {
   display: flex;
   align-items: center;
   background-color: var(--color-two);
-  width: 60%;
-  padding: 1rem;
-  margin: 1rem;
+  width: 70%;
+  padding: 2rem;
   border-radius: 25px;
   box-shadow: 0px 0px 44px 0px rgba(2, 223, 147, 1);
 }
@@ -141,16 +197,7 @@ span {
   color: var(--color-six);
   cursor: pointer;
 }
-.supportSection {
-  display: flex;
-  flex-direction: row;
-  width: 78%;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25px;
-  background-color: var(--color-two);
-  box-shadow: 0px 0px 44px 0px rgba(2, 223, 147, 1);
-}
+
 .supportInfo {
   display: flex;
   flex-direction: column;
@@ -162,14 +209,11 @@ span {
 .callSupport {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 90%;
   background-color: var(--color-five);
   padding: 1rem;
   margin: 1rem;
   border-radius: 25px;
-}
-.phoneText {
-  text-decoration: aliceblue;
 }
 
 @media (max-width: 480px) {
@@ -185,15 +229,34 @@ span {
     display: flex;
     align-items: center;
     background-color: var(--color-two);
-    width: 80%;
+    width: 90%;
     padding: 1rem;
     border-radius: 25px;
     box-shadow: 0px 0px 44px 0px rgba(2, 223, 147, 1);
   }
+  .supportSection {
+    display: flex;
+    background-color: var(--color-two);
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 0px 0px 44px 0px rgba(2, 223, 147, 1);
+    margin-bottom: 3rem;
+  }
+  .supportInfo {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: var(--color-two);
+    padding: 1rem;
+    margin: 1rem;
+  }
   .SectionInfoContactSuggestion {
     display: flex;
     background-color: var(--color-two);
-    width: 80%;
+    width: 90%;
     padding: 1rem;
     border-radius: 25px;
     box-shadow: 0px 0px 44px 0px rgba(2, 223, 147, 1);
