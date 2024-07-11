@@ -13,6 +13,7 @@ function VideoplayerDescription() {
       .then((response) => {
         setInfo(response);
         setRelease(response[0].release_date.split("-"));
+        console.info(response[0])
       });
   }, []);
 setTimeout(()=>{
@@ -50,7 +51,7 @@ setTimeout(()=>{
         <div className="videoplayer_image">
           <img
             className="vignette_image"
-            src={info && info[0].image}
+            src={info && info[0].image_1}
             alt="img"
           />
 

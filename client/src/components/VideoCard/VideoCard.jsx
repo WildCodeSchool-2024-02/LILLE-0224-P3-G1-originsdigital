@@ -61,7 +61,7 @@ function VideoCard() {
             onFocus={() => handleMouseEnter(index)}
             onBlur={handleMouseLeave}
           >
-            <Link to={`/player/${video.videoID}#top`}>
+            <Link to={`/player/${video.videoID}`}>
               <button
                 className="button-random2"
                 type="button"
@@ -74,9 +74,9 @@ function VideoCard() {
             </Link>
 
             <div className="video-card-side video-card-side-front">
-              <Link to={`/player/${video.videoID}#top`}>
+              <Link to={`/player/${video.videoID}`}>
                 <img
-                  src={video.image}
+                  src={video.image_1}
                   alt={video.titre}
                   className="video-card-image"
                 />

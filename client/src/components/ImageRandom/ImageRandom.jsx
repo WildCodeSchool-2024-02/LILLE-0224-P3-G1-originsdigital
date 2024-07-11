@@ -20,7 +20,7 @@ function ImageRandom() {
       const randomVideo = videos[randomIndex];
       setVid(randomVideo);
       // Lit l'image au hasard
-      setRandomImage(randomVideo.image);
+      setRandomImage(randomVideo.image_1);
       setRandom(videos[randomIndex].titre);
     };
 
