@@ -25,6 +25,17 @@
   -webkit-text-stroke: 0.5px black;
 }
 
+.card-home {
+  perspective: 150rem;
+  position: relative;
+  width: 33em;
+  height: 45em;
+  margin: 0 auto;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  color: var(--color-one);
+}
+
 @media screen and (min-width: 375px) {
   .h3-p {
     font-size: x-large;

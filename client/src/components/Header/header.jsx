@@ -85,15 +85,8 @@ function Header() {
         </button>
       </header>
       {!id && (
-        <h1
-          style={{
-            color: "white",
-            fontSize: "2em",
-            position: "relative",
-            top: "2.5em",
-          }}
-        >
-          Bienvenue {session} <br /> Nous vous recommandons:{" "}
+        <h1 id="h1-film-welcom">
+          <span>Bienvenue</span> {session} <br /> FILMS{" "}
           <Link to="/deconnexion">déconnexion</Link>
         </h1>
       )}

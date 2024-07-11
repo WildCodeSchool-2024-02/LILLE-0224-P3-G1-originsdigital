@@ -26,7 +26,6 @@ function ImageRandom() {
 
     fetchVideos();
   }, []);
-
   return (
     <div className="random-image-container" id="apparition2">
       {randomImage ? (
@@ -42,7 +41,15 @@ function ImageRandom() {
               {" "}
             </button>
           </Link>
-          <Link to={`/player/${vid.videoID}`}>
+          <Link
+            to={`/player/${vid.videoID}`}
+            style={{ textDecoration: "none" }}
+          >
+            <h1 className="recommanded">
+              NOUS VOUS <br />
+              RECOMMANDONS
+            </h1>
+
             <img
               src={randomImage}
               alt="Random Video"
@@ -53,6 +60,7 @@ function ImageRandom() {
       ) : (
         <p>Chargement...</p>
       )}
+      <h1 className="synopsis-random">{vid && vid.synopsis}</h1>
     </div>
   );
 }

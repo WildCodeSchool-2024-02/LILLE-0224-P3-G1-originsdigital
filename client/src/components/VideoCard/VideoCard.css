@@ -29,6 +29,17 @@
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
+  animation-name: apparition3;
+  animation-duration: 2s;
+}
+
+@keyframes apparition3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 320px) {
@@ -83,6 +94,42 @@
 
 .video-card-side-front {
   background: var(--color-one);
+}
+
+@media screen and (min-width: 768px) {
+  .video-card-image {
+    margin-left: 1.5em;
+  }
+
+  .video-card {
+    width: 45%;
+    height: 40em;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    margin: 10px;
+    font-family: "Darker Grotesque";
+  }
+
+  .video-card-container {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    gap: 16px;
+    justify-content: space-around;
+    animation-name: apparition3;
+    animation-duration: 2s;
+  }
+
+  .video-card-side-front {
+    background-color: transparent;
+  }
+
+  .button-random2 {
+    width: 90%;
+    height: 100%;
+    left: 8%;
+  }
 }
 
 @media screen and (max-width: 427px) and (min-width: 320px) {
