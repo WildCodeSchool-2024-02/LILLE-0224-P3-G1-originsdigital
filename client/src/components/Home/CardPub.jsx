@@ -3,7 +3,7 @@ import "./CardPub.css";
 function CardPub() {
   const size = window.innerWidth;
   return (
-    <div className="container-cardPub">
+    <div className="container-cardPub" id="scroll-smooth">
       <div className="card card-film" id="card-film-pub">
         &nbsp;
       </div>

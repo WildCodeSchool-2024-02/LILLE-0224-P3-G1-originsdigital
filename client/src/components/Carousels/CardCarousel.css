@@ -12,12 +12,40 @@
 }
 
 @media screen and (max-width: 427px) and (min-width: 320px) {
+  #car-arnauld-serie {
+    margin-top: -1.5em;
+  }
+
+  .control-dots {
+    border-bottom: 1px solid white;
+  }
+
+  .button-car-film {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+  }
+
+  .title-serie-car {
+    top: -0.5em;
+    left: 1em;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .car-arnauld {
     height: 40em;
     margin-top: 15em;
+  }
+
+  .button-car-film {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
   }
 
   .title-serie-car {
@@ -43,5 +71,13 @@
     position: relative;
     top: 3em;
     left: 1em;
+  }
+
+  .button-car-film {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
   }
 }

@@ -180,6 +180,182 @@ header {
   font-weight: bold;
 }
 
+@media screen and (max-width: 427px) and (min-width: 320px) {
+  #h1-film-welcom {
+    left: 1em;
+  }
+
+  .b {
+    color: var(--color-one);
+    position: relative;
+    left: 3em;
+    animation-name: b;
+    animation-duration: 0.2s;
+  }
+  @keyframes b {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .i {
+    color: var(--color-one);
+    position: relative;
+    left: 3.4em;
+    animation-name: i;
+    animation-duration: 0.4s;
+  }
+  @keyframes i {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .e {
+    color: var(--color-one);
+    position: relative;
+    left: 3.8em;
+    animation-name: e;
+    animation-duration: 0.6s;
+  }
+  @keyframes e {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .n {
+    color: var(--color-one);
+    position: relative;
+    left: 4.3em;
+    animation-name: n;
+    animation-duration: 0.8s;
+  }
+  @keyframes n {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .v {
+    color: var(--color-one);
+    position: relative;
+    left: 4.8em;
+    animation-name: v;
+    animation-duration: 1s;
+  }
+  @keyframes v {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .ee {
+    color: var(--color-one);
+    position: relative;
+    left: 5.2em;
+    animation-name: ee;
+    animation-duration: 1.2s;
+  }
+  @keyframes ee {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .nn {
+    color: var(--color-one);
+    position: relative;
+    left: 5.7em;
+    animation-name: nn;
+    animation-duration: 1.4s;
+  }
+  @keyframes nn {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .u {
+    color: var(--color-one);
+    position: relative;
+    left: 6.2em;
+    animation-name: u;
+    animation-duration: 1.6s;
+  }
+  @keyframes u {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .eee {
+    color: var(--color-one);
+    position: relative;
+    left: 6.7em;
+    animation-name: eee;
+    animation-duration: 1.8s;
+  }
+  @keyframes eee {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .session {
+    color: var(--color-five);
+    position: relative;
+    left: 7em;
+    animation-name: session;
+    animation-duration: 2s;
+  }
+  @keyframes session {
+    from {
+      top: -2em;
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  #idWelcome {
+    animation-name: fade-out;
+    animation-duration: 6s;
+    opacity: 0;
+    display: inline;
+  }
+  #noWelcome {
+    opacity: 0;
+  }
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   header {
     height: 10em;
@@ -378,6 +554,348 @@ header {
     font-weight: 900;
     font-size: 30px;
     top: 1.7em;
+  }
+
+  .b {
+    color: var(--color-one);
+    position: relative;
+    left: 5em;
+    animation-name: b;
+    animation-duration: 0.2s;
+  }
+  @keyframes b {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .i {
+    color: var(--color-one);
+    position: relative;
+    left: 5.4em;
+    animation-name: i;
+    animation-duration: 0.4s;
+  }
+  @keyframes i {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .e {
+    color: var(--color-one);
+    position: relative;
+    left: 5.8em;
+    animation-name: e;
+    animation-duration: 0.6s;
+  }
+  @keyframes e {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .n {
+    color: var(--color-one);
+    position: relative;
+    left: 6.3em;
+    animation-name: n;
+    animation-duration: 0.8s;
+  }
+  @keyframes n {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .v {
+    color: var(--color-one);
+    position: relative;
+    left: 6.8em;
+    animation-name: v;
+    animation-duration: 1s;
+  }
+  @keyframes v {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .ee {
+    color: var(--color-one);
+    position: relative;
+    left: 7.2em;
+    animation-name: ee;
+    animation-duration: 1.2s;
+  }
+  @keyframes ee {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .nn {
+    color: var(--color-one);
+    position: relative;
+    left: 7.7em;
+    animation-name: nn;
+    animation-duration: 1.4s;
+  }
+  @keyframes nn {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .u {
+    color: var(--color-one);
+    position: relative;
+    left: 8.2em;
+    animation-name: u;
+    animation-duration: 1.6s;
+  }
+  @keyframes u {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .eee {
+    color: var(--color-one);
+    position: relative;
+    left: 8.7em;
+    animation-name: eee;
+    animation-duration: 1.8s;
+  }
+  @keyframes eee {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .session {
+    color: var(--color-five);
+    position: relative;
+    left: 9em;
+    animation-name: session;
+    animation-duration: 2s;
+  }
+  @keyframes session {
+    from {
+      top: -2em;
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  #idWelcome {
+    animation-name: fade-out;
+    animation-duration: 6s;
+    opacity: 0;
+    display: inline;
+  }
+  #noWelcome {
+    opacity: 0;
+  }
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .b {
+    color: var(--color-one);
+    position: relative;
+    left: 9em;
+    animation-name: b;
+    animation-duration: 0.2s;
+  }
+  @keyframes b {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .i {
+    color: var(--color-one);
+    position: relative;
+    left: 9.4em;
+    animation-name: i;
+    animation-duration: 0.4s;
+  }
+  @keyframes i {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .e {
+    color: var(--color-one);
+    position: relative;
+    left: 9.8em;
+    animation-name: e;
+    animation-duration: 0.6s;
+  }
+  @keyframes e {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .n {
+    color: var(--color-one);
+    position: relative;
+    left: 10.3em;
+    animation-name: n;
+    animation-duration: 0.8s;
+  }
+  @keyframes n {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .v {
+    color: var(--color-one);
+    position: relative;
+    left: 10.8em;
+    animation-name: v;
+    animation-duration: 1s;
+  }
+  @keyframes v {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .ee {
+    color: var(--color-one);
+    position: relative;
+    left: 11.2em;
+    animation-name: ee;
+    animation-duration: 1.2s;
+  }
+  @keyframes ee {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .nn {
+    color: var(--color-one);
+    position: relative;
+    left: 11.7em;
+    animation-name: nn;
+    animation-duration: 1.4s;
+  }
+  @keyframes nn {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .u {
+    color: var(--color-one);
+    position: relative;
+    left: 12.2em;
+    animation-name: u;
+    animation-duration: 1.6s;
+  }
+  @keyframes u {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .eee {
+    color: var(--color-one);
+    position: relative;
+    left: 12.7em;
+    animation-name: eee;
+    animation-duration: 1.8s;
+  }
+  @keyframes eee {
+    from {
+      top: -1em;
+    }
+    to {
+      top: 0;
+    }
+  }
+  .session {
+    color: var(--color-five);
+    position: relative;
+    left: 13em;
+    animation-name: session;
+    animation-duration: 2s;
+  }
+  @keyframes session {
+    from {
+      top: -2em;
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      top: 0;
+    }
+  }
+  #idWelcome {
+    animation-name: fade-out;
+    animation-duration: 6s;
+    opacity: 0;
+    display: inline;
+  }
+  #noWelcome {
+    opacity: 0;
+  }
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
   }
 }
 /* ///////////////////////////////////////////////////////////////////////////////// */

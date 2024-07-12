@@ -7,10 +7,9 @@ import Cookies from "js-cookie";
 import { Mycontext } from "../Context";
 
 function Header() {
-  const { style, textDefile } = Mycontext();
   if (!Cookies.get("auth"))
     window.location.href = "http://localhost:3000/connexion";
-
+  const { style, textDefile } = Mycontext();
   const [searchbar, setSearchBar] = useState(false);
   const [onBlur, setOnBlur] = useState(false);
   const session = Cookies.get("auth");
@@ -86,7 +85,18 @@ function Header() {
       </header>
       {!id && (
         <h1 id="h1-film-welcom">
-          <span>Bienvenue</span> {session}
+          <div id="idWelcome">
+            <span className="b">B</span>
+            <span className="i">i</span>
+            <span className="e">e</span>
+            <span className="n">n</span>
+            <span className="v">v</span>
+            <span className="ee">e</span>
+            <span className="nn">n</span>
+            <span className="u">u</span>
+            <span className="eee">e</span>
+            <span className="session">&nbsp;{session}</span>
+          </div>
         </h1>
       )}
     </div>

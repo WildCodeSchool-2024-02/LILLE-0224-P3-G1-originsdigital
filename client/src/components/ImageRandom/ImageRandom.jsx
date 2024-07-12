@@ -27,41 +27,47 @@ function ImageRandom() {
     fetchVideos();
   }, []);
   return (
-    <div className="random-image-container" id="apparition2">
-      {randomImage ? (
-        <>
-          <Link to={`/player/${vid.videoID}`}>
-            <button
-              className="button-random"
-              type="button"
-              onClick={() => {
-                fctStyle(random);
-              }}
-            >
-              {" "}
-            </button>
-          </Link>
-          <Link
-            to={`/player/${vid.videoID}`}
-            style={{ textDecoration: "none" }}
-          >
-            <h1 className="recommanded">
-              <br />
-              RECOMMANDATION
-            </h1>
+    <>
+      <div className="test-k7">
+        <img src="/public/magn2.png" alt="k7" className="background-k7" />
+      </div>
 
-            <img
-              src={randomImage}
-              alt="Random Video"
-              className="random-image"
-            />
-          </Link>
-        </>
-      ) : (
-        <p>Chargement...</p>
-      )}
-      <h1 className="synopsis-random">{vid && vid.synopsis}</h1>
-    </div>
+      <div className="random-image-container" id="apparition2">
+        {randomImage ? (
+          <>
+            <Link to={`/player/${vid.videoID}`}>
+              <button
+                className="button-random"
+                type="button"
+                onClick={() => {
+                  fctStyle(random);
+                }}
+              >
+                {" "}
+              </button>
+            </Link>
+            <Link
+              to={`/player/${vid.videoID}`}
+              style={{ textDecoration: "none" }}
+            >
+              <h1 className="recommanded">
+                <br />
+                RECOMMANDATION
+              </h1>
+
+              <img
+                src={randomImage}
+                alt="Random Video"
+                className="random-image"
+              />
+            </Link>
+          </>
+        ) : (
+          <p>Chargement...</p>
+        )}
+        <h1 className="synopsis-random">{vid && vid.synopsis}</h1>
+      </div>
+    </>
   );
 }
 
