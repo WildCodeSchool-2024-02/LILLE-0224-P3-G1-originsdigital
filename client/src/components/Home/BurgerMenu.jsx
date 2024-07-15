@@ -1,9 +1,13 @@
 import { useState } from "react";
 import "./BurgerMenu.css";
+import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
+import { Mycontext } from "../Context";
+
 
 function BurgerMenu() {
+  const { setMenu, setAnimate } = Mycontext();
   const [up, setUp] = useState(1);
-
   const selectionUp = () => {
     if (up < 5) {
       setUp(up + 1);
@@ -22,7 +26,15 @@ function BurgerMenu() {
 
   return (
     <div className="burger-menu">
-      <button type="button" label className="button-close-telecommande">
+      <button
+        type="button"
+        label
+        className="button-close-telecommande"
+        onClick={() => {
+          setMenu(false);
+          setAnimate("burger-mini");
+        }}
+      >
         {" "}
       </button>
       <div className="telecommande-ecran">
@@ -67,6 +79,11 @@ function BurgerMenu() {
       >
         &nbsp;
       </button>
+      <Link to={up === 1 && "/browsepage" || up === 2 && `/users/${Cookies.get('auth')}` || up === 5 && "/deconnexion"}>
+        <button type="button" id="button-telecommande-ok" label onClick={()=>{setMenu(false);setAnimate("burger-mini")}}>
+          &nbsp;
+        </button>
+      </Link>
     </div>
   );
 }

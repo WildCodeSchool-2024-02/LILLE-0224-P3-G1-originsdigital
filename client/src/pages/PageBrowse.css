@@ -22,4 +22,21 @@
     background-color: black;
     z-index: 1;
   }
+
+  .masque1024 {
+    animation-name: stopheader;
+    animation-duration: 1s;
+    display: none;
+  }
+
+  @keyframes stopheader {
+    from {
+      opacity: 1;
+      display: block;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
 }

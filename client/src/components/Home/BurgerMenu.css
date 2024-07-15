@@ -10,7 +10,25 @@
   top: 4em;
   border-radius: 3em;
   box-shadow: 1px 1px 25px grey;
+  animation-name: apparition-menu;
+  animation-duration: 0.5s;
 }
+
+@keyframes apparition-menu {
+  from {
+    width: 0;
+    height: 0;
+    top: 30em;
+    left: 42.5%;
+  }
+  to {
+    width: 80%;
+    height: 50em;
+    left: 10%;
+    top: 4em;
+  }
+}
+
 .telecommande {
   width: 56%;
   height: 30%;
@@ -30,6 +48,7 @@
   right: 1em;
   top: 1em;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .telecommande-ecran {
@@ -88,6 +107,7 @@
   left: 40%;
   opacity: 0;
   border: none;
+  cursor: pointer;
 }
 
 #button-telecommande-right {
@@ -98,6 +118,7 @@
   height: 3em;
   opacity: 0;
   border: none;
+  cursor: pointer;
 }
 
 #button-telecommande-down {
@@ -107,6 +128,7 @@
   left: 40%;
   opacity: 0;
   border: none;
+  cursor: pointer;
 }
 
 #button-telecommande-left {
@@ -117,4 +139,220 @@
   height: 3em;
   opacity: 0;
   border: none;
+  cursor: pointer;
+}
+
+.burger-mini {
+  width: 15%;
+  height: 2em;
+  position: absolute;
+  top: 7em;
+  left: 4%;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.telecommande-mini {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.button-telecommande-mini {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+  position: absolute;
+  animation-name: infini;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@keyframes infini {
+  from {
+    border: none;
+  }
+  to {
+    border: 1px solid var(--color-one);
+  }
+}
+
+.burger-mini-animate {
+  animation-name: telecommande;
+  animation-duration: 3s;
+  width: 15%;
+  height: 2em;
+  border: 0.1px solid var(--color-one);
+  position: absolute;
+  top: 30em;
+  left: 42.5%;
+  border-radius: 3px;
+  transform: rotate(90deg);
+}
+
+.none {
+  display: none;
+}
+
+@keyframes telecommande {
+  0% {
+    width: 15%;
+    height: 2em;
+    border: 0.1px solid var(--color-one);
+    position: absolute;
+    top: 7em;
+    left: 4%;
+    border-radius: 3px;
+    transform: rotate(0deg);
+  }
+  25% {
+    width: 15%;
+    height: 2em;
+    border: 0.1px solid var(--color-one);
+    position: absolute;
+    top: 7em;
+    left: 4%;
+    border-radius: 3px;
+    transform: rotate(0deg);
+  }
+  50% {
+    width: 15%;
+    height: 2em;
+    border: 0.1px solid var(--color-one);
+    position: absolute;
+    top: 7em;
+    left: 42.5%;
+    border-radius: 3px;
+    transform: rotate(90deg);
+  }
+  75% {
+    width: 15%;
+    height: 2em;
+    border: 0.1px solid var(--color-one);
+    position: absolute;
+    top: 30em;
+    left: 42.5%;
+    border-radius: 3px;
+    transform: rotate(90deg);
+  }
+  100% {
+    width: 15%;
+    height: 2em;
+    border: 0.1px solid var(--color-one);
+    position: absolute;
+    top: 30em;
+    left: 42.5%;
+    border-radius: 3px;
+    transform: rotate(90deg);
+  }
+}
+
+#button-telecommande-ok {
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  top: 63%;
+  left: 36.5%;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 375px) {
+  #button-telecommande-ok {
+    left: 38.5%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .burger-menu {
+    width: 20%;
+    left: 40%;
+  }
+
+  .burger-mini {
+    width: 15%;
+    height: 4em;
+    position: absolute;
+    top: 12em;
+    left: 4em;
+    border-radius: 3px;
+  }
+
+  @keyframes telecommande {
+    0% {
+      width: 15%;
+      height: 4em;
+      border: 0.1px solid var(--color-one);
+      position: absolute;
+      top: 12em;
+      left: 4%;
+      border-radius: 3px;
+      transform: rotate(0deg);
+    }
+    25% {
+      width: 15%;
+      height: 4em;
+      border: 0.1px solid var(--color-one);
+      position: absolute;
+      top: 12em;
+      left: 4%;
+      border-radius: 3px;
+      transform: rotate(0deg);
+    }
+    50% {
+      width: 15%;
+      height: 4em;
+      border: 0.1px solid var(--color-one);
+      position: absolute;
+      top: 12em;
+      left: 42.5%;
+      border-radius: 3px;
+      transform: rotate(90deg);
+    }
+    75% {
+      width: 15%;
+      height: 4em;
+      border: 0.1px solid var(--color-one);
+      position: absolute;
+      top: 30em;
+      left: 42.5%;
+      border-radius: 3px;
+      transform: rotate(90deg);
+    }
+    100% {
+      width: 15%;
+      height: 4em;
+      border: 0.1px solid var(--color-one);
+      position: absolute;
+      top: 30em;
+      left: 42.5%;
+      border-radius: 3px;
+      transform: rotate(90deg);
+    }
+  }
+
+  @keyframes apparition-menu {
+    from {
+      width: 0;
+      height: 0;
+      top: 30em;
+      left: 42.5%;
+    }
+    to {
+      width: 20%;
+      height: 50em;
+      left: 40%;
+      top: 4em;
+    }
+  }
+  .burger-mini-animate {
+    height: 4em;
+  }
 }
