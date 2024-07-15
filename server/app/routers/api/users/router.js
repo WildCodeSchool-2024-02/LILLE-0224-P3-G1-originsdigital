@@ -12,7 +12,7 @@ const {
 } = require("../../../controllers/userActions");
 const hashPassword = require("../../../services/hashPassword");
 
-router.put("/:id", edit);
+router.put("/:id", hashPassword, edit); ///
 
 router.post("/create", hashPassword, add);
 
