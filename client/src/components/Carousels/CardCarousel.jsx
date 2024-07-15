@@ -74,7 +74,7 @@ function CardCarousel() {
         id="h1-film-welcom"
         style={{
           background: "linear-gradient(to left,black,black,white)",
-          border: "0.1px solid white",
+          borderTop: "0.1px solid white",
           color: "black",
           paddingLeft: "1em",
           marginLeft: "-1em",

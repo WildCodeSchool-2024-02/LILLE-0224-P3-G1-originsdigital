@@ -43,6 +43,15 @@ function Connexion() {
         } else {
           setErrorInvalidPassword(false);
         }
+
+        if (
+          response.data.results.username === "administrator" &&
+          response.data.password
+        ) {
+          Cookies.set("administrator", response.data.results.username);
+          window.location.href = "http://localhost:3000/administrator";
+        }
+
         if (
           response.data.username !== "no username" &&
           response.data.password === true

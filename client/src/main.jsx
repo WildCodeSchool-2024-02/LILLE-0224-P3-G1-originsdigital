@@ -18,6 +18,7 @@ import Deconnexion from "./components/Deconnexion";
 import VideoCard from "./components/VideoCard/VideoCard";
 import PageBrowse from "./pages/PageBrowse";
 import InfoContact from "./components/Contact/InfoContact";
+import Admin from "./components/Admin";
 
 const router = createBrowserRouter([
   {
@@ -107,6 +108,10 @@ const router = createBrowserRouter([
   {
     path: "/deconnexion",
     element: <Deconnexion />,
+  },
+  {
+    path: "/administrator",
+    element: <Admin />,
   },
 ]);
 
