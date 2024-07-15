@@ -156,7 +156,7 @@ function UpdateUserInfo() {
                 regexPass.test(formData.pass) &&
                 animation && (
                   <h3 className="validate">
-                    ENREGISTRER !<br />
+                    ENREGISTRÉ !<br />
                     Reconnecter vous{" "}
                     <Link to="/connexion" style={{ color: "blue" }}>
                       ici
