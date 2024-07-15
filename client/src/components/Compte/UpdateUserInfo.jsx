@@ -157,7 +157,7 @@ function UpdateUserInfo() {
                 animation && (
                   <h3 className="validate">
                     ENREGISTRÉ !<br />
-                    Reconnecter vous{" "}
+                    Reconnectez vous{" "}
                     <Link to="/connexion" style={{ color: "blue" }}>
                       ici
                     </Link>
