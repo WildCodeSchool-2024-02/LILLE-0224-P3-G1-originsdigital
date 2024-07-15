@@ -37,8 +37,18 @@ const read = async (req, res, next) => {
   }
 };
 
+const addVideo = async (req, res, next) => {
+  try {
+    await tables.video.addVideo(req.body);
+    res.json({ message: "video enregistré !" });
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   browse,
   browseFree,
-  read
+  read,
+  addVideo,
 };

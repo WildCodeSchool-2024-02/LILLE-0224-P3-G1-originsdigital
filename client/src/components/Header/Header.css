@@ -181,10 +181,6 @@ header {
 }
 
 @media screen and (max-width: 427px) and (min-width: 320px) {
-  #h1-film-welcom {
-    left: 1em;
-  }
-
   .b {
     color: var(--color-one);
     position: relative;
@@ -470,7 +466,6 @@ header {
   #h1-film-welcom {
     font-size: 5em;
     margin-top: 0em;
-    left: 1em;
   }
 
   .img_background_header {

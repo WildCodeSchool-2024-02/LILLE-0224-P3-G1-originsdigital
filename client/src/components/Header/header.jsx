@@ -5,6 +5,7 @@ import "./Header.css";
 import { Form, useParams } from "react-router-dom";
 import Cookies from "js-cookie";
 import { Mycontext } from "../Context";
+// import BurgerMenu from "../Home/BurgerMenu";
 
 function Header() {
   if (!Cookies.get("auth"))
@@ -32,7 +33,9 @@ function Header() {
 
   return (
     <div id="apparition">
+
       <header>
+        {/* {<BurgerMenu />} */}
         <img
           src="/public/magn1.png"
           alt="ceci est une iage de magnétoscope"

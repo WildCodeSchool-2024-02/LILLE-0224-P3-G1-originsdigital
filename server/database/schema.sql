@@ -30,7 +30,7 @@ CREATE TABLE video (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titre VARCHAR(255),
     release_date DATE,
-    post_date DATE,
+    post_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     typeID VARCHAR(50),
     director VARCHAR(255),
     duration VARCHAR(50),
