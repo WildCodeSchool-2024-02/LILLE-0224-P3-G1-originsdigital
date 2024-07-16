@@ -28,6 +28,16 @@ const browseFree = async (req, res, next) => {
   }
 };
 
+const search = async (req, res, next) => {
+  try {
+    const { title } = req.query;
+    const searchResults = await tables.video.searchFromDB(title);
+    res.json(searchResults);
+  } catch (err) {
+    next(err);
+  }
+};
+
 const read = async (req, res, next) => {
   try {
     const video = await tables.video.read(req.params.id);
@@ -40,5 +50,6 @@ const read = async (req, res, next) => {
 module.exports = {
   browse,
   browseFree,
-  read
+  read,
+  search,
 };

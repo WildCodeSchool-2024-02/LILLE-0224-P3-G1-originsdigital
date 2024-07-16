@@ -8,11 +8,16 @@ const router = express.Router();
 
 // Import item-related actions
 
-const { browse } = require("../../../controllers/videoActions");
-const { browseFree, read } = require("../../../controllers/videoActions");
+const {
+  browse,
+  browseFree,
+  read,
+  search,
+} = require("../../../controllers/videoActions");
 
 // Route to get a list of videos
 
+router.get("/search", search);
 router.get("/", browse);
 router.get("/free", browseFree);
 router.get("/:id", read);

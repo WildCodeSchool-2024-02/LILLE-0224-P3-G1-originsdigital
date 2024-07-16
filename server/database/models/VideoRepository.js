@@ -30,6 +30,20 @@ class VideoRepository extends AbstractRepository {
     return rows;
   }
 
+  async searchFromDB(query) {
+    const [rows] = await this.database.query(
+      `
+      SELECT * FROM video_genre AS vg
+      RIGHT JOIN video AS v ON v.id = vg.videoID
+      LEFT JOIN genre AS g ON g.id = vg.genreID
+      WHERE v.titre LIKE ?
+    `,
+      [`%${query}%`]
+    );
+
+    return rows;
+  }
+
   async read(id) {
     const [row] = await this.database.query(
       `SELECT *
