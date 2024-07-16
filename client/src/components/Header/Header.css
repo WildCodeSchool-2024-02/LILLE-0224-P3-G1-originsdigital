@@ -463,6 +463,23 @@ header {
     left: 5%;
   }
 
+  .header1024 {
+    animation-name: stopheader;
+    animation-duration: 1s;
+    display: none;
+  }
+
+  @keyframes stopheader {
+    from {
+      opacity: 1;
+      display: block;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
+
   #h1-film-welcom {
     font-size: 5em;
     margin-top: 0em;

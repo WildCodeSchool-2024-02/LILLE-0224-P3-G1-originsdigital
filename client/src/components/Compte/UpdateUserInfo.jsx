@@ -1,5 +1,6 @@
 import { Form, Link, useActionData, useParams } from "react-router-dom";
 import { useState } from "react";
+import Cookies from "js-cookie";
 import axios from "axios";
 import "./UpdateUserInfo.css";
 
@@ -15,7 +16,7 @@ function UpdateUserInfo() {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
-    password: "",
+    pass: "",
   });
 
   const handleFormData = (e) => {
@@ -24,6 +25,7 @@ function UpdateUserInfo() {
       ...prevState,
       [name]: value,
     }));
+    console.info(formData);
     setAnimation(false);
     axios
       .get(`http://localhost:3310/api/users/verify/${formData.username}`)
@@ -43,7 +45,7 @@ function UpdateUserInfo() {
     setFormData({
       username: formData.username,
       email: formData.email,
-      password: formData.password,
+      pass: formData.pass,
     });
 
     if (
@@ -51,17 +53,18 @@ function UpdateUserInfo() {
       formData.username !== responseServUserName &&
       regex.test(formData.email) &&
       formData.email !== responseServEmail &&
-      regexPass.test(formData.password)
+      regexPass.test(formData.pass)
     ) {
       setAnimation(true);
 
       axios.put(`http://localhost:3310/api/users/${id}`, formData);
+      Cookies.remove("auth");
     }
   };
 
   return (
     <>
-      <Link to="/">
+      <Link to="/browsepage">
         <img
           src="../src/assets/images/Logo1.png"
           alt="this is a logo"
@@ -69,7 +72,7 @@ function UpdateUserInfo() {
         />
       </Link>
       <Form className="form-mon-compte" method="put" onSubmit={handleSubmit}>
-        <h1 className="h1-my-account">Modifier mon profil </h1> <hr />
+        <h1 className="h1-my-account" id="h1-my-account">Modifier mon profil </h1> <hr />
         <div className="div-form">
           <ul className="ul-form">
             <li className="info">
@@ -128,31 +131,38 @@ function UpdateUserInfo() {
             <li className="info">
               <label htmlFor="password" className="label">
                 Mot de passe:
-                {!regexPass.test(formData.password) &&
-                  formData.password.length > 0 && (
-                    <span className="error">
-                      <br />
-                      Le mot de passe doit <br />
-                      contenir au moins <br />8 caractères, une <br />
-                      majuscule, un chiffre et
-                      <br /> un caractère spécial
-                    </span>
-                  )}
+                {!regexPass.test(formData.pass) && formData.pass.length > 0 && (
+                  <span className="error">
+                    <br />
+                    Le mot de passe doit <br />
+                    contenir au moins <br />8 caractères, une <br />
+                    majuscule, un chiffre et
+                    <br /> un caractère spécial
+                  </span>
+                )}
               </label>
               <input
                 type="password"
-                name="password"
+                name="pass"
                 className="input"
                 id="passwd"
                 onChange={handleFormData}
-                value={formData.password}
+                value={formData.pass}
               />
               {formData.username.length > 3 &&
                 formData.username !== responseServUserName &&
                 regex.test(formData.email) &&
                 formData.email !== responseServEmail &&
-                regexPass.test(formData.password) &&
-                animation && <h3 className="validate">ENREGISTRER !</h3>}
+                regexPass.test(formData.pass) &&
+                animation && (
+                  <h3 className="validate">
+                    ENREGISTRÉ !<br />
+                    Reconnectez vous{" "}
+                    <Link to="/connexion" style={{ color: "blue" }}>
+                      ici
+                    </Link>
+                  </h3>
+                )}
             </li>
           </ul>
         </div>
@@ -164,9 +174,11 @@ function UpdateUserInfo() {
             className="input"
             id="save"
           />
-          <button type="button" className="input" id="cancel">
-            ANNULER
-          </button>
+          <Link to="/browsepage">
+            <button type="button" className="input" id="cancel">
+              ANNULER
+            </button>
+          </Link>
         </div>
         <img
           src="../src/assets/images/th3.jpg"
@@ -179,3 +191,10 @@ function UpdateUserInfo() {
 }
 
 export default UpdateUserInfo;
+
+
+
+
+
+
+

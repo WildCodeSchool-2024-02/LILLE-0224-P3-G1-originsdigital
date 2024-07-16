@@ -5,17 +5,24 @@ import axios from "axios";
 import "./Header.css";
 import { useNavigate, useParams } from "react-router-dom";
 import Cookies from "js-cookie";
+import BurgerMini from '../Home/BurgerMini';
+import BurgerMenu from '../Home/BurgerMenu';
 import { Mycontext } from "../Context";
-
-// import BurgerMenu from "../Home/BurgerMenu";
 
 function Header() {
   if (!Cookies.get("auth"))
     window.location.href = "http://localhost:3000/connexion";
+  const [name, setName] = useState("");
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 1 && window.innerWidth >= 1024) {
+      setName("header1024");
+    } else {
+      setName("");
+    }
+  });
   const navigate = useNavigate();
-  const { style, textDefile } = Mycontext();
+  const { style, textDefile, menu, fctStyle,onBlur, setOnBlur } = Mycontext();
   const [searchbar, setSearchBar] = useState(false);
-  const [onBlur, setOnBlur] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const session = Cookies.get("auth");
@@ -59,8 +66,9 @@ function Header() {
   };
   return (
     <div id="apparition">
-      <header>
-        {/* {<BurgerMenu />} */}
+      <header className={name}>
+        <BurgerMini />
+        {menu && <BurgerMenu />}
         <img
           src="/public/magn1.png"
           alt="ceci est une iage de magnétoscope"
@@ -97,6 +105,8 @@ function Header() {
                         type="button"
                         onClick={() => {
                           handleResultClick(result.videoID);
+                          fctStyle(!style);
+                          setOnBlur(true)
                         }}
                         onKeyPress={(e) =>
                           e.key === "Enter" && handleResultClick(result.videoID)
