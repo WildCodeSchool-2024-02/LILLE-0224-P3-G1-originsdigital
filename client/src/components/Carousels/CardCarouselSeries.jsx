@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 import { Mycontext } from "../Context";
 import "./CardCarousel.css";
 
 function CardCarouselSeries() {
-  const { videos } = Mycontext();
+  const { videos, fctStyle } = Mycontext();
   const a = videos.filter((elem) => elem.typeID === "Série");
   const [displayedVideos, setDisplayedVideos] = useState([]);
   const [flippedIndex, setFlippedIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
   const [hoverTimeout, setHoverTimeout] = useState(null);
+  const win = window.innerWidth;
 
   useEffect(() => {
     if (a.length > 0) {
@@ -67,7 +69,18 @@ function CardCarouselSeries() {
 
   return (
     <>
-      <h1 className="title-serie-car">SERIES</h1>
+      <h1
+        className="title-serie-car"
+        style={{
+          background: "linear-gradient(to left,black,black,white)",
+          borderTop: "0.1px solid white",
+          color: "black",
+          paddingLeft: "1em",
+          marginLeft: "-1em",
+        }}
+      >
+        SERIES
+      </h1>
       <Carousel
         showArrows
         showStatus={false}
@@ -82,6 +95,7 @@ function CardCarouselSeries() {
             className="car-arnauld"
             key={group.map((video) => video.id).join("-")}
             style={{ display: "flex", gap: "1em" }}
+            id="car-arnauld-serie"
           >
             {group.map((video, index) => (
               <div
@@ -93,24 +107,36 @@ function CardCarouselSeries() {
                 onFocus={() => handleMouseEnter(index)}
                 onBlur={handleMouseLeave}
               >
-                <div className="card_side card_side-front">
-                  <img
-                    src={video.image}
-                    alt="Movie Poster"
-                    className="card_image"
-                  />
-                  <div className="card_details_mobile">
-                    <ul>
-                      <li>
-                        {new Date(video.release_date).toLocaleDateString()}
-                      </li>
-                      <li>
-                        {video.duration} {video.rating}
-                      </li>
-                      <li>{video.director}</li>
-                    </ul>
+                <Link to={`/player/${video.videoID}`}>
+                  <div className="card_side card_side-front">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        fctStyle(video.titre);
+                      }}
+                      className="button-car-film"
+                    >
+                      {" "}
+                      .
+                    </button>
+                    <img
+                      src={win < 1024 ? video.image_1 : video.image_2}
+                      alt="Movie Poster"
+                      className="card_image"
+                    />
+                    <div className="card_details_mobile">
+                      <ul>
+                        <li>
+                          {new Date(video.release_date).toLocaleDateString()}
+                        </li>
+                        <li>
+                          {video.duration} {video.rating}
+                        </li>
+                        <li>{video.director}</li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
+                </Link>
                 <div className="card_side card_side-back">
                   <div className="card_cta">
                     <div className="card_details">

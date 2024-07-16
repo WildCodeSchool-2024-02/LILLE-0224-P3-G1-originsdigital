@@ -1,3 +1,7 @@
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .random-image-container {
   display: flex;
   justify-content: center;
@@ -32,6 +36,7 @@
   position: absolute;
   background-color: transparent;
   border: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .recommanded {
@@ -42,6 +47,21 @@
 
 @media screen and (max-width: 427px) and (min-width: 320px) {
   .synopsis-random {
+    display: none;
+  }
+
+  .recommanded {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: -5em;
+  }
+
+  .random-image {
+    margin-left: 1.5em;
+  }
+
+  .background-k7 {
     display: none;
   }
 }
@@ -56,6 +76,7 @@
   .button-random {
     width: 45%;
     height: 75%;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .synopsis-random {
@@ -65,6 +86,56 @@
     margin-left: 1em;
     margin-top: 3em;
   }
+
+  .background-k7 {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+  }
+
+  .test-k7 {
+    width: 73%;
+    height: 30em;
+    border: 1px solid white;
+    position: absolute;
+    top: 70em;
+    left: 13.5%;
+    border-radius: 10px;
+  }
+
+  .random-image {
+    position: relative;
+    left: 10%;
+    top: -15em;
+    opacity: 0.8;
+    width: 15em;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .synopsis-random {
+    color: white;
+    font-size: 2em;
+    margin-left: 1em;
+    margin-top: 3em;
+    background-size: 100%;
+    display: block;
+    position: relative;
+    left: 34.7%;
+    top: -3em;
+    width: 13em;
+    height: 5.9em;
+    display: block;
+    border-radius: 10px;
+    background-color: #4b4b4b;
+    font-family: arial;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+
+  .synopsis-random::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -72,24 +143,143 @@
     color: white;
     font-size: 3.5em;
     font-weight: bold;
+    margin-left: 38%;
+    position: relative;
+    top: 5.5em;
   }
 
   .random-image-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 10em;
+    display: block;
+    padding-top: 5em;
     padding-bottom: 15px;
+    height: 50em;
   }
 
   .random-image {
-    width: 48em;
+    position: relative;
+    left: 16%;
+    top: 18em;
+    opacity: 0.8;
+    width: 18em;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .synopsis-random {
     color: white;
-    font-size: 5em;
-    width: 50%;
+    font-size: 2em;
     margin-left: 1em;
-    margin-top: 1em;
+    margin-top: 3em;
+    background-size: 100%;
+    display: block;
+    position: relative;
+    left: 34.7%;
+    top: -3em;
+    width: 13em;
+    height: 5.9em;
+    display: block;
+    border-radius: 10px;
+    background-color: #4b4b4b;
+    font-family: arial;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+
+  .background-k7 {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+  }
+
+  .test-k7 {
+    width: 73%;
+    height: 30em;
+    border: 1px solid white;
+    position: absolute;
+    top: 70em;
+    left: 13.5%;
+    border-radius: 10px;
+  }
+
+  .button-random {
+    -webkit-tap-highlight-color: transparent;
+    width: 20em;
+    left: 15%;
+  }
+
+  .synopsis-random::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .recommanded {
+    color: white;
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-left: 40%;
+  }
+
+  .random-image-container {
+    display: block;
+    padding-top: 5em;
+    padding-bottom: 15px;
+    height: 50em;
+  }
+
+  .random-image {
+    position: relative;
+    left: 16%;
+    top: 0;
+    opacity: 0.8;
+    width: 27em;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .synopsis-random {
+    color: white;
+    font-size: 2.5em;
+    margin-left: 1em;
+    margin-top: 3em;
+    background-size: 100%;
+    display: block;
+    position: relative;
+    left: 34.7%;
+    top: -13em;
+    width: 15.5em;
+    height: 7.9em;
+    display: block;
+    border-radius: 10px;
+    background-color: #4b4b4b;
+    font-family: arial;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+
+  .synopsis-random::-webkit-scrollbar {
+    display: none;
+  }
+
+  .background-k7 {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+  }
+
+  .test-k7 {
+    width: 73%;
+    height: 50em;
+    border: 1px solid white;
+    position: absolute;
+    top: 70em;
+    left: 13.5%;
+    border-radius: 10px;
+  }
+
+  .button-random {
+    -webkit-tap-highlight-color: transparent;
+    width: 20em;
+    left: 15%;
   }
 }

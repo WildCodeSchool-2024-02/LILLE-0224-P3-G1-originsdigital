@@ -8,11 +8,16 @@ body {
   font-family: "Darker Grotesque", sans-serif;
   margin: 0;
 }
+
 .InfoPage {
   display: flex;
+  width: 100%;
   flex-direction: column;
   margin-bottom: 10rem;
   animation: bounceInDown 2s forwards;
+}
+.container-info {
+  width: 70%;
 }
 .bounceInDown {
   -webkit-animation-name: bounceInDown;

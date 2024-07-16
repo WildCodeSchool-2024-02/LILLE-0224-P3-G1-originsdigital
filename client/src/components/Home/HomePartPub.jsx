@@ -14,11 +14,12 @@ function HomePartPub() {
         <h1 className="titleP">
           Retrouvez les films et séries de votre époque
         </h1>
-
-        <button type="button" className="btn-Choose">
-          {" "}
-          Commencer{" "}
-        </button>
+        <a href="#scroll-smooth">
+          <button type="button" className="btn-Choose">
+            {" "}
+            Commencer{" "}
+          </button>
+        </a>
       </section>
       <article className="artcileP">
         <h1 className="TextChoose">Souscrivez un compte free ou prémium</h1>

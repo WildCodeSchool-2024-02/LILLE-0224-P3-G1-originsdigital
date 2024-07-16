@@ -137,3 +137,45 @@
     background-repeat: no-repeat;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  #card-film-pub {
+    height: 35em;
+  }
+
+  #card-film-pub2 {
+    height: 35em;
+  }
+
+  #card-film-pub3 {
+    height: 35em;
+  }
+
+  #card-film-pub4 {
+    height: 35em;
+    background-image: url("https://fr.web.img3.acsta.net/pictures/19/07/04/09/54/2363561.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #card-film-pub {
+    height: 50em;
+  }
+
+  #card-film-pub2 {
+    height: 50em;
+  }
+
+  #card-film-pub3 {
+    height: 50em;
+  }
+
+  #card-film-pub4 {
+    height: 50em;
+    background-image: url("https://fr.web.img3.acsta.net/pictures/19/07/04/09/54/2363561.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}

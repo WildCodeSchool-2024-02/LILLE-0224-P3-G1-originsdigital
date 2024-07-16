@@ -114,7 +114,6 @@
   .video-card-container {
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
     gap: 16px;
     justify-content: space-around;
     animation-name: apparition3;
@@ -183,7 +182,7 @@
   font-size: 0.9em;
 }
 .video-card-title-main {
-  color: va(--color-one);
+  color: var(--color-one);
   font-size: large;
   font-family: "Glitch";
   margin-top: 3em;
@@ -207,5 +206,39 @@
 
   .video-card-details-mobile {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .video-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-around;
+    animation-name: apparition3;
+    animation-duration: 2s;
+    margin-top: 5em;
+    position: relative;
+    left: -6em;
+  }
+
+  .video-card-title-main {
+    color: var(--color-one);
+    font-size: 4em;
+    font-family: "Glitch";
+    margin-top: 5em;
+    position: relative;
+  }
+
+  .video-card-side.video-card-side-back {
+    margin-left: 11em;
+    width: 31em;
+  }
+
+  .video-card-title {
+    width: 100%;
+    height: 3em;
+    text-align: center;
+    margin: 0;
   }
 }

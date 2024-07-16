@@ -29,6 +29,38 @@ class VideoRepository extends AbstractRepository {
       `);
     return rows;
   }
+
+  async read(id) {
+    const [row] = await this.database.query(
+      `SELECT *
+      FROM video
+      JOIN video_genre ON video.id = video_genre.videoID
+      JOIN genre ON video_genre.genreID = genre.id where video.id = ?;`,
+      [id]
+    );
+    return row;
+  }
+
+  async addVideo(data) {
+    const [row] = await this.database.query(
+      `INSERT INTO video (titre,release_date,typeID,director,duration,synopsis,image_1,image_2,link,rating,status)
+       VALUES (?,?,?,?,?,?,?,?,?,?,?);`,
+      [
+        data.titre,
+        data.release_date,
+        data.typeID,
+        data.director,
+        data.duration,
+        data.synopsis,
+        data.image_1,
+        data.image_2,
+        data.link,
+        data.rating,
+        data.status,
+      ]
+    );
+    return row;
+  }
 }
 
 module.exports = VideoRepository;
