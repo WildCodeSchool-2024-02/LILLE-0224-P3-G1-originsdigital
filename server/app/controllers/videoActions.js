@@ -46,9 +46,20 @@ const addVideo = async (req, res, next) => {
   }
 };
 
+const search = async (req, res, next) => {
+  try {
+    const { title } = req.query;
+    const searchResults = await tables.video.searchFromDB(title);
+    res.json(searchResults);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   browse,
   browseFree,
   read,
   addVideo,
+  search,
 };

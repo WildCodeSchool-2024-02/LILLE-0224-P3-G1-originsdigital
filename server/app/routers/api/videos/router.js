@@ -13,9 +13,12 @@ const {
   browseFree,
   read,
   addVideo,
+  search,
 } = require("../../../controllers/videoActions");
 
 // Route to get a list of videos
+
+router.get("/search", search);
 
 router.get("/", browse);
 
