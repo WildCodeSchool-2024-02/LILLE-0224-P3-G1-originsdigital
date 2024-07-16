@@ -17,6 +17,8 @@ import { ContextProvider } from "./components/Context";
 import Deconnexion from "./components/Deconnexion";
 import VideoCard from "./components/VideoCard/VideoCard";
 import PageBrowse from "./pages/PageBrowse";
+import Movies from "./pages/Movies"
+import Series from "./pages/Series"
 import InfoContact from "./components/Contact/InfoContact";
 import Admin from "./components/Admin";
 
@@ -74,6 +76,14 @@ const router = createBrowserRouter([
   {
     path: "/browsepage",
     element: <PageBrowse />,
+  },
+  {
+    path: "/movies",
+    element: <Movies />,
+  },
+  {
+    path: "/series",
+    element: <Series />,
   },
   {
     path: "/users/:id",
