@@ -5,7 +5,9 @@ import { useEffect, useState } from "react";
 function VideoplayerDescription() {
   const [info, setInfo] = useState();
   const [release, setRelease] = useState();
-  const [container, setContainer] = useState("videoplayer_description_container_none");
+  const [container, setContainer] = useState(
+    "videoplayer_description_container_none"
+  );
   const { id } = useParams();
   useEffect(() => {
     fetch(`http://localhost:3310/api/videos/${id}`)
@@ -13,12 +15,12 @@ function VideoplayerDescription() {
       .then((response) => {
         setInfo(response);
         setRelease(response[0].release_date.split("-"));
-        console.info(response[0])
+        console.info(response[0]);
       });
-  }, []);
-setTimeout(()=>{
-  setContainer("videoplayer_description_container")
-},1000)
+  }, [id]);
+  setTimeout(() => {
+    setContainer("videoplayer_description_container");
+  }, 1000);
   return (
     <div className={container}>
       <div className="videoplayer_description_categories">

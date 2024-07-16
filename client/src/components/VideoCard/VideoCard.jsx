@@ -1,22 +1,37 @@
 import { useState, useEffect } from "react";
 import "./VideoCard.css";
-import { Link } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 import { Mycontext } from "../Context";
 
 function VideoCard() {
-  const { fctStyle } = Mycontext();
-
+  const { fctStyle, videos, setVideos } = Mycontext();
+  const { id } = useParams();
+  const navigate = useNavigate();
   const [flippedIndex, setFlippedIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
-  const { videos } = Mycontext();
   const [hoverTimeout, setHoverTimeout] = useState(null);
   const [title, setTitle] = useState(false);
 
-  setTimeout(() => {
-    setTitle(true);
-  }, 1000);
-
   useEffect(() => {
+    const fetchVideos = async () => {
+      const response = await axios.get("http://localhost:3310/api/videos");
+      setVideos(response.data);
+    };
+
+    const fetchVideoById = async (videoId) => {
+      const response = await axios.get(
+        `http://localhost:3310/api/videos/${videoId}`
+      );
+      setVideos([response.data]); // Assuming you only want to display the selected video
+    };
+
+    if (id) {
+      fetchVideoById(id);
+    } else {
+      fetchVideos();
+    }
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 992);
     };
@@ -25,6 +40,10 @@ function VideoCard() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+  }, [id, setVideos]);
+
+  useEffect(() => {
+    setTitle(true);
   }, []);
 
   const handleMouseEnter = (index) => {
@@ -54,7 +73,6 @@ function VideoCard() {
         {videos.map((video, index) => (
           <div
             key={video.videoID}
-            id="test"
             className={`video-card ${flippedIndex === index ? "flipped" : ""}`}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
@@ -67,6 +85,7 @@ function VideoCard() {
                 type="button"
                 onClick={() => {
                   fctStyle(video.titre);
+                  navigate(`/player/${video.videoID}`);
                 }}
               >
                 {" "}
