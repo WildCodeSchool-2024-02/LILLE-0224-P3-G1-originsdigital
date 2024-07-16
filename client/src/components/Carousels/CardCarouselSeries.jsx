@@ -73,7 +73,7 @@ function CardCarouselSeries() {
         className="title-serie-car"
         style={{
           background: "linear-gradient(to left,black,black,white)",
-          border: "0.1px solid white",
+          borderTop: "0.1px solid white",
           color: "black",
           paddingLeft: "1em",
           marginLeft: "-1em",

@@ -5,11 +5,22 @@ import "./Header.css";
 import { Form, useParams } from "react-router-dom";
 import Cookies from "js-cookie";
 import { Mycontext } from "../Context";
+import BurgerMenu from "../Home/BurgerMenu";
+import BurgerMini from "../Home/BurgerMini";
 
 function Header() {
   if (!Cookies.get("auth"))
     window.location.href = "http://localhost:3000/connexion";
-  const { style, textDefile } = Mycontext();
+  const [name, setName] = useState("");
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 1 && window.innerWidth >= 1024) {
+      setName("header1024");
+    } else {
+      setName("");
+    }
+  });
+
+  const { style, textDefile, menu } = Mycontext();
   const [searchbar, setSearchBar] = useState(false);
   const [onBlur, setOnBlur] = useState(false);
   const session = Cookies.get("auth");
@@ -30,9 +41,13 @@ function Header() {
     }, 500);
   }
 
+  setTimeout(() => {});
+
   return (
     <div id="apparition">
-      <header>
+      <header className={name}>
+        <BurgerMini />
+        {menu && <BurgerMenu />}
         <img
           src="/public/magn1.png"
           alt="ceci est une iage de magnétoscope"

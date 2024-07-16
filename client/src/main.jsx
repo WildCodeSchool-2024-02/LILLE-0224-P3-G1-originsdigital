@@ -17,7 +17,10 @@ import { ContextProvider } from "./components/Context";
 import Deconnexion from "./components/Deconnexion";
 import VideoCard from "./components/VideoCard/VideoCard";
 import PageBrowse from "./pages/PageBrowse";
+import Movies from "./pages/Movies"
+import Series from "./pages/Series"
 import InfoContact from "./components/Contact/InfoContact";
+import Admin from "./components/Admin";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +78,14 @@ const router = createBrowserRouter([
     element: <PageBrowse />,
   },
   {
+    path: "/movies",
+    element: <Movies />,
+  },
+  {
+    path: "/series",
+    element: <Series />,
+  },
+  {
     path: "/users/:id",
     element: <UpdateUserInfo />,
     action: async ({ request }) => request.formData(),
@@ -107,6 +118,10 @@ const router = createBrowserRouter([
   {
     path: "/deconnexion",
     element: <Deconnexion />,
+  },
+  {
+    path: "/administrator",
+    element: <Admin />,
   },
 ]);
 

@@ -13,14 +13,19 @@ const {
   browseFree,
   read,
   search,
+  addVideo,
 } = require("../../../controllers/videoActions");
 
 // Route to get a list of videos
 
 router.get("/search", search);
 router.get("/", browse);
+
 router.get("/free", browseFree);
+
 router.get("/:id", read);
+
+router.post("/administrator", addVideo);
 
 /* ************************************************************************* */
 

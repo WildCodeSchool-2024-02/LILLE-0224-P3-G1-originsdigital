@@ -7,6 +7,7 @@ const context = createContext();
 export function ContextProvider({ children }) {
   const [userName, setUserName] = useState("salut");
   const [videos, setVideos] = useState([]);
+  const [animate, setAnimate] = useState("burger-mini");
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -19,6 +20,7 @@ export function ContextProvider({ children }) {
 
   const [style, setStyle] = useState(false);
   const [textDefile, setTexDefile] = useState("");
+  const [menu, setMenu] = useState(false);
 
   const fctStyle = (title) => {
     setStyle(!style);
@@ -43,8 +45,12 @@ export function ContextProvider({ children }) {
       style,
       videos,
       setVideos,
+      animate,
+      setAnimate,
+      menu,
+      setMenu,
     }),
-    [userName, textDefile, style, videos]
+    [userName, textDefile, style, videos, animate, menu]
   );
 
   return <context.Provider value={contextValue}>{children}</context.Provider>;
