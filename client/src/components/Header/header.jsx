@@ -1,8 +1,9 @@
 // ///////////////////////////////////// alexandre M composant header ////////////////////////////////////////////////
 
 import { useState } from "react";
+import axios from "axios";
 import "./Header.css";
-import { Form, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Cookies from "js-cookie";
 import { Mycontext } from "../Context";
 import BurgerMenu from "../Home/BurgerMenu";
@@ -11,6 +12,7 @@ import BurgerMini from "../Home/BurgerMini";
 function Header() {
   if (!Cookies.get("auth"))
     window.location.href = "http://localhost:3000/connexion";
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > 1 && window.innerWidth >= 1024) {
@@ -23,6 +25,8 @@ function Header() {
   const { style, textDefile, menu } = Mycontext();
   const [searchbar, setSearchBar] = useState(false);
   const [onBlur, setOnBlur] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
   const session = Cookies.get("auth");
   const { id } = useParams();
 
@@ -31,8 +35,26 @@ function Header() {
   };
 
   const blur = () => {
-    setOnBlur(!onBlur);
-    setSearchBar(!searchbar);
+    if (searchResults < 1) {
+      setOnBlur(!onBlur);
+      setSearchBar(!searchbar);
+    }
+  };
+
+  const handleSearchChange = async (event) => {
+    setSearchQuery(event.target.value);
+    if (event.target.value.length > 0) {
+      try {
+        const response = await axios.get(
+          `http://localhost:3310/api/videos/search?title=${event.target.value}`
+        );
+        setSearchResults(response.data);
+      } catch (error) {
+        console.error("Error fetching search results:", error);
+      }
+    } else {
+      setSearchResults([]);
+    }
   };
 
   if (onBlur === true) {
@@ -40,8 +62,10 @@ function Header() {
       setOnBlur(!onBlur);
     }, 500);
   }
-
-  setTimeout(() => {});
+  const handleResultClick = (videoId) => {
+    setSearchResults([]); // Clear search results
+    navigate(`/player/${videoId}`);
+  };
 
   return (
     <div id="apparition">
@@ -64,21 +88,41 @@ function Header() {
           <div>{textDefile}</div>
         </div>
 
-        <Form className="form-search-bar">
+        <form className="form-search-bar" onSubmit={(e) => e.preventDefault()}>
           {searchbar && !onBlur ? (
-            <input
-              type="text"
-              name="searchBar"
-              className="searchBar"
-              autoFocus
-              onBlur={() => {
-                blur();
-              }}
-            />
-          ) : (
-            ""
-          )}
-        </Form>
+            <div className="search-container">
+              <input
+                type="text"
+                name="searchBar"
+                className="searchBar"
+                autoFocus
+                value={searchQuery}
+                onChange={handleSearchChange}
+                onBlur={blur}
+              />
+              {searchResults.length > 0 && (
+                <ul className="search-results">
+                  {searchResults.map((result) => (
+                    <li key={result.videoID}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          handleResultClick(result.videoID);
+                        }}
+                        onKeyPress={(e) =>
+                          e.key === "Enter" && handleResultClick(result.videoID)
+                        }
+                        className="result-button"
+                      >
+                        {result.titre}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ) : null}
+        </form>
 
         <audio src="src/assets/images/son_magnetoscope.mp3">
           <track

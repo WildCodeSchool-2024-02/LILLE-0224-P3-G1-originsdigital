@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 function Videoplayer() {
   const [info, setInfo] = useState();
   const [iframe, setIframe] = useState("iframe_player_none");
-  
+
   const { id } = useParams();
   useEffect(() => {
     fetch(`http://localhost:3310/api/videos/${id}`)
@@ -18,10 +18,10 @@ function Videoplayer() {
           .split("&")[0];
         setInfo(splitUrl);
       });
-  }, []);
-  setTimeout(()=>{
-    setIframe("iframe_player")
-  },1000)
+  }, [id]);
+  setTimeout(() => {
+    setIframe("iframe_player");
+  }, 1000);
   return (
     <iframe
       className={iframe}
