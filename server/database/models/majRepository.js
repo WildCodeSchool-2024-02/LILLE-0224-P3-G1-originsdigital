@@ -7,8 +7,8 @@ class MajRepository extends AbstractRepository {
 
   async update(data, id) {
     await this.database.query(
-      `update user_data set username = ?,email = ?,password = ? where id = ?`,
-      [data.username, data.email, data.password, id]
+      `update user_data set username = ?,email = ?,password = ? where username = ?`,
+      [data.username, data.email, data.hashedPassword, id]
     );
   }
 

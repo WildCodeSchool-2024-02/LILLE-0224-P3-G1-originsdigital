@@ -161,9 +161,9 @@ header {
 
 .click_search {
   position: absolute;
-  top: 0;
+  top: 1em;
   right: 0;
-  width: 10%;
+  width: 20%;
   height: 100%;
   background-color: transparent;
   border: none;
@@ -463,6 +463,23 @@ header {
     left: 5%;
   }
 
+  .header1024 {
+    animation-name: stopheader;
+    animation-duration: 1s;
+    display: none;
+  }
+
+  @keyframes stopheader {
+    from {
+      opacity: 1;
+      display: block;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
+
   #h1-film-welcom {
     font-size: 5em;
     margin-top: 0em;
@@ -554,7 +571,7 @@ header {
   .b {
     color: var(--color-one);
     position: relative;
-    left: 5em;
+    left: 6em;
     animation-name: b;
     animation-duration: 0.2s;
   }
@@ -569,7 +586,7 @@ header {
   .i {
     color: var(--color-one);
     position: relative;
-    left: 5.4em;
+    left: 6.4em;
     animation-name: i;
     animation-duration: 0.4s;
   }
@@ -584,7 +601,7 @@ header {
   .e {
     color: var(--color-one);
     position: relative;
-    left: 5.8em;
+    left: 6.8em;
     animation-name: e;
     animation-duration: 0.6s;
   }
@@ -599,7 +616,7 @@ header {
   .n {
     color: var(--color-one);
     position: relative;
-    left: 6.3em;
+    left: 7.3em;
     animation-name: n;
     animation-duration: 0.8s;
   }
@@ -614,7 +631,7 @@ header {
   .v {
     color: var(--color-one);
     position: relative;
-    left: 6.8em;
+    left: 7.8em;
     animation-name: v;
     animation-duration: 1s;
   }
@@ -629,7 +646,7 @@ header {
   .ee {
     color: var(--color-one);
     position: relative;
-    left: 7.2em;
+    left: 8.2em;
     animation-name: ee;
     animation-duration: 1.2s;
   }
@@ -644,7 +661,7 @@ header {
   .nn {
     color: var(--color-one);
     position: relative;
-    left: 7.7em;
+    left: 8.7em;
     animation-name: nn;
     animation-duration: 1.4s;
   }
@@ -659,7 +676,7 @@ header {
   .u {
     color: var(--color-one);
     position: relative;
-    left: 8.2em;
+    left: 9.2em;
     animation-name: u;
     animation-duration: 1.6s;
   }
@@ -674,7 +691,7 @@ header {
   .eee {
     color: var(--color-one);
     position: relative;
-    left: 8.7em;
+    left: 9.7em;
     animation-name: eee;
     animation-duration: 1.8s;
   }
@@ -689,7 +706,7 @@ header {
   .session {
     color: var(--color-five);
     position: relative;
-    left: 9em;
+    left: 10em;
     animation-name: session;
     animation-duration: 2s;
   }
@@ -738,7 +755,7 @@ header {
   .b {
     color: var(--color-one);
     position: relative;
-    left: 9em;
+    left: 10em;
     animation-name: b;
     animation-duration: 0.2s;
   }
@@ -753,7 +770,7 @@ header {
   .i {
     color: var(--color-one);
     position: relative;
-    left: 9.4em;
+    left: 10.4em;
     animation-name: i;
     animation-duration: 0.4s;
   }
@@ -768,7 +785,7 @@ header {
   .e {
     color: var(--color-one);
     position: relative;
-    left: 9.8em;
+    left: 10.8em;
     animation-name: e;
     animation-duration: 0.6s;
   }
@@ -783,7 +800,7 @@ header {
   .n {
     color: var(--color-one);
     position: relative;
-    left: 10.3em;
+    left: 11.3em;
     animation-name: n;
     animation-duration: 0.8s;
   }
@@ -798,7 +815,7 @@ header {
   .v {
     color: var(--color-one);
     position: relative;
-    left: 10.8em;
+    left: 11.8em;
     animation-name: v;
     animation-duration: 1s;
   }
@@ -813,7 +830,7 @@ header {
   .ee {
     color: var(--color-one);
     position: relative;
-    left: 11.2em;
+    left: 12.2em;
     animation-name: ee;
     animation-duration: 1.2s;
   }
@@ -828,7 +845,7 @@ header {
   .nn {
     color: var(--color-one);
     position: relative;
-    left: 11.7em;
+    left: 12.7em;
     animation-name: nn;
     animation-duration: 1.4s;
   }
@@ -843,7 +860,7 @@ header {
   .u {
     color: var(--color-one);
     position: relative;
-    left: 12.2em;
+    left: 13.2em;
     animation-name: u;
     animation-duration: 1.6s;
   }
@@ -858,7 +875,7 @@ header {
   .eee {
     color: var(--color-one);
     position: relative;
-    left: 12.7em;
+    left: 13.7em;
     animation-name: eee;
     animation-duration: 1.8s;
   }
@@ -873,7 +890,7 @@ header {
   .session {
     color: var(--color-five);
     position: relative;
-    left: 13em;
+    left: 14em;
     animation-name: session;
     animation-duration: 2s;
   }
@@ -905,4 +922,50 @@ header {
     }
   }
 }
+/* Header.css */
+
+/* Header.css */
+
+.search-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchBar {
+  font-size: 1.7em;
+  padding: 0.4em;
+  background-color: #666867;
+  border: 1px solid #3bad49;
+  font-family: DS-Digital;
+  color: #3bad49;
+  font-weight: 900;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.search-results {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.search-results li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search-results li:hover {
+  background-color: #f0f0f0;
+}
+
 /* ///////////////////////////////////////////////////////////////////////////////// */

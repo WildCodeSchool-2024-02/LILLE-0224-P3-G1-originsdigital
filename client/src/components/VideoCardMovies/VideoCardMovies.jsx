@@ -1,37 +1,22 @@
 import { useState, useEffect } from "react";
-import "./VideoCard.css";
-import { Link, useParams, useNavigate } from "react-router-dom";
-import axios from "axios";
+import "./VideoCardMovies.css";
+import { Link } from "react-router-dom";
 import { Mycontext } from "../Context";
 
-function VideoCard() {
-  const { fctStyle, videos, setVideos } = Mycontext();
-  const { id } = useParams();
-  const navigate = useNavigate();
+function VideoCardMovies() {
+  const { fctStyle } = Mycontext();
+
   const [flippedIndex, setFlippedIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
+  const { videos } = Mycontext();
   const [hoverTimeout, setHoverTimeout] = useState(null);
-  const [title, setTitle] = useState(false);
+  const [setTitle] = useState(false);
+
+  setTimeout(() => {
+    setTitle(true);
+  }, 1000);
 
   useEffect(() => {
-    const fetchVideos = async () => {
-      const response = await axios.get("http://localhost:3310/api/videos");
-      setVideos(response.data);
-    };
-
-    const fetchVideoById = async (videoId) => {
-      const response = await axios.get(
-        `http://localhost:3310/api/videos/${videoId}`
-      );
-      setVideos([response.data]); // Assuming you only want to display the selected video
-    };
-
-    if (id) {
-      fetchVideoById(id);
-    } else {
-      fetchVideos();
-    }
-
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 992);
     };
@@ -40,10 +25,6 @@ function VideoCard() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [id, setVideos]);
-
-  useEffect(() => {
-    setTitle(true);
   }, []);
 
   const handleMouseEnter = (index) => {
@@ -63,44 +44,44 @@ function VideoCard() {
     setFlippedIndex(null);
   };
 
+  // Filtrer les vidéos pour ne garder que celles qui sont des films
+  const moviesVideos = videos.filter((video) => video.typeID === "Film");
+
   return (
     <div>
-      {title && (
-        <h1 className="video-card-title-main">DANS LA MEME CATEGORIE</h1>
-      )}
 
-      <div className="video-card-container">
-        {videos.map((video, index) => (
+      <div className="movies-card-container">
+        {moviesVideos.map((video, index) => (
           <div
             key={video.videoID}
-            className={`video-card ${flippedIndex === index ? "flipped" : ""}`}
+            id="test"
+            className={`movies-card ${flippedIndex === index ? "flipped" : ""}`}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
             onFocus={() => handleMouseEnter(index)}
             onBlur={handleMouseLeave}
           >
-            <Link to={`/player/${video.videoID}`}>
+            <Link to={`/player/${video.videoID}#top`}>
               <button
                 className="button-random2"
                 type="button"
                 onClick={() => {
                   fctStyle(video.titre);
-                  navigate(`/player/${video.videoID}`);
                 }}
               >
                 {" "}
               </button>
             </Link>
 
-            <div className="video-card-side video-card-side-front">
-              <Link to={`/player/${video.videoID}`}>
+            <div className="movies-card-side movies-card-side-front">
+              <Link to={`/player/${video.videoID}#top`}>
                 <img
-                  src={video.image_1}
+                  src={video.image}
                   alt={video.titre}
-                  className="video-card-image"
+                  className="movies-card-image"
                 />
               </Link>
-              <div className="video-card-details-mobile">
+              <div className="movies-card-details-mobile">
                 <ul>
                   <li>{new Date(video.release_date).toLocaleDateString()}</li>
                   <li>
@@ -110,10 +91,10 @@ function VideoCard() {
                 </ul>
               </div>
             </div>
-            <div className="video-card-side video-card-side-back">
-              <div className="video-card-back-content">
-                <div className="video-card-details">
-                  <h2 className="video-card-title">{video.titre}</h2>
+            <div className="movies-card-side movies-card-side-back">
+              <div className="movies-card-back-content">
+                <div className="movies-card-details">
+                  <h2 className="movies-card-title">{video.titre}</h2>
                   <ul>
                     <li>{new Date(video.release_date).toLocaleDateString()}</li>
                     <li>
@@ -132,4 +113,4 @@ function VideoCard() {
   );
 }
 
-export default VideoCard;
+export default VideoCardMovies;

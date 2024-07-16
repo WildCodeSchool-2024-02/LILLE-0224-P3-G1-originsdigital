@@ -8,10 +8,11 @@ const router = express.Router();
 
 // Import item-related actions
 
-const { browse } = require("../../../controllers/videoActions");
 const {
+  browse,
   browseFree,
   read,
+  search,
   addVideo,
   search,
 } = require("../../../controllers/videoActions");
