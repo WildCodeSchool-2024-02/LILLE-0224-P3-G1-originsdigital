@@ -107,7 +107,6 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   vertical-align: baseline;
 }
 
@@ -128,6 +127,7 @@ body {
   line-height: 1;
   background-color: black;
 }
+
 ol,
 ul {
   list-style: none;

@@ -7,11 +7,11 @@ function BurgerMini() {
     setAnimate("burger-mini-animate");
     setTimeout(() => {
       setMenu(true);
-      setAnimate("none")
+      setAnimate("none");
     }, 2500);
   };
   return (
-    <div className={animate} style={{zIndex:1}}>
+    <div className={animate} style={{ zIndex: 1 }}>
       <button
         type="button"
         label

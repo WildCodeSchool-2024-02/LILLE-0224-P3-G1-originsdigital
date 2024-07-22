@@ -19,6 +19,7 @@ function Admin() {
     link: "",
     rating: "",
     status: "",
+    number: "",
   });
 
   const [message, setMessage] = useState();
@@ -45,6 +46,7 @@ function Admin() {
       link: "",
       rating: "",
       status: "",
+      number: "",
     });
   };
 
@@ -55,7 +57,7 @@ function Admin() {
           déconnexion
         </button>
       </Link>
-      <h1 className="h1-admin">Upload videos</h1>
+      <h1 className="h1-admin">Add videos</h1>
       <Form className="form-admin" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -67,7 +69,7 @@ function Admin() {
           placeholder="Titre (le titre du film/série)"
         />
         <input
-          type="text"
+          type="date"
           name="release_date"
           value={change.release_date}
           onChange={handleChange}
@@ -82,7 +84,7 @@ function Admin() {
           onChange={handleChange}
           id="typeID-admin"
           className="input-admin"
-          placeholder="typeID (Film ou Série)"
+          placeholder="catégorie (Film ou Série)"
         />
         <input
           type="text"
@@ -109,7 +111,7 @@ function Admin() {
           onChange={handleChange}
           id="synopsis-admin"
           className="input-admin"
-          placeholder="Synopsis (comme on veux)"
+          placeholder="Synopsis (2 ou 3 ligne maxi !)"
         />
         <input
           type="text"
@@ -156,6 +158,17 @@ function Admin() {
           className="input-admin"
           placeholder="Status (free ou premium)"
         />
+
+        <input
+          type="number"
+          name="number"
+          value={change.number}
+          onChange={handleChange}
+          id="number-admin"
+          className="input-admin"
+          placeholder="nombre (numéro du genre)"
+        />
+
         <br />
         <input className="submit-admin" type="submit" value="valider" />
       </Form>

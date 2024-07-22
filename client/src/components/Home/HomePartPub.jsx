@@ -14,7 +14,7 @@ function HomePartPub() {
         <h1 className="titleP">
           Retrouvez les films et séries de votre époque
         </h1>
-        <a href="#scroll-smooth">
+        <a href="#scroll-smooth" style={{ textDecoration: "none" }}>
           <button type="button" className="btn-Choose">
             {" "}
             Commencer{" "}
@@ -22,7 +22,7 @@ function HomePartPub() {
         </a>
       </section>
       <article className="artcileP">
-        <h1 className="TextChoose">Souscrivez un compte free ou prémium</h1>
+        <h1 className="TextChoose">Inscrivez vous gratuitement !</h1>
 
         <p className="textP" style={{ textAlign: "center" }}>
           Regardez des saisons complètes de séries en streaming, des films à

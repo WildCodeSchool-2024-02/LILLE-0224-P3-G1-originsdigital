@@ -54,7 +54,6 @@ function Faq() {
         ))}
       </div>
     </>
-
   );
 }
 

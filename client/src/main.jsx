@@ -19,6 +19,8 @@ import VideoCard from "./components/VideoCard/VideoCard";
 import PageBrowse from "./pages/PageBrowse";
 import InfoContact from "./components/Contact/InfoContact";
 import Admin from "./components/Admin";
+import Movies from "./pages/Movies";
+import Series from "./pages/Series";
 
 const router = createBrowserRouter([
   {
@@ -112,6 +114,14 @@ const router = createBrowserRouter([
   {
     path: "/administrator",
     element: <Admin />,
+  },
+  {
+    path: "/movies",
+    element: <Movies />,
+  },
+  {
+    path: "/series",
+    element: <Series />,
   },
 ]);
 

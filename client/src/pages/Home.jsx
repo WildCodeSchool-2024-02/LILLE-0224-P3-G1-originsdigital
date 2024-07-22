@@ -5,6 +5,7 @@ import PlanFormula from "../components/Home/PlanFormula";
 import CardPlan from "../components/Home/CardPlan";
 import PubSuggestion from "../components/Home/PubSuggestion";
 import "./Home.css";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <PlanFormula />
       <CardPlan />
       <PubSuggestion />
+      <Footer />
     </div>
   );
 }

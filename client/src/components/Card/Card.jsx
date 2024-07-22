@@ -34,7 +34,11 @@ function Card({ video }) {
       onFocus={HandleFlip}
     >
       <div className="card_side card_side-front">
-        <img src={video.image} alt="Movie Poster" className="card_image" />
+        <img
+          src={isMobile ? video.image_1 : video.image_2}
+          alt="Movie Poster"
+          className="card_image"
+        />
         <div className="card_details_mobile">
           <ul>
             <li>{video.release_date}</li>
@@ -64,7 +68,8 @@ function Card({ video }) {
 
 Card.propTypes = {
   video: PropTypes.shape({
-    image: PropTypes.string.isRequired,
+    image_1: PropTypes.string.isRequired,
+    image_2: PropTypes.string.isRequired,
     release_date: PropTypes.string.isRequired,
     duration: PropTypes.string.isRequired,
     director: PropTypes.string.isRequired,

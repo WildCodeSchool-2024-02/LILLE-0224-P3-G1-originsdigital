@@ -14,9 +14,16 @@ const {
   read,
   addVideo,
   search,
+  browseNotation,
+  cat,
 } = require("../../../controllers/videoActions");
 
 // Route to get a list of videos
+router.post("/administrator", addVideo);
+
+router.get("/:categorie/:type", cat);
+
+router.get("/notation", browseNotation);
 
 router.get("/search", search);
 
@@ -25,8 +32,6 @@ router.get("/", browse);
 router.get("/free", browseFree);
 
 router.get("/:id", read);
-
-router.post("/administrator", addVideo);
 
 /* ************************************************************************* */
 

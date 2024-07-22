@@ -72,7 +72,10 @@ function UpdateUserInfo() {
         />
       </Link>
       <Form className="form-mon-compte" method="put" onSubmit={handleSubmit}>
-        <h1 className="h1-my-account" id="h1-my-account">Modifier mon profil </h1> <hr />
+        <h1 className="h1-my-account" id="h1-my-account">
+          Modifier mon profil{" "}
+        </h1>{" "}
+        <hr />
         <div className="div-form">
           <ul className="ul-form">
             <li className="info">
@@ -191,10 +194,3 @@ function UpdateUserInfo() {
 }
 
 export default UpdateUserInfo;
-
-
-
-
-
-
-

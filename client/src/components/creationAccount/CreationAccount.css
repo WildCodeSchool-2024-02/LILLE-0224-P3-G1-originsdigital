@@ -116,7 +116,7 @@
 .connexion {
   background-color: var(--color-one);
   color: black;
-  padding: 0.5em;
+  /* padding: 0.5em; */
   border: 3px double black;
   font-weight: bold;
   border-radius: 0.5em;
@@ -238,7 +238,6 @@
   .connexion {
     background-color: var(--color-one);
     color: black;
-    padding: 0.5em;
     border: 3px double black;
     font-weight: bold;
     border-radius: 0.7em;

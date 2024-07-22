@@ -159,9 +159,10 @@ button {
     position: relative;
     left: 16%;
     top: 18em;
-    opacity: 0.8;
+    opacity: 1;
     width: 18em;
     -webkit-tap-highlight-color: transparent;
+    z-index: 1;
   }
 
   .synopsis-random {
@@ -187,7 +188,7 @@ button {
   .background-k7 {
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.8;
     position: absolute;
   }
 
@@ -218,34 +219,36 @@ button {
     font-size: 3.5em;
     font-weight: bold;
     margin-left: 40%;
+    top: 1.5em;
   }
 
   .random-image-container {
     display: block;
     padding-top: 5em;
     padding-bottom: 15px;
-    height: 50em;
+    height: 70em;
   }
 
   .random-image {
     position: relative;
     left: 16%;
-    top: 0;
-    opacity: 0.8;
+    top: 8em;
+    opacity: 1;
     width: 27em;
     -webkit-tap-highlight-color: transparent;
+    z-index: 1;
   }
 
   .synopsis-random {
     color: white;
     font-size: 2.5em;
     margin-left: 1em;
-    margin-top: 3em;
+    margin-top: -5em;
     background-size: 100%;
     display: block;
     position: relative;
     left: 34.7%;
-    top: -13em;
+    /* top: -13em; */
     width: 15.5em;
     height: 7.9em;
     display: block;
@@ -263,7 +266,7 @@ button {
   .background-k7 {
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.8;
     position: absolute;
   }
 

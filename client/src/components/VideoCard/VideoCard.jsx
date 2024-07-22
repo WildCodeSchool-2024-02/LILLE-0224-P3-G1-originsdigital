@@ -8,10 +8,9 @@ function VideoCard() {
 
   const [flippedIndex, setFlippedIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
-  const { videos } = Mycontext();
+  const { notation } = Mycontext();
   const [hoverTimeout, setHoverTimeout] = useState(null);
   const [title, setTitle] = useState(false);
-
   setTimeout(() => {
     setTitle(true);
   }, 1000);
@@ -47,13 +46,13 @@ function VideoCard() {
   return (
     <div>
       {title && (
-        <h1 className="video-card-title-main">DANS LA MEME CATEGORIE</h1>
+        <h1 className="video-card-title-main">Les &nbsp; mieux &nbsp; notes</h1>
       )}
 
       <div className="video-card-container">
-        {videos.map((video, index) => (
+        {notation.map((video, index) => (
           <div
-            key={video.videoID}
+            key={video.id}
             id="test"
             className={`video-card ${flippedIndex === index ? "flipped" : ""}`}
             onMouseEnter={() => handleMouseEnter(index)}
@@ -61,7 +60,7 @@ function VideoCard() {
             onFocus={() => handleMouseEnter(index)}
             onBlur={handleMouseLeave}
           >
-            <Link to={`/player/${video.videoID}`}>
+            <Link to={`/player/${video.id}`}>
               <button
                 className="button-random2"
                 type="button"
@@ -74,7 +73,7 @@ function VideoCard() {
             </Link>
 
             <div className="video-card-side video-card-side-front">
-              <Link to={`/player/${video.videoID}`}>
+              <Link to={`/player/${video.id}`}>
                 <img
                   src={video.image_1}
                   alt={video.titre}
@@ -91,7 +90,10 @@ function VideoCard() {
                 </ul>
               </div>
             </div>
-            <div className="video-card-side video-card-side-back">
+            <div
+              className="video-card-side video-card-side-back"
+              style={{ cursor: "pointer" }}
+            >
               <div className="video-card-back-content">
                 <div className="video-card-details">
                   <h2 className="video-card-title">{video.titre}</h2>

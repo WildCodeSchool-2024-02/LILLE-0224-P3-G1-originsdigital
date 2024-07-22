@@ -9,6 +9,7 @@
   margin-bottom: 4rem;
   gap: 2rem;
   padding: 2rem;
+  top: -14em;
 }
 .h1-title {
   font-size: xx-large;
@@ -78,6 +79,8 @@
   justify-content: space-between;
   gap: 1.5rem;
   overflow: hidden;
+  position: relative;
+  top: 2em;
 }
 .Card {
   width: 30%;
@@ -86,6 +89,8 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 10em;
 }
 .ImgSuggestionFilms {
   display: flex;
@@ -126,5 +131,61 @@
   }
   .SectionSuggestionFilms {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .h1-title {
+    font-size: xx-large;
+    text-align: center;
+    color: var(--color-one);
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+    -webkit-text-stroke: 1px black;
+    position: relative;
+    top: -3em;
+  }
+
+  .h3-p {
+    color: var(--color-one);
+    font-weight: bold;
+    font-size: 4em;
+    -webkit-text-stroke: 0.5px black;
+    position: relative;
+    top: 4em;
+  }
+
+  .SectionSuggestionSeries {
+    background-image: url("src/assets/images/series/notre-belle-famille.webp");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-bottom: 4rem;
+    gap: 2rem;
+    padding: 2rem;
+    top: 5em;
+  }
+
+  .cardSuggestion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    top: 15em;
+  }
+
+  .ImgSuggestionFilms {
+    display: flex;
+    position: relative;
+    width: 80%;
+    opacity: 0.5;
+    border-radius: 25px;
+    padding: 2rem;
+    top: 3em;
   }
 }
