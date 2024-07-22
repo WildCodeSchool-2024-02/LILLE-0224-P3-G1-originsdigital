@@ -45,18 +45,24 @@
 @media screen and (max-width: 1023px) and (min-width: 320px) {
   .series-card-image {
     margin-left: -0.5em;
+    width: 310px;
+    height: 420px;
   }
 }
 
 @media screen and (min-width: 375px) {
   .series-card-image {
     margin-left: 2em;
+    width: 310px;
+    height: 420px;
   }
 }
 
 @media screen and (min-width: 425px) {
   .series-card-image {
     margin-left: 5em;
+    width: 310px;
+    height: 420px;
   }
 }
 
