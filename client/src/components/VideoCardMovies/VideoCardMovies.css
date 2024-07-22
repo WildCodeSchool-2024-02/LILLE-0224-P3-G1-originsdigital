@@ -100,6 +100,7 @@
 @media screen and (min-width: 768px) {
   .movies-card-image {
     margin-left: 1.5em;
+    height: 40em;
   }
 
   .movies-card {

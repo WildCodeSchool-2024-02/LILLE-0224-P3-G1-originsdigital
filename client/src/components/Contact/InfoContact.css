@@ -267,3 +267,43 @@ span {
     cursor: pointer;
   }
 }
+
+@media screen and (min-width: 320px) {
+  .div-info-contact {
+    width: 100%;
+    height: 12em;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+  }
+
+  .img-info-contact {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    left: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .div-info-contact {
+    width: 100%;
+    height: 20em;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+  }
+
+  .img-info-contact {
+    width: 15%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+    left: 42.5%;
+  }
+}
