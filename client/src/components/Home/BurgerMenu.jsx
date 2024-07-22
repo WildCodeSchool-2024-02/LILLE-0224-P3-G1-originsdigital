@@ -83,6 +83,8 @@ function BurgerMenu() {
         to={
           (up === 1 && "/browsepage") ||
           (up === 2 && `/users/${Cookies.get("auth")}`) ||
+          (up === 3 && `/movies`) ||
+          (up === 4 && `/series`) ||
           (up === 5 && "/deconnexion")
         }
       >

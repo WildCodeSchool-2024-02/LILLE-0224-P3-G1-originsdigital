@@ -1,12 +1,23 @@
 import { useEffect, useState } from "react";
 import "./Videoplayer.css";
 import { useParams } from "react-router-dom";
+import { Mycontext } from "../Context";
 
 function Videoplayer() {
   const [info, setInfo] = useState();
-  const [iframe, setIframe] = useState("iframe_player_none");
+
+  const { iframe, setIframe } = Mycontext();
+  const [iframeId, setIframeId] = useState("iframe-video-none");
 
   const { id } = useParams();
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200 && window.innerWidth >= 1024) {
+      setIframeId("iframe-video-youtube");
+    } else {
+      setIframeId("iframe-video-none");
+    }
+  });
+
   useEffect(() => {
     fetch(`http://localhost:3310/api/videos/${id}`)
       .then((response) => response.json())
@@ -19,6 +30,7 @@ function Videoplayer() {
         setInfo(splitUrl);
       });
   }, [id]);
+
   setTimeout(() => {
     setIframe("iframe_player");
   }, 1000);
@@ -30,8 +42,9 @@ function Videoplayer() {
       title="video"
       src={`https://www.youtube.com/embed/${info && info}`}
       frameBorder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
+      id={iframeId}
     >
       {" "}
     </iframe>

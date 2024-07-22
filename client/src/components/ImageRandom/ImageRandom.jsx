@@ -9,7 +9,18 @@ function ImageRandom() {
   const [randomImage, setRandomImage] = useState("");
   const [vid, setVid] = useState();
   const [random, setRandom] = useState();
-
+  const [win, setWin] = useState(false);
+  window.addEventListener("scroll", () => {
+    if (
+      window.scrollY > 200 &&
+      window.scrollY < 1000 &&
+      window.innerWidth >= 1024
+    ) {
+      setWin(true);
+    } else {
+      setWin(false);
+    }
+  });
   useEffect(() => {
     const fetchVideos = async () => {
       const response = await axios.get("http://localhost:3310/api/videos");
@@ -67,6 +78,22 @@ function ImageRandom() {
         )}
         <h1 className="synopsis-random">{vid && vid.synopsis}</h1>
       </div>
+      {win && (
+        <video
+          autoPlay
+          muted
+          loop
+          style={{
+            width: "100%",
+            opacity: 0.2,
+            position: "absolute",
+            top: "62em",
+          }}
+        >
+          <source src="/public/20th Century Fox HD.mp4" type="video/mp4" />
+          <track kind="film" src="captions.vtt" label="English" />
+        </video>
+      )}
     </>
   );
 }

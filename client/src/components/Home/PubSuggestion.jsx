@@ -19,6 +19,9 @@ function PubSuggestion() {
   const x = y - 1;
   const w = x - 1;
   const v = w - 1;
+
+  const u = v - 1;
+  const t = u - 1;
   return (
     <>
       <div className="SectionSuggestionSeries">
@@ -31,6 +34,12 @@ function PubSuggestion() {
               <Card className="card card-home" video={data[w]} />
               <Card className="card card-home" video={data[x]} />
               <Card className="card card-home" video={data[y]} />
+              {window.innerWidth >= 1440 && (
+                <>
+                  <Card className="card card-home" video={data[u]} />
+                  <Card className="card card-home" video={data[t]} />
+                </>
+              )}
             </>
           )}
         </article>

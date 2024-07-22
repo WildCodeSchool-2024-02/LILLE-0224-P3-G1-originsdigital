@@ -12,6 +12,7 @@
   box-shadow: 1px 1px 25px grey;
   animation-name: apparition-menu;
   animation-duration: 0.5s;
+  z-index: 1;
 }
 
 @keyframes apparition-menu {
@@ -308,7 +309,7 @@
     }
     50% {
       width: 15%;
-      height: 4em;
+      height: 8em;
       border: 0.1px solid var(--color-one);
       position: absolute;
       top: 12em;
@@ -318,7 +319,7 @@
     }
     75% {
       width: 15%;
-      height: 4em;
+      height: 8em;
       border: 0.1px solid var(--color-one);
       position: absolute;
       top: 30em;
@@ -328,7 +329,7 @@
     }
     100% {
       width: 15%;
-      height: 4em;
+      height: 8em;
       border: 0.1px solid var(--color-one);
       position: absolute;
       top: 30em;

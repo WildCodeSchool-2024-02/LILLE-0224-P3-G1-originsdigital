@@ -1,0 +1,105 @@
+.button-same-cat {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .SameCategories {
+    width: 100%;
+    height: 60em;
+    position: absolute;
+    top: 140em;
+    animation-name: same;
+    animation-duration: 2s;
+  }
+
+  @keyframes same {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #video-card-title-main-id {
+    letter-spacing: 5px;
+  }
+
+  .same-categorie {
+    width: 30%;
+    height: 50em;
+    float: left;
+    margin-left: 0.5em;
+  }
+
+  .img-same-categorie {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .SameCategories-none {
+    display: none;
+  }
+
+  .button-same-cat {
+    width: 30%;
+    height: 40em;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 320px) {
+  .SameCategories {
+    width: 100%;
+    height: 35em;
+    position: absolute;
+    top: 50em;
+    animation-name: same;
+    animation-duration: 2s;
+  }
+
+  .button-same-cat {
+    width: 30%;
+    height: 15em;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    border: none;
+    cursor: pointer;
+  }
+
+  @keyframes same {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #video-card-title-main-id {
+    letter-spacing: 5px;
+  }
+
+  .same-categorie {
+    width: 30%;
+    height: 15em;
+    float: left;
+    margin-left: 0.5em;
+  }
+
+  .img-same-categorie {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .SameCategories-none {
+    display: none;
+  }
+}

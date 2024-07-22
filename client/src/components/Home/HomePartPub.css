@@ -44,10 +44,13 @@
   cursor: pointer;
   border: none;
   transition: transform 0.2s ease 0.2s;
+  text-decoration: none;
 }
+
 .btn-Choose:hover {
-  transform: scale(1.1);
+  color: black;
 }
+
 .artcileP {
   display: flex;
   flex-direction: column;

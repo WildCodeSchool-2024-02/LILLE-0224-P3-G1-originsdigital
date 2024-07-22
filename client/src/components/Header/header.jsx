@@ -5,13 +5,14 @@ import axios from "axios";
 import "./Header.css";
 import { useNavigate, useParams } from "react-router-dom";
 import Cookies from "js-cookie";
-import BurgerMini from '../Home/BurgerMini';
-import BurgerMenu from '../Home/BurgerMenu';
+import BurgerMini from "../Home/BurgerMini";
+import BurgerMenu from "../Home/BurgerMenu";
 import { Mycontext } from "../Context";
 
 function Header() {
   if (!Cookies.get("auth"))
     window.location.href = "http://localhost:3000/connexion";
+
   const [name, setName] = useState("");
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > 1 && window.innerWidth >= 1024) {
@@ -21,7 +22,8 @@ function Header() {
     }
   });
   const navigate = useNavigate();
-  const { style, textDefile, menu, fctStyle,onBlur, setOnBlur } = Mycontext();
+  const { style, textDefile, menu, fctStyle, onBlur, setOnBlur, setTexDefile } =
+    Mycontext();
   const [searchbar, setSearchBar] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -64,6 +66,10 @@ function Header() {
     setSearchResults([]); // Clear search results
     navigate(`/player/${videoId}`);
   };
+
+  const urlSeries = window.location.href.includes("series");
+  const urlMovies = window.location.href.includes("movies");
+
   return (
     <div id="apparition">
       <header className={name}>
@@ -105,8 +111,9 @@ function Header() {
                         type="button"
                         onClick={() => {
                           handleResultClick(result.videoID);
-                          fctStyle(!style);
-                          setOnBlur(true)
+                          fctStyle(result.titre);
+                          setTexDefile(result.titre);
+                          setSearchBar(false);
                         }}
                         onKeyPress={(e) =>
                           e.key === "Enter" && handleResultClick(result.videoID)
@@ -141,7 +148,7 @@ function Header() {
           b
         </button>
       </header>
-      {!id && (
+      {!id && !urlSeries && !urlMovies && (
         <h1 id="h1-film-welcom">
           <div id="idWelcome">
             <span className="b">B</span>

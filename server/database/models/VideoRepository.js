@@ -59,6 +59,13 @@ class VideoRepository extends AbstractRepository {
         data.status,
       ]
     );
+
+    await this.database.query(
+      `INSERT INTO video_genre (videoID,genreID)
+       VALUES (?,?);`,
+      [row.insertId, data.number]
+    );
+
     return row;
   }
 
@@ -74,6 +81,27 @@ class VideoRepository extends AbstractRepository {
     );
 
     return rows;
+  }
+
+  async browseNotation() {
+    const [rows] = await this.database.query(
+      `
+      SELECT * FROM video where rating > 4 order by id desc;
+    `
+    );
+
+    return rows;
+  }
+
+  async readAllCategories(categorie, type) {
+    const [row] = await this.database.query(
+      `SELECT *
+    FROM video
+    JOIN video_genre ON video.id = video_genre.videoID
+    JOIN genre ON video_genre.genreID = genre.id WHERE name = ? AND typeID = ? limit 3;`,
+      [categorie, type]
+    );
+    return row;
   }
 }
 

@@ -32,3 +32,30 @@
     }
   }
 }
+
+@media screen and (min-width: 1024px) {
+  #iframe-video-youtube {
+    position: relative;
+    top: -200px;
+    width: 100%;
+    height: 70em;
+    animation-name: iframe-v;
+    animation-duration: 1s;
+  }
+
+  @keyframes iframe-v {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #iframe-video-none {
+    display: none;
+  }
+  .iframe_player_none {
+    display: none;
+  }
+}

@@ -3,6 +3,8 @@
   justify-content: center;
   gap: 5rem;
   margin: 15px 0;
+  position: relative;
+  top: -10em;
 }
 .textTitle {
   font-size: large;
@@ -99,5 +101,16 @@
   }
   .underlineText {
     text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin: 15px 0;
+    position: relative;
+    top: -7em;
   }
 }

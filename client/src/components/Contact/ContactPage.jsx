@@ -20,7 +20,6 @@ export default function ContactPage() {
   };
 
   return (
-
     <div className="container-form">
       <div className="sectionForm">
         <h1 className="h1contact">Contact</h1>

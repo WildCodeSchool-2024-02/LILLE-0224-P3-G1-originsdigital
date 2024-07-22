@@ -38,8 +38,9 @@ const read = async (req, res, next) => {
 };
 
 const addVideo = async (req, res, next) => {
+  const data = req.body;
   try {
-    await tables.video.addVideo(req.body);
+    await tables.video.addVideo(data);
     res.json({ message: "video enregistré !" });
   } catch (err) {
     next(err);
@@ -56,10 +57,31 @@ const search = async (req, res, next) => {
   }
 };
 
+const browseNotation = async (req, res, next) => {
+  try {
+    const searchNotation = await tables.video.browseNotation();
+    res.json(searchNotation);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const cat = async (req, res, next) => {
+  const { categorie, type } = req.params;
+
+  try {
+    const result = await tables.video.readAllCategories(categorie, type);
+    res.json(result);
+  } catch (err) {
+    next(err);
+  }
+};
 module.exports = {
   browse,
   browseFree,
   read,
   addVideo,
   search,
+  browseNotation,
+  cat,
 };
