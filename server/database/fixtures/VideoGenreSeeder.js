@@ -259,7 +259,7 @@ class VideoGenreSeeder extends AbstractSeeder {
       },
       {
         videoID: this.getRef("video_Pokémon").insertId,
-        genreID: this.getRef("genre_Fantastique").insertId,
+        genreID: this.getRef("genre_Animation").insertId,
       },
       {
         videoID: this.getRef("video_Highlander").insertId,
@@ -280,6 +280,155 @@ class VideoGenreSeeder extends AbstractSeeder {
       {
         videoID: this.getRef("video_Berserk").insertId,
         genreID: this.getRef("genre_Animation").insertId,
+      },
+      {
+        videoID: this.getRef("video_Vampire Diaries").insertId,
+        genreID: this.getRef("genre_Drame").insertId,
+      },
+      {
+        videoID: this.getRef("video_Gossip Girl").insertId,
+        genreID: this.getRef("genre_Drame").insertId,
+      },
+      {
+        videoID: this.getRef("video_Breaking Bad").insertId,
+        genreID: this.getRef("genre_Thriller").insertId,
+      },
+      {
+        videoID: this.getRef("video_Kaamelott").insertId,
+        genreID: this.getRef("genre_Fantastique").insertId,
+      },
+      {
+        videoID: this.getRef("video_Game of Thrones").insertId,
+        genreID: this.getRef("genre_Fantastique").insertId,
+      },
+      {
+        videoID: this.getRef("video_The Walking Dead").insertId,
+        genreID: this.getRef("genre_Drame").insertId,
+      },
+      {
+        videoID: this.getRef("video_The Leftovers").insertId,
+        genreID: this.getRef("genre_Fantastique").insertId,
+      },
+      {
+        videoID: this.getRef("video_Peaky Blinders").insertId,
+        genreID: this.getRef("genre_Drame").insertId,
+      },
+      {
+        videoID: this.getRef("video_Vikings").insertId,
+        genreID: this.getRef("genre_Historique").insertId,
+      },
+      {
+        videoID: this.getRef("video_Chernobyl").insertId,
+        genreID: this.getRef("genre_Historique").insertId,
+      },
+      {
+        videoID: this.getRef("video_L'Attaque des Titans").insertId,
+        genreID: this.getRef("genre_Animation").insertId,
+      },
+      {
+        videoID: this.getRef("video_Mr. Robot").insertId,
+        genreID: this.getRef("genre_Thriller").insertId,
+      },
+      {
+        videoID: this.getRef("video_Narcos").insertId,
+        genreID: this.getRef("genre_Action").insertId,
+      },
+      {
+        videoID: this.getRef("video_Person of Interest").insertId,
+        genreID: this.getRef("genre_Action").insertId,
+      },
+      {
+        videoID: this.getRef("video_Spartacus").insertId,
+        genreID: this.getRef("genre_Historique").insertId,
+      },
+      {
+        videoID: this.getRef("video_Frères d'armes").insertId,
+        genreID: this.getRef("genre_Guerre").insertId,
+      },
+      {
+        videoID: this.getRef("video_Rome").insertId,
+        genreID: this.getRef("genre_Historique").insertId,
+      },
+      {
+        videoID: this.getRef("video_Dr House").insertId,
+        genreID: this.getRef("genre_Drame").insertId,
+      },
+      {
+        videoID: this.getRef("video_Battlestar Galactica").insertId,
+        genreID: this.getRef("genre_Science-fiction").insertId,
+      },
+      {
+        videoID: this.getRef("video_24 heures chrono").insertId,
+        genreID: this.getRef("genre_Action").insertId,
+      },
+      {
+        videoID: this.getRef("video_Prison Break").insertId,
+        genreID: this.getRef("genre_Action").insertId,
+      },
+      {
+        videoID: this.getRef("video_Sons of Anarchy").insertId,
+        genreID: this.getRef("genre_Thriller").insertId,
+      },
+      {
+        videoID: this.getRef("video_Firefly").insertId,
+        genreID: this.getRef("genre_Science-fiction").insertId,
+      },
+      {
+        videoID: this.getRef("video_Supernatural").insertId,
+        genreID: this.getRef("genre_Fantastique").insertId,
+      },
+      {
+        videoID: this.getRef("video_Friday Night Lights").insertId,
+        genreID: this.getRef("genre_Sport").insertId,
+      },
+      {
+        videoID: this.getRef("video_Fullmetal Alchemist").insertId,
+        genreID: this.getRef("genre_Animation").insertId,
+      },
+      {
+        videoID: this.getRef("video_Mad Max: Fury Road").insertId,
+        genreID: this.getRef("genre_Action").insertId,
+      },
+      {
+        videoID: this.getRef("video_The Hunger Games").insertId,
+        genreID: this.getRef("genre_Action").insertId,
+      },
+      {
+        videoID: this.getRef("video_Ready Player One").insertId,
+        genreID: this.getRef("genre_Action").insertId,
+      },
+      {
+        videoID: this.getRef("video_La Planète des singes : Les Origines")
+          .insertId,
+        genreID: this.getRef("genre_Action").insertId,
+      },
+      {
+        videoID: this.getRef("video_Time Out").insertId,
+        genreID: this.getRef("genre_Action").insertId,
+      },
+      {
+        videoID: this.getRef("video_Jujutsu Kaisen").insertId,
+        genreID: this.getRef("genre_Animation").insertId,
+      },
+      {
+        videoID: this.getRef("video_Hunter x Hunter (2011)").insertId,
+        genreID: this.getRef("genre_Animation").insertId,
+      },
+      {
+        videoID: this.getRef("video_Sword Art Online").insertId,
+        genreID: this.getRef("genre_Animation").insertId,
+      },
+      {
+        videoID: this.getRef("video_One Punch Man").insertId,
+        genreID: this.getRef("genre_Animation").insertId,
+      },
+      {
+        videoID: this.getRef("video_JoJo's Bizarre Adventure").insertId,
+        genreID: this.getRef("genre_Animation").insertId,
+      },
+      {
+        videoID: this.getRef("video_Trainspotting").insertId,
+        genreID: this.getRef("genre_Drame").insertId,
       },
     ];
 

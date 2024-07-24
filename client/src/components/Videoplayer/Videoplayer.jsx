@@ -43,7 +43,7 @@ function Videoplayer() {
       src={`https://www.youtube.com/embed/${info && info}`}
       frameBorder="0"
       allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
+      allowFullScreen
       id={iframeId}
     >
       {" "}

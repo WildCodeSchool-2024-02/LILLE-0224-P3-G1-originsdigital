@@ -984,7 +984,7 @@ class VideoSeeder extends AbstractSeeder {
           "https://fr.web.img3.acsta.net/c_310_420/pictures/14/03/24/12/46/257044.jpg",
         image_2:
           "https://m.media-amazon.com/images/S/pv-target-images/a4bcfab0582505f3fb361846abe480a580ab84f10d4797825b0902484574f351.jpg",
-        link: "https://www.youtube.com/watch?v=_-CT5kC-W6g&ab_channel=vegas",
+        link: "https://www.youtube.com/watch?v=VAfy26xs6e0&ab_channel=SouthParkStudios",
         rating: 3.8,
         status: "premium",
       },
@@ -1138,6 +1138,649 @@ class VideoSeeder extends AbstractSeeder {
           "https://www.nautiljon.com/images/galerie/04/84/berserk_376448.jpg",
         link: "https://www.youtube.com/watch?v=IXL5r3n862U&ab_channel=AnimeClips",
         rating: 3.5,
+        status: "premium",
+      },
+      {
+        titre: "Vampire Diaries",
+        release_date: "2009-09-10",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Julie Plec, Kevin Williamson",
+        duration: "42 min",
+        synopsis:
+          "Quatre mois après un accident tragique, Elena et son frère Jeremy essaient de s'adapter à leur nouvelle réalité. Elena est fascinée par Stefan et Damon Salvatore, deux frères vampires.",
+        image_1:
+          "https://fr.web.img3.acsta.net/c_310_420/pictures/15/10/05/10/33/221403.jpg",
+        image_2:
+          "https://www.lemagducine.fr/wp-content/uploads/2023/09/the-vampire-diaries-le-mag-critique.jpg",
+        link: "https://www.youtube.com/watch?v=BmVmhjjkN4E&ab_channel=ElinaG",
+        rating: 4.0,
+        status: "premium",
+      },
+      {
+        titre: "Gossip Girl",
+        release_date: "2007-09-19",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Josh Schwartz, Stephanie Savage",
+        duration: "42 min",
+        synopsis:
+          "La vie de la jeunesse dorée des élèves de deux écoles privées new-yorkaises, vue à travers les yeux ironiques d'une mystérieuse 'bloggeuse' surnommée Gossip Girl. Entre amour et amitié, chacun tente de tirer son épingle du jeu, mais rien n'est jamais simple derrière des apparences parfaites...",
+        image_1:
+          "https://fr.web.img2.acsta.net/c_310_420/pictures/18/10/31/16/40/2925980.jpg",
+        image_2:
+          "https://assets.afcdn.com/story/20130224/16683_w1200h630c1.jpg",
+        link: "https://www.youtube.com/watch?v=ai5hin7ffs0&ab_channel=RottenTomatoesTV",
+        rating: 3.7,
+        status: "premium",
+      },
+      {
+        titre: "Breaking Bad",
+        release_date: "2008-01-20",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Vince Gilligan",
+        duration: "42 min",
+        synopsis:
+          "Walter White, un professeur de chimie atteint d'un cancer incurable, se lance dans la fabrication et la vente de méthamphétamine pour subvenir aux besoins de sa famille.",
+        image_1:
+          "https://fr.web.img3.acsta.net/c_310_420/pictures/19/06/18/12/11/3956503.jpg",
+        image_2:
+          "https://img.gaming.gentside.com/sto/tags/breaking-bad-6402981cde1dfb15bf589de2_1278d4a2cb82d030787460ba.jpg",
+        link: "https://www.youtube.com/watch?v=HhesaQXLuRY&t=2s&ab_channel=TrailerBlend",
+        rating: 4.7,
+        status: "premium",
+      },
+      {
+        titre: "Kaamelott",
+        release_date: "2005-01-03",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Alexandre Astier, Alain Kappauf, Jean-Yves Robin",
+        duration: "7 min",
+        synopsis:
+          "Le quotidien banal et burlesque du roi Arthur et des chevaliers de la Table ronde : quête du Graal, repas en famille et stratégie militaire.",
+        image_1:
+          "https://media.senscritique.com/media/000020082603/0/kaamelott.jpg",
+        image_2:
+          "https://static.hitek.fr/img/actualite/ill_m/30209847/illustr-avant-apres-kaamelott.jpg",
+        link: "https://www.youtube.com/watch?v=o8358kIZ8EU&ab_channel=TMDBcontributor",
+        rating: 4.1,
+        status: "premium",
+      },
+      {
+        titre: "Game of Thrones",
+        release_date: "2011-04-11",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "D.B. Weiss, David Benioff",
+        duration: "52 min",
+        synopsis:
+          "Dans un pays où l'été peut durer plusieurs années et l'hiver toute une vie, des forces sinistres et surnaturelles se pressent aux portes du Royaume des Sept Couronnes. La Garde de Nuit n'a plus les ressources nécessaires pour assurer la sécurité de tous, et des complots et rivalités se jouent pour s'emparer du Trône de Fer.",
+        image_1:
+          "https://fr.web.img3.acsta.net/c_310_420/pictures/23/01/03/14/13/0717778.jpg",
+        image_2:
+          "https://www.viedegeek.fr/media/2012/03/Game-of-Thrones-game-of-thrones-20131987-1280-800.jpg",
+        link: "https://www.youtube.com/watch?v=bjqEWgDVPe0&ab_channel=HBOUK",
+        rating: 4.6,
+        status: "premium",
+      },
+      {
+        titre: "The Walking Dead",
+        release_date: "2010-10-30",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Frank Darabont",
+        duration: "44 min",
+        synopsis:
+          "Après une apocalypse ayant transformé la quasi-totalité de la population en zombies, un groupe d'hommes et de femmes mené par l'officier Rick Grimes tente de survivre... Ensemble, ils vont devoir tant bien que mal faire face à ce nouveau monde devenu méconnaissable.",
+        image_1:
+          "https://fr.web.img5.acsta.net/c_310_420/pictures/22/08/29/18/20/3648785.jpg",
+        image_2:
+          "https://global-img.gamergen.com/the-walking-dead-saison-1-poster_0901023905.jpg",
+        link: "https://www.youtube.com/watch?v=sfAc2U20uyg&ab_channel=TrailerBlend",
+        rating: 4.4,
+        status: "premium",
+      },
+      {
+        titre: "The Leftovers",
+        release_date: "2014-06-29",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Damon Lindelof, Tom Perrotta",
+        duration: "60 min",
+        synopsis:
+          "Du jour au lendemain, 2% de la population mondiale disparaît mystérieusement, laissant leurs proches dans l'angoisse et le désespoir. Trois ans plus tard, la vie continue dans la petite ville de Mapleton, mais les cicatrices de la disparition sont toujours présentes.",
+        image_1:
+          "https://fr.web.img5.acsta.net/c_310_420/pictures/21/02/11/13/55/3189267.jpg",
+        image_2:
+          "https://resize.elle.fr/article_1280/var/plain_site/storage/images/loisirs/series/the-leftovers-un-premier-trailer-pour-la-saison-2-2958760/55211302-1-fre-FR/The-Leftovers-un-premier-trailer-pour-la-saison-2.jpg",
+        link: "https://www.youtube.com/watch?v=FLT3YUALJno&ab_channel=SeriesTrailerMP",
+        rating: 4.3,
+        status: "premium",
+      },
+      {
+        titre: "Peaky Blinders",
+        release_date: "2013-09-12",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Steven Knight",
+        duration: "52 min",
+        synopsis:
+          "En 1919, à Birmingham, soldats, révolutionnaires politiques et criminels combattent pour se faire une place dans le paysage industriel de l'après-guerre. La famille Shelby, surnommée les Peaky Blinders, tire principalement son argent de paris et de vol.",
+        image_1:
+          "https://fr.web.img6.acsta.net/c_310_420/pictures/22/06/07/11/57/5231272.jpg",
+        image_2:
+          "https://actorsfactory-studio.fr/wp-content/uploads/2022/03/2-min-5.png",
+        link: "https://www.youtube.com/watch?v=X3PGOaEfCmQ&ab_channel=LukeLewisVideoEditing",
+        rating: 4.5,
+        status: "premium",
+      },
+      {
+        titre: "Vikings",
+        release_date: "2013-03-03",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Michael Hirst",
+        duration: "52 min",
+        synopsis:
+          "Scandinavie, à la fin du 8ème siècle. Ragnar Lodbrok, un jeune guerrier viking, est avide d'aventures et de nouvelles conquêtes. Lassé des pillages sur les terres de l'Est, il se met en tête d'explorer l'Ouest par la mer.",
+        image_1:
+          "https://fr.web.img6.acsta.net/c_310_420/pictures/20/12/04/10/04/4859166.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/265d67318d99543d49dafeefedf9f4dfba7f677cc5dd7b4e4e39a780de949dd9.jpg",
+        link: "https://www.youtube.com/watch?v=9GgxinPwAGc&ab_channel=RewatchAgain",
+        rating: 4.4,
+        status: "premium",
+      },
+      {
+        titre: "Chernobyl",
+        release_date: "2019-05-06",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Craig Mazin",
+        duration: "58 min",
+        synopsis:
+          "26 avril 1986, l'histoire vraie de la pire catastrophe causée par l'homme et de ceux qui ont sacrifié leur vie pour sauver l'Europe du drame. L'explosion d'un réacteur à la centrale nucléaire de Tchernobyl, en Ukraine, a de terribles conséquences aussi bien sur le personnel de l'usine, que sur les équipes de secours, la population et l'environnement.",
+        image_1:
+          "https://fr.web.img2.acsta.net/c_310_420/pictures/23/01/03/14/05/3165194.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/e86e3ae26b4e16e7f2857a0a16f23bd43958295fb879b90c8c02d8abdd4b1bb9.jpg",
+        link: "https://www.youtube.com/watch?v=s9APLXM9Ei8&ab_channel=HBO",
+        rating: 4.6,
+        status: "premium",
+      },
+      {
+        titre: "L'Attaque des Titans",
+        release_date: "2013-04-07",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Hajime Isayama",
+        duration: "24 min",
+        synopsis:
+          "Dans un monde ravagé par des titans mangeurs d’homme depuis plus d’un siècle, les rares survivants de l’Humanité n’ont d’autre choix pour survivre que de se barricader dans une cité-forteresse. Le jeune Eren, témoin de la mort de sa mère dévorée par un titan, n’a qu’un rêve : entrer dans le corps d’élite chargé de découvrir l’origine des Titans et les annihiler jusqu’au dernier.",
+        image_1:
+          "https://fr.web.img4.acsta.net/c_310_420/pictures/20/12/28/10/24/5603983.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/93c059c692eb775297fcaddf769414db826e0cb9e88414f8a41a5b41b18e7ca6.jpg",
+        link: "https://www.youtube.com/watch?v=LV-nazLVmgo&ab_channel=BRASStv",
+        rating: 4.5,
+        status: "premium",
+      },
+      {
+        titre: "Mr. Robot",
+        release_date: "2015-06-24",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Sam Esmail",
+        duration: "45 min",
+        synopsis:
+          "Elliot est un jeune programmeur anti-social qui souffre d'un trouble du comportement. Il travaille pour une firme de cyber-sécurité mais est recruté par Mr. Robot pour faire tomber une puissante entreprise.",
+        image_1:
+          "https://fr.web.img6.acsta.net/c_310_420/pictures/15/05/06/16/13/020977.jpg",
+        image_2:
+          "https://braindamaged.fr/wp-content/uploads/2015/06/mr-robot-dans-la-tete-dun-hacker-une-631x250.jpg",
+        link: "https://www.youtube.com/watch?v=xIBiJ_SzJTA&ab_channel=AlchemistEskimo",
+        rating: 4.3,
+        status: "premium",
+      },
+      {
+        titre: "Westworld",
+        release_date: "2016-10-02",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Jonathan Nolan, Lisa Joy",
+        duration: "52 min",
+        synopsis:
+          "À Westworld, un parc d'attractions futuriste, les visiteurs paient pour revivre le frisson de la conquête de l'Ouest. Les androïdes créés pour ce monde commencent à adopter des comportements imprévisibles après une mise à jour.",
+        image_1:
+          "https://www.france.tv/image/carre/400/400/4/a/a/b4a2845b-vodcarre31d923bfc68a1e9ce71382b7f6d4c3c5a989f42dc2c82bc4983f30b8b1f1daa4.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/cebcaf7d85e3b6bfd95892809611de11cd74bd95bdf2a708ed87201df8a060f3._SX1080_FMjpg_.jpg",
+        link: "https://www.youtube.com/watch?v=kEkZdgWu7mM&ab_channel=HBOUK",
+        rating: 4.3,
+        status: "premium",
+      },
+      {
+        titre: "Narcos",
+        release_date: "2015-08-28",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Carlo Bernard, Chris Brancato, Doug Miro",
+        duration: "52 min",
+        synopsis:
+          "Loin d’un simple biopic de Pablo Escobar, Narcos retrace la lutte acharnée des États-Unis et de la Colombie contre le cartel de la drogue de Medellín, l’organisation la plus lucrative et impitoyable de l’histoire criminelle moderne. En multipliant les points de vue — policier, politique, judiciaire et personnel — la série dépeint l’essor du trafic de cocaïne et le bras de fer sanglant engagé avec les narcotrafiquants.",
+        image_1:
+          "https://fr.web.img4.acsta.net/c_310_420/pictures/15/07/29/14/33/086520.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/c5731641a600188abd3fc6aff514a40eac842121b6d0f812e657659e52ff370a.jpg",
+        link: "https://www.youtube.com/watch?v=LNqJnZl4imQ&ab_channel=NetflixFrance",
+        rating: 4.4,
+        status: "premium",
+      },
+      {
+        titre: "Person of Interest",
+        release_date: "2011-09-22",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Jonathan Nolan",
+        duration: "42 min",
+        synopsis:
+          "Un agent paramilitaire de la CIA, présumé mort, est recruté par un millionnaire reclu pour travailler sur un projet top-secret : prévenir le crime avant qu'il ne se produise. Un programme ingénieux identifie chaque jour des personnes qui seront impliquées dans un crime.",
+        image_1: "https://serieall.fr/images/shows/person-of-interest.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/513722b8dff999c5498a51ece44b3ded8d732c4d5206ce8cc0c3d3fc65d89875.jpg",
+        link: "https://www.youtube.com/watch?v=WYDWSNMTauQ&ab_channel=LadyGisborne15",
+        rating: 4.3,
+        status: "premium",
+      },
+      {
+        titre: "Spartacus",
+        release_date: "2010-01-22",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Steven S. DeKnight",
+        duration: "42 min",
+        synopsis:
+          "C’est dans le sang et le sable des arènes que s’écrit la légende de Spartacus. Puissant guerrier Thrace trahi par un ambitieux légat romain, Spartacus est réduit en esclavage, contraint de devenir gladiateur s’il veut un jour revoir sa femme.",
+        image_1:
+          "https://fr.web.img4.acsta.net/c_310_420/pictures/21/01/29/17/37/5311898.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/e1c5254d7d479f2815a939a3f65c78a2eaa87acc2b634ebc35d4512cca5aa992.jpg",
+        link: "https://www.youtube.com/watch?v=m2CqtNeRK_w&ab_channel=STARZ",
+        rating: 4.2,
+        status: "premium",
+      },
+      {
+        titre: "Frères d'armes",
+        release_date: "2001-09-09",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Steven Spielberg, Tom Hanks",
+        duration: "60 min",
+        synopsis:
+          "Vivez la Seconde Guerre Mondiale aux côtés de la Easy Company, un groupe de soldats américains. Suivez-les depuis leur formation en 1942, jusqu'à la libération de l'Allemagne Nazie en 1945, en passant par leur parachutage en Normandie le 6 juin 1944.",
+        image_1:
+          "https://fr.web.img6.acsta.net/c_310_420/pictures/23/01/03/13/45/1573815.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/51dbe04287543222a6514c2353b1b648ab0fdc51279cd6dfa18ee188f4a2fca2.jpg",
+        link: "https://www.youtube.com/watch?v=KKRBAFlN5ww&ab_channel=WarnerBros.Entertainment",
+        rating: 4.2,
+        status: "premium",
+      },
+      {
+        titre: "Rome",
+        release_date: "2005-08-28",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "John Milius, William J. MacDonald",
+        duration: "52 min",
+        synopsis:
+          "Les destins de deux soldats romains et de leurs familles alors que la République Romaine est en train de s'effondrer en laissant peu à peu la place à un Empire.",
+        image_1:
+          "https://fr.web.img3.acsta.net/c_310_420/pictures/23/01/06/14/12/4097876.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/ca10f41a47eeeead6d2ada0eef81ded4bf9a06e574092ca12e23b9a88958db3f.jpg",
+        link: "https://www.youtube.com/watch?v=VWSVSPaszJk&ab_channel=TopRatedTVShows",
+        rating: 4.0,
+        status: "premium",
+      },
+      {
+        titre: "Dr House",
+        release_date: "2004-11-16",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "David Shore",
+        duration: "44 min",
+        synopsis:
+          "Le Dr Greg House est un médecin revêche qui ne fait confiance à personne, et encore moins à ses patients. Irrévérencieux et controversé, il est prêt à tout pour résoudre les cas médicaux les plus mystérieux et sauver des vies avec son équipe d'experts.",
+        image_1:
+          "https://fr.web.img3.acsta.net/c_310_420/pictures/22/04/01/11/50/1018209.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/68c18ff432fea7df044ac04cf195e31b7814d9320a77fb150557b8877ea40286.jpg",
+        link: "https://www.youtube.com/watch?v=MczMB8nU1sY&ab_channel=iflixMalaysia",
+        rating: 4.3,
+        status: "premium",
+      },
+      {
+        titre: "Battlestar Galactica",
+        release_date: "2004-10-18",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Glen A. Larson, Ronald D. Moore",
+        duration: "42 min",
+        synopsis:
+          "Puissants robots, les Cylons règnent en maître sur l'univers. À bord du dernier vaisseau de guerre, le Galactica, des humains tentent de survivre en entreprenant le voyage de la dernière chance : trouver une légendaire planète appelée la Terre.",
+        image_1:
+          "https://fr.web.img3.acsta.net/c_310_420/pictures/19/09/02/10/57/3132882.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/2ce3e91d5fd57a5ccb1d00e8e0923b22defc59c159d5f81839632c72875dfa02.jpg",
+        link: "https://www.youtube.com/watch?v=TnYsf2Yv8i8&ab_channel=devbobcz",
+        rating: 3.8,
+        status: "premium",
+      },
+      {
+        titre: "24 heures chrono",
+        release_date: "2001-11-06",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Joel Surnow, Robert Cochran",
+        duration: "42 min",
+        synopsis:
+          "Responsable de la Cellule Anti-Terroriste de Los Angeles, Jack Bauer a 24 heures pour mener sa mission à bien et protéger les siens du danger qui les menacent...",
+        image_1:
+          "https://fr.web.img6.acsta.net/c_310_420/pictures/21/01/29/17/22/0650437.jpg",
+        image_2:
+          "https://static1.purebreak.com/articles/5/14/76/5/@/21896-110-24-heures-chrono-580x0-1.jpg",
+        link: "https://www.youtube.com/watch?v=-Tldme1j_Ec&t=1s&ab_channel=TJDW",
+        rating: 3.7,
+        status: "premium",
+      },
+      {
+        titre: "Prison Break",
+        release_date: "2005-08-29",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Paul Scheuring",
+        duration: "42 min",
+        synopsis:
+          "Michael Scofield s'engage dans une véritable lutte contre la montre : son frère Lincoln est dans le couloir de la mort, en attente de son exécution. Persuadé de son innocence mais à court de solutions, Michael décide de se faire incarcérer à son tour dans le pénitencier d'état de Fox River pour organiser leur évasion...",
+        image_1:
+          "https://fr.web.img3.acsta.net/c_310_420/pictures/17/05/22/16/49/588696.jpg",
+        image_2: "https://i.servimg.com/u/f48/16/48/85/85/tm/saiso100.jpg",
+        link: "https://www.youtube.com/watch?v=lLr8KuOM0hA",
+        rating: 3.8,
+        status: "premium",
+      },
+      {
+        titre: "Sons of Anarchy",
+        release_date: "2008-09-03",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Kurt Sutter",
+        duration: "42 min",
+        synopsis:
+          "Afin de protéger leur ville des dealers et des entrepreneurs locaux, les membres d'un club de motos sont prêts à tout. Jax Teller est partagé entre l'amour qu'il porte à sa confrérie et l'appréhension grandissante qu'il nourrit en voyant l'anarchie et le banditisme qui règne dans son club...",
+        image_1:
+          "https://fr.web.img6.acsta.net/c_310_420/pictures/21/01/29/17/41/0758046.jpg",
+        image_2:
+          "https://www.programme-tv.net/imgre/fit/http.3A.2F.2Fprmd.2Etmsimg.2Ecom.2Fassets.2Fp7895131_b_h10_aa.2Ejpg/630x355/quality/80/sons-of-anarchy.jpg",
+        link: "https://www.youtube.com/watch?v=-Nv9YrZr3wE&ab_channel=RewatchAgain",
+        rating: 4.3,
+        status: "premium",
+      },
+      {
+        titre: "Firefly",
+        release_date: "2002-09-20",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Joss Whedon",
+        duration: "42 min",
+        synopsis:
+          "Après une guerre civile, le capitaine Malcolm Reynolds et son équipage survivent à bord du vaisseau Serenity en effectuant diverses missions sans trop se soucier de la légalité.",
+        image_1:
+          "https://fr.web.img4.acsta.net/c_310_420/pictures/16/03/02/13/50/077597.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/09f6427daf610ccfa5e252fbe7b11e474d795d5182e3d953d0e13117eb64beab.jpg",
+        link: "https://www.youtube.com/watch?v=oBZrZij2-g8&ab_channel=TopRatedTVShows",
+        rating: 3.3,
+        status: "premium",
+      },
+      {
+        titre: "Supernatural",
+        release_date: "2005-09-13",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Eric Kripke, McG",
+        duration: "42 min",
+        synopsis:
+          "Deux frères parcourent les États-Unis pour traquer les forces du Mal. Ils espèrent par la même occasion mettre la main sur le démon responsable de la mort de leur mère, vingt ans plus tôt.",
+        image_1:
+          "https://fr.web.img6.acsta.net/c_310_420/pictures/18/12/26/00/30/2209565.jpg",
+        image_2:
+          "https://www.lemagducine.fr/wp-content/uploads/2014/08/supernatural-critique-series.jpg",
+        link: "https://www.youtube.com/watch?v=zlJQSte3lW0&ab_channel=SupernaturalTvShow",
+        rating: 3.9,
+        status: "premium",
+      },
+      {
+        titre: "Friday Night Lights",
+        release_date: "2006-10-03",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Peter Berg",
+        duration: "42 min",
+        synopsis:
+          "À Dillon, une petite ville du Texas, le championnat de football américain est pris très au sérieux. L'équipe du lycée est prometteuse, et chaque match est un événement pour la communauté.",
+        image_1:
+          "https://fr.web.img3.acsta.net/c_310_420/pictures/22/12/20/13/48/2308362.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/60b231f0b82aaea3bf835f5529009a4b3be93ddd1ce5cd6e52f3d1fa2c426584.jpg",
+        link: "https://www.youtube.com/watch?v=qBARUXrzrIk&ab_channel=TopRatedTVShows",
+        rating: 3.5,
+        status: "premium",
+      },
+      {
+        titre: "Fullmetal Alchemist",
+        release_date: "2003-10-04",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Hiromu Arakawa",
+        duration: "24 min",
+        synopsis:
+          "Après avoir perdu leur mère, Edward et Alphonse tentent de la ramener à la vie grâce à l'alchimie. Cependant, l'alchimie doit obéir à la loi de l'échange équivalent : l'objet transformé et l'objet issu de la transformation doivent être de masses équivalentes. Passer outre cette règle coûte très cher, et les frères Elric en feront les frais...",
+        image_1:
+          "https://fr.web.img2.acsta.net/c_310_420/pictures/19/07/30/12/08/0075575.jpg",
+        image_2:
+          "https://imgmedia.larepublica.pe/640x371/larepublica/migration/images/WV6GG4SHGVF37HTQYI2V4ZTZKE.webp",
+        link: "https://www.youtube.com/watch?v=asTxh9kuEvE&ab_channel=IGN",
+        rating: 3.6,
+        status: "premium",
+      },
+      {
+        titre: "Mad Max: Fury Road",
+        release_date: "2015-05-14",
+        post_date: "2024-06-15",
+        typeID: "Film",
+        director: "George Miller",
+        duration: "2h00",
+        synopsis:
+          "Hanté par un lourd passé, Mad Max estime que le meilleur moyen de survivre est de rester seul. Cependant, il se retrouve embarqué par une bande qui parcourt la Désolation à bord d'un véhicule militaire piloté par l'Imperator Furiosa. Ils fuient la Citadelle où sévit le terrible Immortan Joe qui s'est fait voler un objet irremplaçable.",
+        image_1:
+          "https://fr.web.img6.acsta.net/c_310_420/pictures/15/04/14/18/30/215297.jpg",
+        image_2:
+          "https://focus.telerama.fr/664x442/60/2024/05/03/cafc63bcc5c941629369258e62fb7a23.jpg/webp",
+        link: "https://www.youtube.com/watch?v=hEJnMQG9ev8&ab_channel=WarnerBros.Pictures",
+        rating: 4.2,
+        status: "premium",
+      },
+      {
+        titre: "The Hunger Games",
+        release_date: "2012-03-21",
+        post_date: "2024-06-15",
+        typeID: "Film",
+        director: "Gary Ross",
+        duration: "2h22",
+        synopsis:
+          "Chaque année, le Capitole oblige les douze districts de Panem à envoyer des jeunes pour concourir aux Hunger Games, une compétition où les tributs doivent s'affronter jusqu'à la mort. Katniss Everdeen se porte volontaire pour sauver sa sœur.",
+        image_1:
+          "https://fr.web.img3.acsta.net/c_310_420/medias/nmedia/18/85/51/91/20018884.jpg",
+        image_2:
+          "https://www.slate.fr/uploads/store/story_95085/large_landscape_95085.jpg",
+        link: "https://www.youtube.com/watch?v=mfmrPu43DF8&ab_channel=LionsgateMovies",
+        rating: 3.8,
+        status: "premium",
+      },
+      {
+        titre: "Ready Player One",
+        release_date: "2018-03-28",
+        post_date: "2024-06-15",
+        typeID: "Film",
+        director: "Steven Spielberg",
+        duration: "2h20",
+        synopsis:
+          "En 2045, l'humanité trouve refuge dans l'OASIS, un univers virtuel créé par James Halliday. Ce dernier a caché un œuf de Pâques numérique dans l'OASIS, promettant sa fortune à celui qui le trouvera. Wade Watts se lance dans cette quête, découvrant un monde parallèle plein de dangers.",
+        image_1:
+          "https://fr.web.img2.acsta.net/c_310_420/pictures/18/02/14/09/15/3437390.jpg",
+        image_2:
+          "https://cdn.sortiraparis.com/images/80/57915/338417-ready-player-one-decouvrez-la-bande-annonce-du-nouveau-spielberg.jpg",
+        link: "https://www.youtube.com/watch?v=cSp1dM2Vj48&ab_channel=WarnerBros.Pictures",
+        rating: 4.2,
+        status: "premium",
+      },
+      {
+        titre: "La Planète des singes : Les Origines",
+        release_date: "2011-08-10",
+        post_date: "2024-06-15",
+        typeID: "Film",
+        director: "Rupert Wyatt",
+        duration: "1h50",
+        synopsis:
+          "Des scientifiques testent un traitement contre la maladie d'Alzheimer sur des singes, augmentant leur intelligence. César, un jeune chimpanzé, mène une révolte contre les humains.",
+        image_1:
+          "https://fr.web.img5.acsta.net/c_310_420/medias/nmedia/18/84/60/29/19765980.jpg",
+        image_2:
+          "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/DD7DC17CC47E4EF8FAC3E030AD5B7B99B4FCB7E7FEBD06D8287288A6FAF0D1BF/scale?width=1200&amp;aspectRatio=1.78&amp;format=webp",
+        link: "https://www.youtube.com/watch?v=Vn8GriIog1s&ab_channel=20thCenturyStudiosFR",
+        rating: 4.1,
+        status: "premium",
+      },
+      {
+        titre: "Time Out",
+        release_date: "2011-11-23",
+        post_date: "2024-06-15",
+        typeID: "Film",
+        director: "Andrew Niccol",
+        duration: "1h41",
+        synopsis:
+          "Dans un futur où le temps a remplacé l'argent, les hommes ne vieillissent plus après 25 ans. Ils doivent gagner du temps pour rester en vie. Un homme accusé à tort de meurtre prend la fuite avec une otage.",
+        image_1:
+          "https://fr.web.img2.acsta.net/c_310_420/medias/nmedia/18/85/59/68/19816803.jpg",
+        image_2:
+          "https://proxymedia.woopic.com/api/v1/images/331%2FINTIMEXXXXXW0059488_BAN1_2424_NEWTV_HD.jpg",
+        link: "https://www.youtube.com/watch?v=bVZsx_a488w&ab_channel=20thCenturyStudiosFR",
+        rating: 3.5,
+        status: "premium",
+      },
+      {
+        titre: "Jujutsu Kaisen",
+        release_date: "2020-10-03",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Gege Akutami",
+        duration: "24 min",
+        synopsis:
+          "Yuji Itadori, un lycéen avec une force physique hors norme, découvre le monde des malédictions après avoir avalé le doigt d'un démon millénaire. Possédé par Ryômen Sukuna, il doit aider les exorcistes à retrouver tous les doigts de Sukuna pour éviter sa condamnation à mort.",
+        image_1:
+          "https://fr.web.img6.acsta.net/c_310_420/pictures/20/09/14/10/31/4875617.jpg",
+        image_2:
+          "https://sm.ign.com/ign_in/screenshot/default/jujutsukaisen_vdeh.png",
+        link: "https://www.youtube.com/watch?v=pkKu9hLT-t8&ab_channel=Crunchyroll",
+        rating: 4.3,
+        status: "premium",
+      },
+      {
+        titre: "Hunter x Hunter (2011)",
+        release_date: "2011-10-02",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Yoshihiro Togashi",
+        duration: "22 min",
+        synopsis:
+          "Gon Freecss, 12 ans, décide de devenir Hunter pour retrouver son père. Il affronte des épreuves périlleuses, se lie d'amitié avec Kurapika, Leorio et Killua, et découvre le monde des Hunters.",
+        image_1:
+          "https://fr.web.img3.acsta.net/c_310_420/pictures/19/08/01/09/52/4803203.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/0b9e5665fcdd89c4fcfb124627da931ea025b72dd3af0742797b9af4d5e92284.jpg",
+        link: "https://www.youtube.com/watch?v=d6kBeJjTGnY&ab_channel=vizmedia",
+        rating: 4.5,
+        status: "premium",
+      },
+      {
+        titre: "Sword Art Online",
+        release_date: "2012-07-08",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Reki Kawahara",
+        duration: "24 min",
+        synopsis:
+          "En 2022, 10 000 joueurs se retrouvent piégés dans le jeu en réalité virtuelle Sword Art Online. Pour survivre, ils doivent terminer le jeu sans mourir dans la vraie vie. Kirito, un ex-bêta-testeur, tente de conquérir ce monde virtuel.",
+        image_1:
+          "https://fr.web.img5.acsta.net/c_310_420/pictures/19/07/09/11/04/5921608.jpg",
+        image_2: "https://i.ytimg.com/vi/L-n9dAQAUUA/maxresdefault.jpg",
+        link: "https://www.youtube.com/watch?v=GZswY9hW_Bg&ab_channel=Wakanim",
+        rating: 4.2,
+        status: "premium",
+      },
+      {
+        titre: "One Punch Man",
+        release_date: "2015-10-05",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Tomohiro Suzuki",
+        duration: "24 min",
+        synopsis:
+          "Histoire de passer le temps, Saitama est devenu un héros. Trois années d’un entraînement spécial lui ont donné un pouvoir le rendant invincible. Mais Saitama est devenu si fort qu’un seul coup de poing lui suffit à terrasser chaque adversaire se présentant, aussi puissant soit-il.",
+        image_1:
+          "https://fr.web.img4.acsta.net/c_310_420/pictures/17/02/27/17/41/046707.jpg",
+        image_2:
+          "https://fr.web.img5.acsta.net/newsv7/18/08/13/16/06/2876487.jpg",
+        link: "https://www.youtube.com/watch?v=Poo5lqoWSGw&ab_channel=vizmedia",
+        rating: 4.3,
+        status: "premium",
+      },
+      {
+        titre: "JoJo's Bizarre Adventure",
+        release_date: "2012-10-06",
+        post_date: "2024-06-15",
+        typeID: "Série",
+        director: "Hirohiko Araki",
+        duration: "25 min",
+        synopsis:
+          "En Angleterre, dans les années 1880, Jonathan Joestar et Dio Brando, liés par une ancienne promesse, s'affrontent. Leur rivalité, marquée par la magie noire, se perpétue à travers les générations, touchant les descendants Joestar.",
+        image_1:
+          "https://fr.web.img3.acsta.net/c_310_420/pictures/20/03/10/12/07/4001550.jpg",
+        image_2:
+          "https://m.media-amazon.com/images/S/pv-target-images/ea0275b4205b07294cb7b2ea3f702454331fa4e60ce03e58085399bdd6d1d524.jpg",
+        link: "https://www.youtube.com/watch?v=EO08vMz73YY&ab_channel=SupaAzarashi",
+        rating: 4.1,
+        status: "premium",
+      },
+      {
+        titre: "Trainspotting",
+        release_date: "1996-06-19",
+        post_date: "2024-06-15",
+        typeID: "Film",
+        director: "Danny Boyle",
+        duration: "1h34",
+        synopsis:
+          "Mark Renton, jeune toxicomane d’Édimbourg, tente de sortir de sa dépendance à l'héroïne tout en affrontant la réalité difficile de son entourage et de ses amis tout aussi accros.",
+        image_1:
+          "https://fr.web.img6.acsta.net/medias/nmedia/18/78/52/54/19534550.jpg",
+        image_2:
+          "https://fr.web.img2.acsta.net/r_1920_1080/pictures/18/03/27/16/17/4965868.jpg",
+        link: "https://www.youtube.com/watch?v=lLr8KuOM0hA",
+        rating: 4.3,
         status: "premium",
       },
     ];
