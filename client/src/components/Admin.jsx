@@ -23,6 +23,7 @@ function Admin() {
   });
 
   const [message, setMessage] = useState();
+  const [sh, setSh] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,6 +51,10 @@ function Admin() {
     });
   };
 
+  const show = () => {
+    setSh(!sh);
+  };
+
   return (
     <div className="administrator">
       <Link to="/deconnexion">
@@ -57,7 +62,7 @@ function Admin() {
           déconnexion
         </button>
       </Link>
-      <h1 className="h1-admin">Add videos</h1>
+      <h1 className="h1-admin">Add</h1>
       <Form className="form-admin" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -168,9 +173,31 @@ function Admin() {
           className="input-admin"
           placeholder="nombre (numéro du genre)"
         />
-
+        <button
+          type="button"
+          className="after"
+          onClick={() => {
+            show();
+          }}
+        >
+          ?
+        </button>
         <br />
         <input className="submit-admin" type="submit" value="valider" />
+        {sh && (
+          <div className="help">
+            <img src="/public/help.png" alt="help" className="img-help" />{" "}
+            <button
+              type="button"
+              className="button-help"
+              onClick={() => {
+                show();
+              }}
+            >
+              X
+            </button>
+          </div>
+        )}
       </Form>
       {message && <h1 className="message-ok">{message}</h1>}
     </div>
